@@ -13,7 +13,6 @@
     .newsletters .row {
         padding: 20px 0;
     }
-
     .newsletters input[type="text"] {
         border: none;
         border-bottom: 1px solid #76f983;

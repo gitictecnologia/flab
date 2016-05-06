@@ -21,9 +21,11 @@ class Connection
             if(self::$instance == NULL) 
             {
                 $environments = array(
-                    'localhost' => array('string' => 'mysql:host=127.0.0.1;dbname=flab_hml', 'user' => 'root', 'pwd' => ''),
-                    'localhost:8080' => array('string' => 'mysql:host=127.0.0.1;dbname=flab_hml', 'user' => 'root', 'pwd' => ''),
-                    '192.168.0.29:8080' => array('string' => 'mysql:host=127.0.0.1;dbname=flab_hml', 'user' => 'root', 'pwd' => '')                    
+                    'localhost'                 => array('string' => 'mysql:host=127.0.0.1; dbname=flab_hml', 'user' => 'root', 'pwd' => ''),
+                    'localhost:8080'            => array('string' => 'mysql:host=127.0.0.1; dbname=flab_hml', 'user' => 'root', 'pwd' => ''),
+                    '192.168.0.29:8080'         => array('string' => 'mysql:host=127.0.0.1; dbname=flab_hml', 'user' => 'root', 'pwd' => ''),
+                    'flab.solutions'            => array('string' => 'mysql:host=flab_solutions.mysql.dbaas.com.br; dbname=flab_solutions', 'user' => 'flab_solutions', 'pwd' => 'fischer@321F'),
+                    'www.flab.solutions'        => array('string' => 'mysql:host=flab_solutions.mysql.dbaas.com.br; dbname=flab_solutions', 'user' => 'flab_solutions', 'pwd' => 'fischer@321F'),
                 );
                
                 if(array_key_exists($_SERVER['HTTP_HOST'], $environments)) 
