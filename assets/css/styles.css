@@ -408,7 +408,7 @@ select {
   height: 780px;
 }
 .bg-slider-wrapper .flexslider .slide.slide-1 {
-  background: #253340 url('../images/background/bg-header-1.jpg') no-repeat 50% top;
+  background: #5DCA68 url('') no-repeat 50% top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3325,14 +3325,16 @@ select {
     padding-top: 25px;
   }
   .header.scrolled .main-nav .nav .nav-item a {
-    color: #666666;
+    color: #2A8C37;
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
   }
+  
   .header.scrolled .main-nav .nav .nav-item.nav-item-cta a.btn-cta-secondary {
-    background: #2A8C37;
+    background: #fff;
     border-color: #2A8C37;
+    color: #2A8C37;
   }
   .header.scrolled .main-nav .nav .dropdown-menu a {
     color: #fff;
