@@ -119,6 +119,11 @@
     </section>
 
 
+
+    <?php include 'includes/site_newsletters.php'; ?>
+
+
+
     <!-- ******CTA Section****** -->
     <section id="cta-section" class="section cta-section text-center home-cta-section">
         <div class="container">
