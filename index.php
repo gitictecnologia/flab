@@ -12,7 +12,7 @@ require_once 'admin/model/autoload.php';
     <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
     <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
     <head>
-        <title>Flab Solutions</title>
+        <title>flab.solutions é inovação</title>
         <!-- Meta -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
