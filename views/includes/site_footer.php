@@ -1,18 +1,47 @@
+
+<style>
+    .footer {
+        background-color: #5c5d5c;
+        color: #76f983;
+        font-size: 1em;        
+        padding-bottom: 30px;
+    }
+    .footer p {
+        opacity: 1;
+    }
+    .footer .footer-description {
+        margin-top: 5px;
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+    .footer .footer-email {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+</style>
 <!-- ******FOOTER****** --> 
- <footer class="footer" style="text-align: center;">
+<footer class="footer">
     <div class="footer-content">
         <div class="container">
-            <div class="row">                    
-                <img src="assets/images/logoflab.png" height="157" width="249"><a href="">Info@flab.solutions</a>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <p class="footer-email">info@flab.solutions</p>
+                    <p class="footer-description">flab.solutions é uma unidade de negócios <img src="assets/images/logo/logo-fischer.png"></p>                    
+                </div>
+                <div class="visible-md visible-lg col-md-4 text-right">
+                    <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                </div>
+                <div class="visible-xs visible-sm col-sm-12 text-center">
+                    <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                </div>
             </div><!--//row-->
         </div><!--//container-->
-    </div><!--//footer-content-->
-    <div class="bottom-bar">
-        <div class="container">
-            <small class="copyright">Copyright @ 2016 <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>                
-        </div><!--//container-->
-    </div><!--//bottom-bar-->
+    </div><!--//footer-content-->    
 </footer><!--//footer-->
+
+
+
 
 <!-- Video Modal -->
 <div class="modal modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
@@ -30,6 +59,8 @@
         </div><!--//modal-content-->
     </div><!--//modal-dialog-->
 </div><!--//modal-->
+
+
 
 <!-- Javascript -->
 <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
