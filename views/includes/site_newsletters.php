@@ -42,6 +42,7 @@
     }
 
     .newsletters .btn {
+        color: #76f983;
         border: 1px solid #76f983;
         border-radius: 0px;        
         font-size: 1em;
