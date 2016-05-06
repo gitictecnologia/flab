@@ -1,4 +1,4 @@
-<section class="section testimonials">
+<section class="section testimonials" id="testemonial">
     <figure class="profile" style="text-align: center;"><img class="img-circle"src="assets/images/people/jairocircle.png" width="300" height="300" alt="" /></figure><br><br>
     <div class="container">
         <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
@@ -13,9 +13,11 @@
                                 sendo geradoras de aprendizados e conhecimento mútuo entre todas as partes do nosso negócio.
                             </p>
                         </blockquote>
-                    <p class="source">Jairo Soares<i class="fa fa-angle-left"></i><br /><span class="title">Idealizador do FLAB.SOLUTIONS e COO da agência Fischer America</span></p>
-                </div><!--//content-->                         
-            </div><!--//item-->                    
-        </div><!--//carousel-->
+                        <p class="source">Jairo Soares<br />
+                            <span class="title">Idealizador do FLAB.SOLUTIONS e COO da agência Fischer America</span></p>
+                    </div><!--//content-->                         
+                </div><!--//item active-->  
+            </div><!--//carousel-->
+        </div><!--//data ride-->
     </div><!--//container-->
 </section><!--//testimonials-->
