@@ -1,91 +1,102 @@
 
 <style>
-    .newsletters {
-        background-color: #777877;
-        padding-top: 46px;
-        padding-bottom: 14px;
-        color: #76f983;
+    .timeline {
+        /*background-image: url('assets/images/background/point.png');*/  
+        background-image: url('assets/images/background/point.png');
+        background-repeat: repeat;      
+        background-color: rgba(71,157,80,1);
+        background-color: -moz-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
+        background-color: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(71,157,80,1)), color-stop(100%, rgba(65,153,129,1)));
+        background-color: -webkit-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
+        background-color: -o-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
+        background-color: -ms-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
+        background-color: linear-gradient(135deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#479d50', endColorstr='#419981', GradientType=1 );
+        
+        
+        padding-top: 45px;
+        padding-bottom: 20px;        
+        color: #fff;
     }
-    .newsletters .title-h1 {
+    .timeline .title-h1 {
         font-size: 4.3em;
         font-weight: 900;
     }
-    .newsletters .row {
-        padding: 20px 0;
+    .timeline p {
+        padding: 0px 0px;
+        margin: 0px 0px;
     }
-    .newsletters input[type="text"] {
-        border: none;
-        border-bottom: 1px solid #76f983;
-        border-radius: 0px;
-        background-color: #777877;
-        color: #76f983;
-        font-size: 1.5em;
+    .timeline li {
+        margin-bottom: 40px;
+        list-style: none;
+    }
+    .timeline li.tm-item:not(:last-child):before {
+        border-left: 3px solid #2DA653;        
+        height: 90px;
+        content: "";
+        float: left;
+        margin-left: -15px;
         margin-top: 15px;
-        padding: 0px 0px 20px 0px;        
-    } 
-    input[type="text"]::-webkit-input-placeholder { 
-        color: #76f983;
+    }
+     
+    .timeline .tm-data, .timeline .tm-description {
+        display: block;
+        position: relative;
+    }
+    .timeline .tm-data {
+        font-size: 1.3em;
+        margin-left: 30px;
+    }
+    .tm-bullet {
+        position: absolute;
+        font-size: 3em;
+        color: #56B280;
+        float: left;        
+        top: -34px;
+        left: -54px;
+    }
+    .timeline .tm-data strong {
+        color: #1B4146;
+        font-weight: 800;        
+    }
+    .timeline .tm-description {        
         font-weight: 100;
+        margin-left: 30px;
     }
-    input[type="text"]:-moz-input-placeholder {
-        color: #76f983;
-        font-weight: 100;
-    }
-    input[type="text"]::-moz-input-placeholder {
-        color: #76f983;
-        font-weight: 100;
-    }
-    input[type="text"]:-ms-input-placeholder {
-        color: #76f983;
-        font-weight: 100;
-    }
-
-    .newsletters .btn {
-        color: #76f983;
-        border: 1px solid #76f983;
-        border-radius: 0px;        
-        font-size: 1em;
-        margin-top: 20px;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
+    
 </style>
-<section id="newsletters" class="section newsletters">
+<section id="timeline" class="section timeline">
+    <div></div>
     <div class="container">
-        <h1 class="title-h1">Acompanhe as novidades</h1>
-        <span>As inscrições começam em <strong>1° de junho</strong>. Deixe seus dados e te avisamos sobre as próximas fases.</span>
+        <h1 class="title-h1">Timeline</h1>
+        <p>A FLab.Solutions analisará os projetos inscritos e definirá as startups que avançam para a etapa de Pitch.</p>
+        <p>Se sua startup for selecionada, entraremos em contato a partir do dia <strong>16 de julho</strong></p>
     
         <h2 class="title text-center"></h2>
         <div class="row">
             <div class="col-sm-12 col-md-12">
-
-                <form class="form-horizontal" role="form">
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersNome" name="newslettersNome" placeholder="Nome" value="">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <button class="btn btn-cta btn-cta-secondary">Cadastrar</button>
-                        </div>
-                    </div>
-
-                </form>
+                <ul>
+                    <li class="tm-item">
+                        <span class="tm-data"><span class="tm-bullet">&bull;</span> 01 <strong>JUN</strong> 2016</span>
+                        <span class="tm-description">Início das inscrições</span>
+                    </li>
+                    <li class="tm-item">
+                        <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>JUN</strong> 2016</span>
+                        <span class="tm-description">Fim das inscrições</span>
+                    </li>
+                    <li class="tm-item">
+                        <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>AGO</strong> 2016</span>
+                        <span class="tm-description">Pitch day</span>
+                    </li>
+                    <li class="tm-item">
+                        <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>AGOSTO</strong> 2016</span>
+                        <span class="tm-description">Anúncio das selecionadas</span>
+                    </li>
+                    <li class="tm-item">
+                        <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>SETEMBRO</strong> 2016</span>
+                        <span class="tm-description">Início do programa</span>
+                    </li>
+                </ul>
             </div><!--//content-->
         </div><!--//item-->
     </div>
