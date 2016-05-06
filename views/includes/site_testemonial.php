@@ -1,4 +1,4 @@
-<section class="section testimonials">
+<section class="section testimonials" id="testemonial">
     <figure class="profile" style="text-align: center;"><img class="img-circle"src="assets/images/people/jairocircle.png" width="300" height="300" alt="" /></figure><br/><br/>
     <div class="container">
         <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
