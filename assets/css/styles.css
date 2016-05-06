@@ -26,7 +26,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  color: #e74124;
+  color: #2A8C37;
 }
 a:focus {
   text-decoration: none;
@@ -56,8 +56,8 @@ a.btn-cta-primary,
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #e9553b;
-  border: 2px solid #e9553b;
+  background: #2A8C37;
+  border: 2px solid #fff;
   color: #fff;
 }
 a.btn-cta-secondary,
@@ -740,7 +740,6 @@ select {
   position: absolute;
   color: #2A8C37;
   font-size: 22px;
-  left: -45px;
 }
 .testimonials .item .source {
   color: #2A8C37;
@@ -3479,18 +3478,15 @@ select {
   .bg-slider-wrapper {
     position: fixed;
   }
-/*----------------------------------------------------  Parallax------------------------------------------------------*/
-.parallax {
-  text-align:center;
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-size:cover;
-  /**
-  *colocar efeito para sobrepor 
-  */
-/* background-attachment:fixed !important;*/
-  overflow:hidden;
-}
+  /**Lightbox**/
+.mtlsr-lightbox{display:none;position:absolute;width:100%;height:100%;z-index:9999;top:0;}
+.mtlsr-lightbox .image-in-lightbox{max-width:700px;width:100%;position:absolute;z-index:999;top:10%; margin-left: auto;margin-right: auto;left: 0;right: 0;}
+ 
+.close, .next, .prev{position:absolute;z-index:9999;}
+.close{position:absolute;right:20px;top:20px}
+.next, .prev{top:50%}
+.next{right:20px;}
+.prev{left:20px;}
 
 
 }
