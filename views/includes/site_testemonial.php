@@ -1,8 +1,7 @@
 <section class="section testimonials">
-    <figure class="profile" style="text-align: center;"><img class="img-circle"src="assets/images/people/jairocircle.png" width="300" height="300" alt="" /></figure><br><br>
+    <figure class="profile" style="text-align: center;"><img class="img-circle"src="assets/images/people/jairocircle.png" width="300" height="300" alt="" /></figure><br/><br/>
     <div class="container">
         <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
                 <div class="item active">
                     <div class="content">
                         <blockquote>
@@ -17,7 +16,6 @@
                             <span class="title">Idealizador do FLAB.SOLUTIONS e COO da agência Fischer America</span></p>
                     </div><!--//content-->                         
                 </div><!--//item-->                    
-            </div><!--//carousel-->
         </div><!--//testemonials-carousel-->
     </div><!--//container-->
 </section><!--//testimonials-->
