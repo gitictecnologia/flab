@@ -1,7 +1,7 @@
 <!-- ******HEADER****** --> 
 <header id="header" class="header navbar-fixed-top">  
     <div class="container">
-        <img src="assets/images/logo/logo-color.png" style="height: 80px; width: 97px;" >       
+        <img src="assets/images/logo/logo-color.png" style="height: 80px; width: 97px;" >
         <h1 class="logo">
         </h1><!--//<logo--></logo-->
         <nav class="main-nav navbar-right" role="navigation">
@@ -36,3 +36,5 @@
         <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
     </div><!--//container-->
 </section><!--//promo-->
+
+
