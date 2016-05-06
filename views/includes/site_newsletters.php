@@ -23,7 +23,7 @@
         font-size: 1.5em;
         margin-top: 15px;
         padding: 0px 0px 20px 0px;        
-    }
+    } 
     input[type="text"]::-webkit-input-placeholder { 
         color: #76f983;
         font-weight: 100;
