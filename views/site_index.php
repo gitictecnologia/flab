@@ -107,20 +107,10 @@
         </div><!--//item-->
     </section>
 
+    <?php include 'includes/site_timeline.php'; ?>
 
+    <?php //include 'includes/site_subscribe.php'; ?>
 
     <?php include 'includes/site_newsletters.php'; ?>
-
-
-
-    <!-- ******CTA Section****** -->
-    <section id="cta-section" class="section cta-section text-center home-cta-section">
-        <div class="container">
-            <h2 class="title">INSCRIÇÕES A PARTIR DE JUNHO</h2>
-            <p class="intro">Não fique de fora <!-- destaque <span class="counting">300,000</span>--> desse grande evento!</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="#" target="_blank">Inscreva-se sua Startup!</a></p>
-        </div><!--//container-->
-    </section><!--//cta-section-->
-
 
 </div><!--//section-wrapper-->
