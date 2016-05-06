@@ -1,7 +1,7 @@
 <!-- ******HEADER****** --> 
 <header id="header" class="header navbar-fixed-top">  
     <div class="container">
-        <img src="assets/images/logo/logo-color.png" >       
+        <img src="assets/images/logo/logo-color.png" style="height: 80px; width: 97px;" >       
         <h1 class="logo">
         </h1><!--//<logo--></logo-->
         <nav class="main-nav navbar-right" role="navigation">
