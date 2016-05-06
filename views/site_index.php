@@ -6,17 +6,6 @@
     </div>
 </div><!--//bg-slider-wrapper-->        
 
-<section class="promo section section-on-bg">
-    <div class="container text-center">                
-        <h2 class="title">Let's get your product online fast<br />and get attention right away!</h2>
-        <p class="intro">Velocity is a mobile-friendly HTML5 template designed to help you <br /> promote your product effectively to your target users</p>
-        <p><a class="btn btn-cta btn-cta-primary" href="signup.html">Cadastre seu email</a></p>   
-        <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
-    </div><!--//container-->
-</section><!--//promo-->
-
-
-
 <div class="sections-wrapper">
 
 <!-- ******Testimonials Section****** -->

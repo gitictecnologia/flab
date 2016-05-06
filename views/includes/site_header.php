@@ -19,6 +19,7 @@
                     <li class="nav-item"><a href="#sobre">Visão Flab</a></li>
                     <li class="nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
                     <li class="nav-item"><a href="#interesse">Área de Interesse</a></li>
+                    <li class="nav-item"><a href="#interesse">Acompanhe as Novidades</a></li>
                     <!-- DROPDOWN de paginas
                     <li class="nav-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Pages <i class="fa fa-angle-down"></i></a>
@@ -38,3 +39,13 @@
         </nav><!--//main-nav-->                     
     </div><!--//container-->
 </header><!--//header-->
+
+<!--Texto que fica no banner -->
+<section class="promo section section-on-bg">
+    <div class="container text-center">                
+        <h2 class="title" style="text-align: left">A FLAB.SOLUTIONS É A ACELERADORA DE STARTUPS CRIADA PELO GRUPO FISCHER. <br />O NOSSO PRIMEIRO PROGRAMA COMEÇA NO DIA 1º DE JULHO.</h2>
+        <p class="intro" style="font-size: 25px;">Deixe os seus dados e acompanhe as novidades! <br /></p>
+        <p><a class="btn btn-cta btn-cta-primary" href="signup.html">Cadastre seu email</a></p>   
+        <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
+    </div><!--//container-->
+</section><!--//promo-->
