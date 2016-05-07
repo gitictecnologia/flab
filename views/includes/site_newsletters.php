@@ -83,6 +83,12 @@
                             </div>
                         </div>
 
+                        <div class="row newsletters-resposnse" style="display: none; padding-bottom: 0;">
+                            <div class="col-md-6">                        
+                                <p>Teste</p>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-6">                        
                                 <button type="submit" class="btn btn-cta btn-cta-secondary">Cadastrar</button>

@@ -76,6 +76,7 @@
 <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
 <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="assets/js/newsletters.js"></script>
 
 <!-- Vimeo video API -->
 <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>

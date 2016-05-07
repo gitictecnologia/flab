@@ -10,14 +10,23 @@ $('#form-newsletters').submit(function (event) {
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
-		beforeSend: function () {
-			console.log('antes');
+		beforeSend: function () {			
+			$('#form-newsletters button[type="submit"]').attr('disabled', true);			
 		},
 		success: function(data) {
-			console.log(data);
+
+			$('#form-newsletters .newsletters-resposnse p').html(data.message);
+			$('#form-newsletters .newsletters-resposnse').show(200);			
+
+			setTimeout( function () {
+				$('#form-newsletters button[type="submit"]').attr('disabled', false);
+				$('#form-newsletters .newsletters-resposnse').hide(200);
+				$('#form-newsletters .newsletters-resposnse p').html('');
+			}, 5000);
+			
 		},
-		error: function() {
-			console.log('erro');
-		},
+		error: function() {			
+			$(this).find('.newsletters-resposnse').html('Por favor, tente mais tarde.').toggle();
+		}
 	});
 });

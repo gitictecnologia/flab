@@ -12,8 +12,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localh
 	}
 	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC')
 	{
-		define('PATH', 	'/flab/site/');
-		define('PATHA', '/flab/site/admin/');
+		define('PATH', 	'/flab/flab/');
+		define('PATHA', '/flab/flab/admin/');
 	}
 	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'ic1-PC')
 	{

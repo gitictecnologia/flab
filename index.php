@@ -39,7 +39,17 @@ require_once 'admin/model/autoload.php';
         <![endif]-->
 
 
-        <?php echo $css; ?>
+        <?php
+        /**
+        * Print de styles
+        */
+        echo $css;
+
+        /**
+        * Define a PATH para javascript
+        */
+        echo '<script> var PATH = "' . PATH . '"; var PATHA = "' . PATHA . '"; </script>';
+        ?>
 
     </head>
     <body class="home-page">

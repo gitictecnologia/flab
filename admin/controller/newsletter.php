@@ -14,19 +14,14 @@ switch ($_REQUEST['do'])
         */
         extract($_POST);
 
-        $response = array('status' => false, 'message' => 'Teste');
+
+        $response = array('status' => true, 'message' => '');
 
 
         /**
         * Reposta JSON
         */
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        return;
-
-
-
-        
+        header('Content-Type: application/json');        
 
 
         /**
@@ -36,22 +31,25 @@ switch ($_REQUEST['do'])
 
         if(empty($newslettersNome))
         {
+            $response['status'] = false;
             $response['message'] = "<br>Campo Nome é inválido";
         }
 
         if(empty($newslettersNomeEmpresa))
         {
+            $response['status'] = false;            
             $response['message'] = "<br>Campo Nome da Empresa é inválido";
         }
 
         if(empty($newslettersEmail) || !validaEmail($newslettersEmail))
         {
-            $response['message'] = "<br>Campo Email é inválido";
+            $response['status'] = false;            
+            $response['message'] = "<br>Campo Email é inválido";      
         }
 
         
-        if(!semErros())
-        {
+        if($response['status'] == false)
+        {            
             echo json_encode($response);
             return;
             break;
@@ -66,12 +64,11 @@ switch ($_REQUEST['do'])
         $newsletter = new Newsletter();
         $newsletter->set('NomeUsuario', $newslettersNome);
         $newsletter->set('NomeEmpresa', $newslettersNomeEmpresa);
-        $newsletter->set('Email', $email);
+        $newsletter->set('Email', $newslettersEmail);
         $newsletter->set('St', 1);
 
         if($newsletter->insert())
-        {
-            $response['status'] = true;
+        {            
             $response['message'] = "<br>Cadastro efetuado com sucesso";
 
             echo json_encode($response);
