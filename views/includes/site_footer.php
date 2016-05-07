@@ -10,13 +10,13 @@
         opacity: 1;
     }
     .footer .footer-description {
-        margin-top: 5px;
+        margin-top: -10px;
         font-size: 1.3em;
         font-weight: 700;
     }
     .footer .footer-email {
         margin-top: 30px;
-        margin-bottom: -20px;
+        
     }
 
 </style>
@@ -24,22 +24,22 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-2 col-xs-1"></div>
+            <div class="col-md-8 col-xs-8">
                 <div class="row">
-                    <div class="col-sm-12 col-md-8">
+                    <div class="col-sm-8 col-xs-10">
                         <p class="footer-email">info@flab.solutions</p>
                         <p class="footer-description">flab.solutions é uma unidade de negócios <img src="assets/images/logo/logo-fischer.png"></p>                    
                     </div>
                     <div class="visible-md visible-lg col-md-4 text-right">
-                        <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                        <img src="assets/images/logo/logo-branco.png" style="height: 130px">
                     </div>
-                    <div class="visible-xs visible-sm col-sm-12 text-center">
-                        <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                    <div class="visible-xs visible-sm col-sm-12 col-xs-12 text-center">
+                        <img src="assets/images/logo/logo-branco.png" style="height: 130px">
                     </div>
                 </div><!--//row-->                
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-2 col-xs-1"></div>
         </div>
     </div><!--//footer-content-->    
 </footer><!--//footer-->

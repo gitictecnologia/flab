@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <figure class="profile" style="text-align: center;"><img class="img-circle"src="assets/images/people/jairocircle.png" width="300" height="300" alt="" /></figure><br/><br/>
+            <figure class="profile" style="text-align: center;"><img src="assets/images/logo/logo_fischer_transp.png" width="300" alt="" /></figure><br/><br/>
             <div class="container">
                 <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
                         <div class="item active">
