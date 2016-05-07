@@ -32,8 +32,8 @@
 		font-family: Antenna;
 	}
 	
-	.antenna{
-		font-family: Antenna;
+	.bt-antenna{
+		font-family: Antenna, sans-serif; 
 	}
     
 </style>
@@ -42,8 +42,8 @@
     <div class="col-md-8">
         <header id="header" class="header navbar-fixed-top">  
             <div class="container">
-                <div style="float: left; position: absolute; top: 45px">
-                    <img class="x-logo" src="assets/images/logo/logo-branco.png" />
+                <div style="float: left; position: absolute; top: 30px">
+                    <img class="x-logo" src="assets/images/logo/logo-branco.png" style="margin:15px 0 0 -30px;" />
                     <img class="x-logo-2" src="assets/images/logo/logo-color.png" />
                 </div>
                 <!-- <h1 class="logo"></h1><!--//<logo-->
@@ -73,7 +73,7 @@
         <!--Texto que fica no banner -->
         <section class="promo section section-on-bg">
             <div class="container text-left">                
-                <h2 class="title" style="font-size: 1.5em; text-align: left; text-shadow: none;">
+                <h2 class="title" style="font-size: 1.5em; text-align: left; text-shadow: none; margin-top:25px;">
                     FLAB.SOLUTIONS É UMA PLATAFORMA <br>
                     PARA GEREÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.
@@ -86,7 +86,7 @@
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
                 <p>
-                    <a class="btn btn-cta btn-cta-primary antenna" href="signup.html" >Cadastre seu email</a>
+                    <a class="btn btn-cta btn-cta-primary bt-antenna" href="signup.html" >Cadastre seu email</a>
                 </p>
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             </div><!--//container-->

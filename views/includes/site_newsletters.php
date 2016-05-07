@@ -1,7 +1,7 @@
 
 <style>
     .newsletters {
-        background-color: #777877;
+        background-color: #666666;
         padding-top: 46px;
         padding-bottom: 14px;
         color: #76f983;
@@ -17,7 +17,7 @@
         border: none;
         border-bottom: 1px solid #76f983;
         border-radius: 0px;
-        background-color: #777877;
+        background-color: #666666;
         color: #76f983;
         font-size: 1.5em;
         margin-top: 15px;

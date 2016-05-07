@@ -14,24 +14,35 @@
                         <div class="item active">
                             <div class="content">
                                 <blockquote>
-                                    <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i>
-                                    <p>
+                                    <img src="assets/images/figures/aspas.png" style="margin-top: -55px; float:left;">
+									<!-- <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i> -->
+                                    <p style="font-weight: normal; text-align: center; font-style: italic; font-size: 0.9em; float:left;">
                                         Acreditamos que a inovação e a evolução do negócio de comunicação e marketing<br>
                                         passam também pelo incentivo, pela aproximação e pela participação de iniciativas<br>
                                         empreendedoras, pioneiras e desbravadoras, que permitem estarmos conectados<br>
-                                        e antenados, sendo geradoras de aprendizados, conhecimento mútuo e oportunidade<br>
-                                        <span style="margin-left: 50px;">comerciais entre todas as partes do nosso negócio.<i class="fa fa-quote-right" style=""></i></span>
+                                        e antenados, sendo geradoras de aprendizados, conhecimento mútuo e oportunidades<br>
+                                        <span style="margin-left: 40px;">comerciais entre todas as partes do nosso negócio.
+										<img src="assets/images/figures/aspas-close.png" style="margin-left: -5px">
+										<!-- <i class="fa fa-quote-right"></i> --></span>
                                     </p>
+									
+									
                                 </blockquote>
-                                <a href="#">
-                                    <p class="source">Jairo Soares &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></p>                                    
-                                </a>
-                                <span>COO da agência Fischer</span>
+                                
 
-                            </div><!--//content-->                         
+                            </div>
+							
+							<!--//content-->                         
                         </div><!--//item-->                    
                 </div><!--//testemonials-carousel-->
-            </div><!--//container-->
+            </div>
+			<div style="margin:20px 0 0 80px;">
+								<a href="#">
+                                    <p class="source" style="font-weight: bold;">Jairo Soares &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
+                                </a>
+                                <span>COO da agência Fischer</span>
+								</div>
+			<!--//container-->
                 </div>
     <div class="col-md-2"></div>
         </section><!--//testimonials-->
