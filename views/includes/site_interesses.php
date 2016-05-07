@@ -64,7 +64,8 @@
             <div class="row" style="margin-left: -5px">
                 <div class="col-md-10 x-box">
                     <h1>Projetos</h1>
-                    <p>que tenham a ver com o contexto de negócios<br> das seguintes áreas (produtos ou serviços)<br> e focados em B2C</p> 
+                    <p>que tenham a ver com o contexto de negócios<br> das seguintes áreas (produtos ou serviços)<br> e focados em B2C</p>
+					<i class="fa fa-angle-down" style="font-size: 50px; margin-top: 60px;"></i>
                 </div>                    
             </div>               
                           

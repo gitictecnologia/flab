@@ -15,6 +15,11 @@
 	font-size: 1.1em;
 	color:#666666;
 	}
+	
+	#comofunciona .iconcircle{
+		width:145px;
+	}
+	
 </style>
 <section id="comofunciona" class="">
     <div class="row">
@@ -23,17 +28,17 @@
             <h1 class="title-h1">Como Funciona</h1>
 			
             <div class="row">
-                <div class="col-md-4" style="text-align:center;"><img src="assets/images/icon/icon_light.png">
+                <div class="col-md-4" style="text-align:center;"><img src="assets/images/icon/icon_light.png" class="iconcircle">
                     <br/>
                     <p><strong>Prepare</strong> sua apresentação</p>
                     </b>
                 </div>
-                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_doc.png">
+                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_doc.png" class="iconcircle">
                     <br/>
                     <p><strong>Preencha</strong> a sua inscrição</p>
                     </b>
                 </div>
-                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_ok.png">
+                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_ok.png" class="iconcircle">
                     <br/>
                     <p><strong>Júri</strong> selecionará os finalistas</p>
                     </b>
@@ -41,13 +46,13 @@
             </div>
             <div class="row" style="margin:40px 0 40px 0;">
                 <div class="col-md-2"></div>
-                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_like.png">
+                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_like.png" class="iconcircle">
                     <br/>
                     <p><strong>Os finalistas</strong>
                         <br/> apresentam a sua ideia</p>
                     </b>
                 </div>
-                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_people.png">
+                <div class="col-md-4" style="text-align:center;"> <img src="assets/images/icon/icon_people.png" class="iconcircle">
                     <br/>
                     <p><strong>Divulgação</strong>
                         <br/> dos 5 vencedores</p>
