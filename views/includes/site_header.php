@@ -39,9 +39,22 @@
 		font-size:1em;
 		font-weight: 100;
 	}
+
+    /*
+    * Handler bullet menu
+    */
+    .bullet-nav-item:after {
+        content: '-';
+        font-size: 2em;
+        display: inline;
+        position: absolute;
+        top: 7px;
+        right: -12px;
+    }
     
 </style>
 <div class="row">
+    <span id="home"></span>    
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <header id="header" class="header navbar-fixed-top">  
@@ -62,12 +75,12 @@
                     </div><!--//navbar-header-->
                     <div id="navbar-collapse" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active nav-item"><a href="#home">Home</a></li>
-                            <li class="nav-item"><a href="#sobre">Visão Flab</a></li>
-                            <li class="nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
-                            <li class="nav-item"><a href="#interesse">Área de Interesse</a></li>
-                            <li class="nav-item"><a href="#interesse">Acompanhe as Novidades</a></li>
-                            <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="#">Inscreva-se sua Startup!</a></li>
+                            <li class="active nav-item bullet-nav-item"><a href="#home">Home</a></li>
+                            <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
+                            <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
+                            <li class="nav-item bullet-nav-item"><a href="#interesses">Área de Interesse</a></li>
+                            <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li>
+                            <li class="nav-item nav-item-cta last" onclick="return false;"><a class="btn btn-cta btn-cta-secondary" href="#" onclick="return false;" disabled="disabled">Inscreva-se sua Startup!</a></li>
                         </ul><!--//nav-->
                     </div><!--//navabr-collapse-->
                 </nav><!--//main-nav-->                     
@@ -89,9 +102,8 @@
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
-                <p>
-                    <a class="btn btn-cta btn-cta-primary bt-antenna" href="signup.html" >Cadastre seu email</a>
-                </p>
+                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Cadastre seu email</a></p>
+
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             </div><!--//container-->
         </section><!--//promo-->

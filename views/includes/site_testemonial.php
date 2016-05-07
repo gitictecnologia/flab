@@ -1,5 +1,8 @@
 
 <style>
+    .testimonials {
+        padding-top: 90px;
+    }
     .testimonials .item .content {
         padding-left: 50px;
     }

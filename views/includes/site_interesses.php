@@ -2,6 +2,7 @@
 <style>
     .interesses {
         background-color: #E1E1E1;
+        padding-top: 46px;
     }
     .interesses .title-h1 {
         font-size: 4.0em;

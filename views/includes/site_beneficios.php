@@ -3,8 +3,8 @@
     font-size: 20px;
 }
 .beneficios {
-    /*background-image: url('assets/images/background/bg_beneficios.jpg');*/
-    padding-top: 46px;
+    /*background-image: url('assets/images/background/bg_beneficios.jpg');*/    
+    padding-top: 90px;
     padding-bottom: 14px;
     color: #E6E6E6
 }
