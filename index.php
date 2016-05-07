@@ -18,7 +18,7 @@ require_once 'admin/model/autoload.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <meta name="author" content="">  
+        <meta name="author" content="">
         <link rel="icon" type="image/png" href="assets/images/favicon.png">  
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
@@ -50,7 +50,16 @@ require_once 'admin/model/autoload.php';
         */
         echo '<script> var PATH = "' . PATH . '"; var PATHA = "' . PATHA . '"; </script>';
         ?>
+<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+		  ga('create', 'UA-77440405-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
     </head>
     <body class="home-page">
         <?php
