@@ -62,31 +62,32 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
 
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" id="form-newsletters" role="form">
+                        <input type="hidden" name="do" value="add"></input>
+
                         <div class="row">
                             <div class="col-md-6">                        
-                                <input type="text" class="form-control" id="newslettersNome" name="newslettersNome" placeholder="Nome" value="">
+                                <input type="text" class="form-control" id="newslettersNome" name="newslettersNome" placeholder="Nome" value="" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">                        
-                                <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="">
+                                <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">                        
-                                <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="">
+                                <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">                        
-                                <button class="btn btn-cta btn-cta-secondary">Cadastrar</button>
+                                <button type="submit" class="btn btn-cta btn-cta-secondary">Cadastrar</button>
                             </div>
                         </div>
-
                     </form>
                 </div><!--//content-->
             </div><!--//item-->
