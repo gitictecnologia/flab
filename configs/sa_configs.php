@@ -21,6 +21,11 @@ if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localh
 		define('PATHA', '/git/flab/flab/admin/');
 	}
 }
+else if($_SERVER['HTTP_HOST'] == 'flab.solutions')
+{
+    define('PATH', '/site/');
+    define('PATHA', '/site/admin/');
+}
 else
 {
     define('PATH', '/');

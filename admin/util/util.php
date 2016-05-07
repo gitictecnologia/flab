@@ -29,10 +29,10 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
         define('PATHA', '/flab/site/admin/');        
     }
 }
-else if($_SERVER['HTTP_HOST'] == 'ictecnologia.com.br')
+else if($_SERVER['HTTP_HOST'] == 'flab.solutions')
 {
-    define('PATH', '/flab/');
-    define('PATHA', '/flab/admin/');
+    define('PATH', '/site/');
+    define('PATHA', '/site/admin/');
 }
 else
 {
