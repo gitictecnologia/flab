@@ -1,7 +1,7 @@
 
 <style>
     .testimonials .item .content {
-        padding-left: 65px;
+        padding-left: 50px;
     }
 </style>
 <section class="section testimonials" id="testemonial">
@@ -16,14 +16,14 @@
                                 <blockquote>
                                     <img src="assets/images/figures/aspas.png" style="margin-top: -55px; float:left;">
 									<!-- <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i> -->
-                                    <p style="font-weight: normal; text-align: center; font-style: italic; font-size: 0.9em; float:left;">
-                                        Acreditamos que a inovação e a evolução do negócio de comunicação e marketing<br>
-                                        passam também pelo incentivo, pela aproximação e pela participação de iniciativas<br>
-                                        empreendedoras, pioneiras e desbravadoras, que permitem estarmos conectados<br>
-                                        e antenados, sendo geradoras de aprendizados, conhecimento mútuo e oportunidades<br>
-                                        <span style="margin-left: 40px;">comerciais entre todas as partes do nosso negócio.
+                                    <p style="font-weight: normal; text-align: center; font-style: italic; font-size: 0.9em; float:left; width:85%;">
+                                        Acreditamos que a inovação e a evolução do negócio de comunicação e marketing
+                                        passam também pelo incentivo, pela aproximação e pela participação de iniciativas
+                                        empreendedoras, pioneiras e desbravadoras, que permitem estarmos conectados
+                                        e antenados, sendo geradoras de aprendizados, conhecimento mútuo e oportunidades
+                                        comerciais entre todas as partes do nosso negócio.
 										<img src="assets/images/figures/aspas-close.png" style="margin-left: -5px">
-										<!-- <i class="fa fa-quote-right"></i> --></span>
+										<!-- <i class="fa fa-quote-right"></i> -->
                                     </p>
                                 </blockquote>
                             </div>
