@@ -19,7 +19,7 @@ require_once 'admin/model/autoload.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">  
-        <link rel="shortcut icon" href="assets/images/favicon.ico">  
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">  
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
         
@@ -42,41 +42,55 @@ require_once 'admin/model/autoload.php';
 
     </head>
     <body class="home-page">
-    <?php
+        <?php
 
-    flush();
+        flush();
 
-    $require = 'index.php';
+        $require = 'index.php';
 
-    if(!$_CREATE)
-    {
-        $require = 'error_404.php';
-    }
-    else
-    {
-        if(isset($_GET["a"]) && !empty($_GET["a"]))
+        if(!$_CREATE)
         {
-            $require = $_GET["a"].'.php';
-            
-            if(!file_exists('views/site_'.$require) && !file_exists('views/site_p_'.$require))
+            $require = 'error_404.php';
+        }
+        else
+        {
+            if(isset($_GET["a"]) && !empty($_GET["a"]))
             {
-                $require = 'error_404.php';
-            }
-            else if(file_exists('views/site_p_'.$require))
-            {
-                $require = 'p_'.$require;
+                $require = $_GET["a"].'.php';
+                
+                if(!file_exists('views/site_'.$require) && !file_exists('views/site_p_'.$require))
+                {
+                    $require = 'error_404.php';
+                }
+                else if(file_exists('views/site_p_'.$require))
+                {
+                    $require = 'p_'.$require;
+                }
             }
         }
-    }
 
 
-    require_once 'views/includes/site_header.php';
-    require_once 'views/site_'.$require;
-    require_once 'views/includes/site_footer.php';
+        require_once 'views/includes/site_header.php';
+        require_once 'views/site_'.$require;
+        require_once 'views/includes/site_footer.php';
 
 
-    echo $js;
-    ?>
+        echo $js;
+        ?>
+
+        <script>
+            $(window).scroll(function () {
+                console.log('work: ' + $(this).scrollTop());
+
+                if($(this).scrollTop() == 0) {
+                    $('.x-logo-2').css('display', 'none');
+                    $('.x-logo').css('display', 'inline');
+                } else {
+                    $('.x-logo-2').css('display', 'inline');
+                    $('.x-logo').css('display', 'none');
+                }
+            });
+        </script>
 
     </body>
 </html>
