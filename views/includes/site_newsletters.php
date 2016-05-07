@@ -53,7 +53,7 @@
 
 </style>
 <section id="newsletters" class="section newsletters">
-    <div class="row">
+    <div class="row" style="margin-left: 15px">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <h1 class="title-h1">Acompanhe as novidades</h1>
