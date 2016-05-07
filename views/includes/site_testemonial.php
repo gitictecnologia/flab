@@ -14,7 +14,7 @@
                         <div class="item active">
                             <div class="content">
                                 <blockquote>
-                                    <i class="fa fa-quote-left" style="font-size: 41px; left: -45px;"></i>
+                                    <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i>
                                     <p>
                                         Acreditamos que a inovação e a evolução do negócio de comunicação e marketing<br>
                                         passam também pelo incentivo, pela aproximação e pela participação de iniciativas<br>

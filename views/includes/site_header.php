@@ -3,7 +3,7 @@
 	.header .x-logo {
 		width: 160px;
 		height: 130px;
-		top: 45px;
+		top: 60px;
 		left: -5px;
 		float: left;
 	}
@@ -28,6 +28,13 @@
         .container {
             width: 1060px !important;
     }
+	.nav-item{
+		font-family: Antenna;
+	}
+	
+	.antenna{
+		font-family: Antenna;
+	}
     
 </style>
 <div class="row">
@@ -35,7 +42,7 @@
     <div class="col-md-8">
         <header id="header" class="header navbar-fixed-top">  
             <div class="container">
-                <div style="float: left; position: absolute; top: 30px">
+                <div style="float: left; position: absolute; top: 45px">
                     <img class="x-logo" src="assets/images/logo/logo-branco.png" />
                     <img class="x-logo-2" src="assets/images/logo/logo-color.png" />
                 </div>
@@ -79,7 +86,7 @@
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
                 <p>
-                    <a class="btn btn-cta btn-cta-primary" href="signup.html">Cadastre seu email</a>
+                    <a class="btn btn-cta btn-cta-primary antenna" href="signup.html" >Cadastre seu email</a>
                 </p>
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             </div><!--//container-->

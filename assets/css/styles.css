@@ -6,6 +6,8 @@
  * Twitter: @3rdwave_themes
 */
 /* ======= Base ======= */
+@font-face { font-family: Antenna; src: url('../fonts/Antenna Light.otf'); } 
+
 body {
   font-family: 'Roboto', arial, sans-serif;
   color: #444444;
@@ -303,7 +305,8 @@ select {
   background: none;
 }
 .header .main-nav .nav .nav-item.active {
-  color: #2A8C37;
+  /* color: #2A8C37;*/
+  color: #333333;
 }
 .header .main-nav .nav .nav-item.last {
   margin-right: 0;
@@ -3355,7 +3358,7 @@ select {
     float: right !important;
   }
   .promo {
-    height: 620px;
+    height: 455px;
     padding-top: 200px;
   }
   .promo.section .intro {
