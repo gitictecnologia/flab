@@ -25,23 +25,18 @@
 										<img src="assets/images/figures/aspas-close.png" style="margin-left: -5px">
 										<!-- <i class="fa fa-quote-right"></i> --></span>
                                     </p>
-									
-									
                                 </blockquote>
-                                
-
                             </div>
-							
 							<!--//content-->                         
                         </div><!--//item-->                    
                 </div><!--//testemonials-carousel-->
             </div>
 			<div style="margin:20px 0 0 80px;">
-								<a href="#">
-                                    <p class="source" style="font-weight: bold;">Jairo Soares &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
-                                </a>
-                                <span>COO da agência Fischer</span>
-								</div>
+                <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
+                    <p class="source" style="font-weight: bold;">Jairo Soares &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
+                </a>
+                <span>COO da agência Fischer</span>
+			</div>
 			<!--//container-->
                 </div>
     <div class="col-md-2"></div>

@@ -77,7 +77,14 @@ require_once 'admin/model/autoload.php';
 
 
         echo $js;
+
+        /**        
+        * Lightbox
+        */
+        include 'views/includes/site_lightbox.php';
         ?>
+
+
 
         <script>
             $(window).scroll(function () {

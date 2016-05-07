@@ -30,10 +30,8 @@
 	<?php //include 'includes/site_subscribe.php'; ?>
 
 	<!-- Newsletter -->
-    <?php include 'includes/site_newsletters.php'; ?>
+    <?php include 'includes/site_newsletters.php'; ?>    
 
 </div><!--//section-wrapper-->
 
 
-<!-- Lightbox -->
-<?php include 'includes/site_lightbox.php'; ?>
