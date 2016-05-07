@@ -1,14 +1,14 @@
 <style>
 	.lightbox-img {
-		width: 103.5% !important;
-		max-width: 103.5%;
-    	margin-left: -15px;
+		width: 111.5% !important;
+    	max-width: 111.5%;
+    	margin-left: -46px;
     	margin-top: -20px;
 	}
 	.lightbox-texto {
 		padding-top: 20px;
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
 		color: #539672;
 	}
 	.lightbox-texto strong {
