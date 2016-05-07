@@ -12,6 +12,7 @@
     }
     .newsletters .row {
         padding: 20px 0;
+        margin-left: -15px;
     }
     .newsletters input[type="text"] {
         border: none;
@@ -48,7 +49,7 @@
         margin-top: 20px;
         padding-left: 60px;
         padding-right: 60px;
-    }
+    }   
 
 </style>
 <section id="newsletters" class="section newsletters">
@@ -73,7 +74,7 @@
 
                         <div class="row">
                             <div class="col-md-6">                        
-                                <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="" required>
+                                <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="">
                             </div>
                         </div>
 

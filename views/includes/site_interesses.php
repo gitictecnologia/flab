@@ -50,7 +50,7 @@
         <div class="col-md-8">
             <h1 class="title-h1">Áreas de Interesse</h1>
             
-            <div class="row">
+            <div class="row" style="margin-left: -5px">
                 <div class="col-md-5 x-box">
                     <h1>Requisito</h1>
                     <h2>Principal</h2>
@@ -61,7 +61,7 @@
                     <p>que permitam conexão e comunicação com os públicos e negócios dos clientes pertencentes ao <strong>Grupo Fischer</strong></p>
                 </div>                    
             </div>
-            <div class="row">
+            <div class="row" style="margin-left: -5px">
                 <div class="col-md-10 x-box">
                     <h1>Projetos</h1>
                     <p>que tenham a ver com o contexto de negócios<br> das seguintes áreas (produtos ou serviços)<br> e focados em B2C</p> 

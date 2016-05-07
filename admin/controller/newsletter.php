@@ -33,13 +33,7 @@ switch ($_REQUEST['do'])
         {
             $response['status'] = false;
             $response['message'] = "<br>Campo Nome é inválido";
-        }
-
-        if(empty($newslettersNomeEmpresa))
-        {
-            $response['status'] = false;            
-            $response['message'] = "<br>Campo Nome da Empresa é inválido";
-        }
+        }        
 
         if(empty($newslettersEmail) || !validaEmail($newslettersEmail))
         {
@@ -59,28 +53,47 @@ switch ($_REQUEST['do'])
 
         /**
         *
-        * Persistencia
+        *
+        * Verifica se o email já axiste no Banco de Dados
+        *
         */
-        $newsletter = new Newsletter();
-        $newsletter->set('NomeUsuario', $newslettersNome);
-        $newsletter->set('NomeEmpresa', $newslettersNomeEmpresa);
-        $newsletter->set('Email', $newslettersEmail);
-        $newsletter->set('St', 1);
+        if(Newsletter::getByEmail($newslettersEmail) == NULL)
+        {
+            /**
+            *
+            * Persistencia
+            */        
+            $newsletter = new Newsletter();
+            $newsletter->set('NomeUsuario', $newslettersNome);
+            $newsletter->set('NomeEmpresa', $newslettersNomeEmpresa);
+            $newsletter->set('Email', $newslettersEmail);
+            $newsletter->set('St', 1);
 
-        if($newsletter->insert())
-        {            
-            $response['message'] = "<br>Cadastro efetuado com sucesso";
+            if($newsletter->insert())
+            {            
+                $response['message'] = "<br>Cadastro efetuado com sucesso";
 
-            echo json_encode($response);
-            return;
+                echo json_encode($response);
+                return;
+            }
+            else
+            {            
+                $response['message'] = "<br>Não foi possível realizar o cadastro, tente mais tarde.";
+
+                echo json_encode($response);
+                return;
+            }
         }
         else
-        {            
-            $response['message'] = "<br>Não foi possível realizar o cadastro, tente mais tarde.";
+        {
+            $response['status'] = false;            
+            $response['message'] = "<br>Esse email já está cadastrado em nosso Banco de Dados";
 
             echo json_encode($response);
             return;
+            break;
         }
+        
 
         break;
 
