@@ -15,30 +15,12 @@
 <?php include 'includes/site_beneficios.php'; ?>
 
 
+<!-- Ares de interesse -->
+<?php include 'includes/site_interesses.php'; ?>
 
-    <section id="sobre" class="section why">
-        <div class="container">
-            <h2 class="title text-center"></h2>
-            <div class="row item">
 
-                <div class="content">
-                    <h3 class="title-h2">Área de Interesse</h3><br>
-                    <div class="desc">
 
-                        <p>&bull; <b>Requisito principal:</b> presença nas plataformas mobile</p>
-                        <br><p>&bull; <b>Startups</b> que permitam conexão e comunicação com os públicos e negócios dos clientes pertencentes ao Grupo Fischer</p>
-                        <br><p>&bull; <b>Projetos</b> que tenham a ver com o contexto de negócios das seguintes áreas (produtos ou serviços) e focados em B2C</p>
-                        <br><p style="text-align: center;">&bull; <br>Melhoria na relação com o dinheiro<label style="color: #2A8C37"> (vida financeira)</label></p>
-                        <p >&bull; <br>Produtos ou serviços que visam a melhoria da relação com o corpo e a saúde</p>
-                        <p >&bull; <br>Processo de escolha e/ou compra de produtos e serviços</p>
-                        <p >&bull; <br>Processo de escolha e/ou compra de produtos e serviços ligados a entretenimento <label style="color: #2A8C37">(viagem, cinema, restaurante, férias, hotel etc.)</label></p>
-                        <p >&bull; <br>Produtos ou serviços de inteligência para o varejo</p>
-                        <br><p>&bull; <br>Serviços ligados à entretenimento esportivo<label style="color: #2A8C37"> (Futebol)</label></p>
-                        <p >&bull; <br>Inteligências em segmentação e compra de mídia</p>
-                    </div>
-                </div><!--//content-->
-            </div><!--//item-->
-        </section><!--//press-->
+  
 
 
 
