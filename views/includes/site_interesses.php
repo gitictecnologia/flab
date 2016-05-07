@@ -4,7 +4,7 @@
         background-color: #E1E1E1;
     }
     .interesses .title-h1 {
-        font-size: 4.7em;
+        font-size: 4.0em;
         font-weight: 900;
         color: #535353;
         margin-bottom: 5px;
@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h1 class="title-h1">Área de Interesse</h1>
+            <h1 class="title-h1">Áreas de Interesse</h1>
             
             <div class="row">
                 <div class="col-md-5 x-box">

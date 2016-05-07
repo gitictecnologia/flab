@@ -3,12 +3,18 @@
         background-color: #FFFFFF;
     }
     #comofunciona .title-h1 {
-        font-size: 4.7em;
+        font-size: 4.0em;
         font-weight: 900;
         color: #66CC66;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         margin-top: 50px;
     }
+	
+	#comofunciona p{
+		
+	font-size: 1.1em;
+	color:#666666;
+	}
 </style>
 <section id="comofunciona" class="">
     <div class="row">

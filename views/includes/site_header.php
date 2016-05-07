@@ -28,12 +28,17 @@
         .container {
             width: 1060px !important;
     }
-	.nav-item{
+	.nav-item a{
 		font-family: Antenna;
+		font-weight: 100;
+		font-size:0.9em;
+		color:#666666;
 	}
 	
 	.bt-antenna{
-		font-family: Antenna, sans-serif; 
+		font-family: Antenna;
+		font-weight: 100;
+		font-size:0.8em;
 	}
     
 </style>
@@ -73,7 +78,7 @@
         <!--Texto que fica no banner -->
         <section class="promo section section-on-bg">
             <div class="container text-left">                
-                <h2 class="title" style="font-size: 1.5em; text-align: left; text-shadow: none; margin-top:25px;">
+                <h2 class="title" style="font-size: 1.6em; text-align: left; text-shadow: none; margin-top:25px;">
                     FLAB.SOLUTIONS É UMA PLATAFORMA <br>
                     PARA GEREÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.

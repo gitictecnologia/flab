@@ -6,8 +6,7 @@
  * Twitter: @3rdwave_themes
 */
 /* ======= Base ======= */
-@font-face { font-family: Antenna; src: url('../fonts/Antenna Light.otf') format("opentype"); font-weight: normal;
-    font-style: normal; } 
+@font-face { font-family: Antenna; src: url('../fonts/Antenna Light.otf') format("opentype");} 
 
 body {
   font-family: 'Roboto', arial, sans-serif;
@@ -275,7 +274,7 @@ select {
   margin-right: 15px;
 }
 .header .main-nav .nav .nav-item.active a {
-  color: #2A8C37;
+  color: #333333;
   background: none;
   font-weight: bold;
 }

@@ -3,7 +3,7 @@
     font-size: 20px;
 }
 .beneficios {
-    background-image: url('assets/images/background/bg_beneficios.jpg');
+    /*background-image: url('assets/images/background/bg_beneficios.jpg');*/
     padding-top: 46px;
     padding-bottom: 14px;
     color: #E6E6E6
@@ -12,7 +12,7 @@
     background-color: #43984C;
 }
 .beneficios .title-h1 {
-    font-size: 4.7em;
+    font-size: 4.4em;
     font-weight: 900;
     color: #E6E6E6;
     margin-bottom: 5px;
@@ -41,7 +41,9 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+		<!-- <img src="assets/images/background/x-beneficios.png" style="float:right;">-->
             <p class="title-h1 spacerow" >Benefícios </p>
+			
             <p style="font-size: 2.8em; font-weight: 300; margin-bottom: 0px;">para as Startups</p>
             <p style="font-size: 1.4em; font-weight: 100;">Selecionadas <b>5 startups</b> na primeira rodada, que contarão com 3 meses de:</p><br>
 
