@@ -52,42 +52,46 @@
 
 </style>
 <section id="newsletters" class="section newsletters">
-    <div class="container">
-        <h1 class="title-h1">Acompanhe as novidades</h1>
-        <span>As inscrições começam em <strong>1° de junho</strong>. Deixe seus dados e te avisamos sobre as próximas fases.</span>
-    
-        <h2 class="title text-center"></h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1 class="title-h1">Acompanhe as novidades</h1>
+            <span>As inscrições começam em <strong>1° de junho</strong>. Deixe seus dados e te avisamos sobre as próximas fases.</span>
+        
+            <h2 class="title text-center"></h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
 
-                <form class="form-horizontal" role="form">
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersNome" name="newslettersNome" placeholder="Nome" value="">
+                    <form class="form-horizontal" role="form">
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <input type="text" class="form-control" id="newslettersNome" name="newslettersNome" placeholder="Nome" value="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="">
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <input type="text" class="form-control" id="newslettersNomeEmpresa" name="newslettersNomeEmpresa" placeholder="Nome da Empresa" value="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="">
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6">                        
-                            <button class="btn btn-cta btn-cta-secondary">Cadastrar</button>
+                        <div class="row">
+                            <div class="col-md-6">                        
+                                <button class="btn btn-cta btn-cta-secondary">Cadastrar</button>
+                            </div>
                         </div>
-                    </div>
 
-                </form>
-            </div><!--//content-->
-        </div><!--//item-->
+                    </form>
+                </div><!--//content-->
+            </div><!--//item-->
+        </div>
+        <div class="col-md-2"></div>
     </div>
 </section>
 

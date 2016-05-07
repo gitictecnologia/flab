@@ -1,18 +1,8 @@
 
 <style>
-    .timeline {
-        /*background-image: url('assets/images/background/point.png');*/  
-        background-image: url('assets/images/background/point.png');
-        background-repeat: repeat;      
-        background-color: rgba(71,157,80,1);
-        background-color: -moz-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
-        background-color: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(71,157,80,1)), color-stop(100%, rgba(65,153,129,1)));
-        background-color: -webkit-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
-        background-color: -o-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
-        background-color: -ms-linear-gradient(-45deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
-        background-color: linear-gradient(135deg, rgba(71,157,80,1) 0%, rgba(65,153,129,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#479d50', endColorstr='#419981', GradientType=1 );
-        
+    .timeline {           
+        background-image: url('assets/images/background/point.png'); 
+        background-color: #43984C;
         
         padding-top: 45px;
         padding-bottom: 20px;        
@@ -65,40 +55,45 @@
     }
     
 </style>
-<section id="timeline" class="section timeline">
-    <div></div>
-    <div class="container">
-        <h1 class="title-h1">Timeline</h1>
-        <p>A FLab.Solutions analisará os projetos inscritos e definirá as startups que avançam para a etapa de Pitch.</p>
-        <p>Se sua startup for selecionada, entraremos em contato a partir do dia <strong>16 de julho</strong></p>
+<section id="timeline" class="section timeline">    
+    <div class="row"> 
+        <div class="col-md-2"></div> 
     
-        <h2 class="title text-center"></h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-12">
-                <ul>
-                    <li class="tm-item">
-                        <span class="tm-data"><span class="tm-bullet">&bull;</span> 01 <strong>JUN</strong> 2016</span>
-                        <span class="tm-description">Início das inscrições</span>
-                    </li>
-                    <li class="tm-item">
-                        <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>JUN</strong> 2016</span>
-                        <span class="tm-description">Fim das inscrições</span>
-                    </li>
-                    <li class="tm-item">
-                        <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>AGO</strong> 2016</span>
-                        <span class="tm-description">Pitch day</span>
-                    </li>
-                    <li class="tm-item">
-                        <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>AGOSTO</strong> 2016</span>
-                        <span class="tm-description">Anúncio das selecionadas</span>
-                    </li>
-                    <li class="tm-item">
-                        <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>SETEMBRO</strong> 2016</span>
-                        <span class="tm-description">Início do programa</span>
-                    </li>
-                </ul>
-            </div><!--//content-->
-        </div><!--//item-->
-    </div>
+        <div class="col-md-8">
+            <h1 class="title-h1">Timeline</h1>
+            <p>A FLab.Solutions analisará os projetos inscritos e definirá as startups que avançam para a etapa de Pitch.</p>
+            <p>Se sua startup for selecionada, entraremos em contato a partir do dia <strong>16 de julho</strong></p>
+        
+            <h2 class="title text-center"></h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <ul>
+                        <li class="tm-item">
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span> 01 <strong>JUN</strong> 2016</span>
+                            <span class="tm-description">Início das inscrições</span>
+                        </li>
+                        <li class="tm-item">
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>JUN</strong> 2016</span>
+                            <span class="tm-description">Fim das inscrições</span>
+                        </li>
+                        <li class="tm-item">
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>AGO</strong> 2016</span>
+                            <span class="tm-description">Pitch day</span>
+                        </li>
+                        <li class="tm-item">
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>AGOSTO</strong> 2016</span>
+                            <span class="tm-description">Anúncio das selecionadas</span>
+                        </li>
+                        <li class="tm-item">
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>SETEMBRO</strong> 2016</span>
+                            <span class="tm-description">Início do programa</span>
+                        </li>
+                    </ul>
+                </div><!--//content-->
+            </div><!--//item-->
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>    
 </section>
 

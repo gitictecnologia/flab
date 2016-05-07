@@ -23,20 +23,24 @@
 <!-- ******FOOTER****** --> 
 <footer class="footer">
     <div class="footer-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-8">
-                    <p class="footer-email">info@flab.solutions</p>
-                    <p class="footer-description">flab.solutions é uma unidade de negócios <img src="assets/images/logo/logo-fischer.png"></p>                    
-                </div>
-                <div class="visible-md visible-lg col-md-4 text-right">
-                    <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
-                </div>
-                <div class="visible-xs visible-sm col-sm-12 text-center">
-                    <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
-                </div>
-            </div><!--//row-->
-        </div><!--//container-->
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <p class="footer-email">info@flab.solutions</p>
+                        <p class="footer-description">flab.solutions é uma unidade de negócios <img src="assets/images/logo/logo-fischer.png"></p>                    
+                    </div>
+                    <div class="visible-md visible-lg col-md-4 text-right">
+                        <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                    </div>
+                    <div class="visible-xs visible-sm col-sm-12 text-center">
+                        <img src="assets/images/logo/logo-branco.png" style="width: 170px; height: 130px">
+                    </div>
+                </div><!--//row-->                
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </div><!--//footer-content-->    
 </footer><!--//footer-->
 
