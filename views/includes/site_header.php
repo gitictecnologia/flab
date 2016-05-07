@@ -10,9 +10,9 @@
 
 	.header .x-logo-2 {
         position: absolute;
-		width: 100px;
-		height: 80px;	
-        top: -30px;	
+		
+		height: 72px;	
+        top: -27px;	
 		left: -30px;
 		display: none;
 	}
