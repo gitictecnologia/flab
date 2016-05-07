@@ -6,7 +6,7 @@
                 <li>
                     <a href="?s=empresas" title="Empresas" class="tipB">
                         <span class="icon icomoon-icon-pencil"></span>
-                        <span class="txt">Empresas</span>
+                        <span class="txt">Startups</span>
                         <span class="notification blue"><?= count(Empresa::getAll()) ?></span>
                     </a>
                 </li>
