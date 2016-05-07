@@ -29,16 +29,16 @@
             width: 1060px !important;
     }
 	.nav-item a{
-		font-family: Antenna;
+		font-family: Lato;
 		font-weight: 100;
-		font-size:0.9em;
+		font-size:1.1em;
 		color:#666666;
 	}
 	
 	.bt-antenna{
-		font-family: Antenna;
+		font-family: Lato;
+		font-size:1em;
 		font-weight: 100;
-		font-size:0.8em;
 	}
     
 </style>
