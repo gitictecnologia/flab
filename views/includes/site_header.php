@@ -1,7 +1,6 @@
 <!-- ******HEADER****** -->
 <style>
 	.header .x-logo {
-		width: 160px;
 		height: 130px;
 		top: 60px;
 		left: -5px;
