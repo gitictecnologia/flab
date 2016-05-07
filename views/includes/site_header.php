@@ -80,7 +80,7 @@
             <div class="container text-left">                
                 <h2 class="title" style="font-size: 1.6em; text-align: left; text-shadow: none; margin-top:25px;">
                     FLAB.SOLUTIONS É UMA PLATAFORMA <br>
-                    PARA GEREÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
+                    PARA GERAÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.
                     <br>
                     <br>
