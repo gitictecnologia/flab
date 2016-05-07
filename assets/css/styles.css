@@ -3016,7 +3016,7 @@ select {
     font-size: 16px;
   }
   .promo {
-    height: 420px;
+    height: auto;
   }
   .why .item .content {
     margin-bottom: 60px;

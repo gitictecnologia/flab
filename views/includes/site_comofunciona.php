@@ -17,7 +17,7 @@
 	}
 	
 	#comofunciona .iconcircle{
-		width:145px;
+		width:135px;
 	}
 	
 </style>

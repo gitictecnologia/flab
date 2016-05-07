@@ -80,7 +80,7 @@
                             <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#interesses">Área de Interesse</a></li>
-                            <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li>
+                            <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
                             <li class="nav-item nav-item-cta last" onclick="return false;">
                                 <a class="btn btn-cta btn-cta-secondary" href="#" onclick="return false;" disabled="disabled">Inscreva sua Startup!</a>
                             </li>
@@ -93,7 +93,7 @@
         <!--Texto que fica no banner -->
         <section class="promo section section-on-bg">
             <div class="container text-left">                
-                <h2 class="title" style="font-size: 1.6em; text-align: left; text-shadow: none; margin-top:25px;">
+                <h2 class="title" style="font-size: 1.6em; text-align: left; text-shadow: none; margin-top:30px;">
                     FLAB.SOLUTIONS É UMA PLATAFORMA <br>
                     PARA GERAÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.
@@ -105,8 +105,8 @@
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
-                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Cadastre seu email</a></p>
-
+                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Acompanhe as Novidades</a></p>
+				<div style="width:auto;text-align:center;"><a href="#testemonial"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;"></i></a></div>
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             </div><!--//container-->
         </section><!--//promo-->
