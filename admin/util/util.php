@@ -29,7 +29,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
         define('PATHA', '/flab/site/admin/');        
     }
 }
-else if($_SERVER['HTTP_HOST'] == 'flab.solutions')
+else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'www.flab.solutions')
 {
     define('PATH', '/site/');
     define('PATHA', '/site/admin/');
