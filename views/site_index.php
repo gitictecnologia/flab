@@ -8,26 +8,32 @@
 
 <div class="sections-wrapper">
 
-<!-- ******Testimonials Section****** -->
-<?php include 'includes/site_testemonial.php'; ?>
+	<!-- ******Testimonials Section****** -->
+	<?php include 'includes/site_testemonial.php'; ?>
 
-<!-- ******Beneficios para startups****** -->
-<?php include 'includes/site_beneficios.php'; ?>
-
-
-<!-- Ares de interesse -->
-<?php include 'includes/site_interesses.php'; ?>
+	<!-- ******Beneficios para startups****** -->
+	<?php include 'includes/site_beneficios.php'; ?>
 
 
-<!-- Ares como funciona -->
-<?php include 'includes/site_comofunciona.php'; ?>
+	<!-- Ares de interesse -->
+	<?php include 'includes/site_interesses.php'; ?>
+
+
+	<!-- Ares como funciona -->
+	<?php include 'includes/site_comofunciona.php'; ?>
 
     
+	<!-- Timeline -->
+	<?php include 'includes/site_timeline.php'; ?>
 
-    <?php include 'includes/site_timeline.php'; ?>
+	<!-- Subscribe -->
+	<?php //include 'includes/site_subscribe.php'; ?>
 
-    <?php //include 'includes/site_subscribe.php'; ?>
-
+	<!-- Newsletter -->
     <?php include 'includes/site_newsletters.php'; ?>
 
 </div><!--//section-wrapper-->
+
+
+<!-- Lightbox -->
+<?php include 'includes/site_lightbox.php'; ?>
