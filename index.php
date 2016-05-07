@@ -95,11 +95,21 @@ require_once 'admin/model/autoload.php';
         ?>
 
 
-
+        <style>
+        /* Tira margem row e ajusta para mobile */
+        .row {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        </style>
         <script>
-            $(window).scroll(function () {
-                console.log('work: ' + $(this).scrollTop());
+            // Menu active
+            $('.main-nav .nav-item').click(function() {
+                $('.main-nav .nav-item').removeClass('active');
+                $(this).addClass('active');
+            });
 
+            $(window).scroll(function () {
                 if($(this).scrollTop() == 0) {
                     $('.x-logo-2').css('display', 'none');
                     $('.x-logo').css('display', 'inline');
