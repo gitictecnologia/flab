@@ -1,10 +1,16 @@
 <style>
-	.lightbox-img {
-		width: 111.5% !important;
-    	max-width: 111.5%;
-    	margin-left: -46px;
-    	margin-top: -20px;
+	.modal-body, .modal-body .lightbox-img .row .col-sm-12 {
+		padding: 0px;
 	}
+	.modal-body .lightbox-img {
+    	margin-top: -10px;    	
+	}
+	.modal-body .lightbox-img .row{
+    	margin-left: 0px;
+    	margin-right: 0px;
+	}
+
+
 	.lightbox-texto {
 		padding-top: 20px;
 		padding-left: 20px;
@@ -30,9 +36,11 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">			
 			<div class="modal-body">
-				<div class="row">
-					<div class="col-sm-12">
-						<img class="img-responsive lightbox-img" src="assets/images/lightbox_jairo.jpg">
+				<div class="lightbox-img">
+					<div class="row">
+						<div class="col-sm-12">
+							<img class="img-responsive" src="assets/images/lightbox_jairo.jpg">
+						</div>
 					</div>
 				</div>
 
