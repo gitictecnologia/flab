@@ -17,8 +17,12 @@
     }
     .footer .footer-email {
         margin-top: 30px;
-        
+        color: #76f983;
     }
+	.footer .footer-email a{
+        color: #76f983;
+    }
+	
 
 </style>
 <!-- ******FOOTER****** --> 
@@ -38,7 +42,7 @@
 						<p class="footer-email">info@flab.solutions</p>
                     </div>
 					<div class="visible-md visible-lg col-md-2 text-right"  style="margin-top:150px;">
-                        <p class="footer-email">info@flab.solutions</p>
+                        <p class="footer-email"><a href="mailto:info@flab.solutions">info@flab.solutions</a></p>
                     </div>
 					
                 </div><!--//row-->                
