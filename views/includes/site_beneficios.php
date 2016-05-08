@@ -12,11 +12,12 @@
     background-color: #43984C;
 }
 .beneficios .title-h1 {
-    font-size: 4.4em;
+    font-size: 4.0em;
     font-weight: 900;
     color: #E6E6E6;
     margin-bottom: 5px;
 }
+
 .beneficios .row {
     padding: 20px 0;
 }
