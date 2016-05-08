@@ -28,7 +28,7 @@
             <div class="col-md-2 col-xs-1"></div>
             <div class="col-md-8 col-xs-10">
                 <div class="row">
-                    <div class="visible-md visible-lg col-md-6 text-left">
+                    <div class="visible-md visible-lg col-md-10 text-left">
                         <img src="assets/images/logo/logo-branco.png" style="height: 130px">
 						<p class="footer-description">é uma unidade de negócios <a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png"  border="0" style="margin-bottom:30px;"></a></p>
                     </div>
@@ -37,7 +37,7 @@
 						<p class="footer-description">é uma unidade de negócios <br/><a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png" border="0"></a></p>
 						<p class="footer-email">info@flab.solutions</p>
                     </div>
-					<div class="visible-md visible-lg col-md-6 text-right"  style="margin-top:150px;">
+					<div class="visible-md visible-lg col-md-2 text-right"  style="margin-top:150px;">
                         <p class="footer-email">info@flab.solutions</p>
                     </div>
 					

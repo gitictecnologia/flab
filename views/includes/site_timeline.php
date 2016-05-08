@@ -4,9 +4,10 @@
         background-image: url('assets/images/background/point.png'); 
         background-color: #43984C;
         
-        padding-top: 45px;
+        padding-top: 50px;
         padding-bottom: 20px;        
         color: #fff;
+		min-height:780px;
     }
     .timeline .title-h1 {
         font-size: 4.3em;
@@ -91,7 +92,8 @@
                     </ul>
                 </div><!--//content-->
             </div><!--//item-->
-        </div>
+        <div style="width:auto;text-align:center;" class="setabanner"><a href="#newsletters"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin-top:80px 0 50px 0;"></i></a></div>
+		</div>
 
         <div class="col-md-2"></div>
     </div>    

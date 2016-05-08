@@ -1,17 +1,18 @@
 
 <style>
     .testimonials {
-        padding-top: 90px;
+        padding-top: 50px;
+		min-height:780px;
     }
     .testimonials .item .content {
-        padding-left: 50px;
+        padding-left: 40px;
     }
 </style>
 <section class="section testimonials" id="testemonial">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <figure class="profile" style="text-align: center;"><img src="assets/images/logo/logo_fischer_transp.png" width="300" alt="" /></figure><br/><br/>
+            <figure class="profile" style="text-align: center;"><img src="assets/images/logo/logo_fischer_transp.png" width="300" alt="" style="max-width:100%;" /></figure><br/><br/>
             <div class="container">
                 <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
                         <div class="item active">
@@ -29,11 +30,14 @@
 										<!-- <i class="fa fa-quote-right"></i> -->
                                     </p>
                                 </blockquote>
-                            </div>
+                            
+							</div>
+							
 							<!--//content-->                         
                         </div><!--//item-->                    
                 </div><!--//testemonials-carousel-->
-            </div>
+            
+			</div>
 			<div style="margin:20px 0 0 80px;">
                 <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
                     <p class="source" style="font-weight: bold;">Jairo Soares &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
@@ -41,6 +45,7 @@
                 <span>COO da agência Fischer</span>
 			</div>
 			<!--//container-->
-                </div>
+                <div style="width:auto;text-align:center;"><a href="#beneficios"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin-top:180px"></i></a></div>
+				</div>
     <div class="col-md-2"></div>
         </section><!--//testimonials-->

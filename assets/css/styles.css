@@ -3010,13 +3010,17 @@ select {
     margin-bottom: 45px;
   }
   .section .title {
-    font-size: 32px;
+    font-size: 1.2em;
+	margin-top:20px;
   }
+  .setabanner{
+		margin-top:20px;
+	}
   .section .intro {
     font-size: 16px;
   }
   .promo {
-    height: auto;
+    height: 500px;
   }
   .why .item .content {
     margin-bottom: 60px;
@@ -3170,6 +3174,14 @@ select {
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .section .title{
+			font-size: 1.8em;
+			margin-top:80px;
+		}
+		.setabanner{
+		margin-top:80px;
+	}
+  
   .config-wrapper {
     display: none;
   }
@@ -3295,6 +3307,13 @@ select {
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+   .section .title{
+		font-size: 2.2em;
+		margin-top:80px;
+	}
+	.setabanner{
+		margin-top:130px;
+	}
   .config-wrapper {
     display: block;
   }
@@ -3359,7 +3378,7 @@ select {
     float: right !important;
   }
   .promo {
-    height: 500px;
+    height: 780px;
     padding-top: 200px;
   }
   .promo.section .intro {

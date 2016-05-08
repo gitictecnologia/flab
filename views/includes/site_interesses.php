@@ -5,7 +5,7 @@
         padding-top: 46px;
     }
     .interesses .title-h1 {
-        font-size: 4.0em;
+        font-size: 3.6em;
         font-weight: 900;
         color: #535353;
         margin-bottom: 5px;
@@ -30,7 +30,7 @@
         font-size: 1.2em;
     }
     .interesses-exp {
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: 300;
     }
     .interesses-exp span {
@@ -47,7 +47,7 @@
 <section id="interesses" class="interesses">           
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-7">
+        <div class="col-md-8">
             <h1 class="title-h1">Áreas de Interesse</h1>
             
             <div class="row" style="margin-left: -5px">
@@ -62,10 +62,10 @@
                 </div>                    
             </div>
             <div class="row" style="margin-left: -5px">
-                <div class="col-md-10 x-box">
+                <div class="col-md-10 x-box" style="min-height: 280px;">
                     <h1>Projetos</h1>
                     <p>que tenham a ver com o contexto de negócios<br> das seguintes áreas (produtos ou serviços)<br> e focados em B2C</p>
-					<i class="fa fa-angle-down" style="font-size: 50px; margin-top: 60px;"></i>
+					<!-- <i class="fa fa-angle-down" style="font-size: 50px; margin-top: 60px;"></i>-->
                 </div>                    
             </div>               
                           
@@ -82,7 +82,8 @@
                 <br>
                 <br>
                 <br>
-            </div>            
+            </div>
+                <div style="width:auto;text-align:center;"><a href="#comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin:80px 0 50px 0"></i></a></div>			
         </div>
         <div class="col-md-2"></div>
     </div>   

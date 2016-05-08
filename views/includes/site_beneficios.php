@@ -6,7 +6,8 @@
     /*background-image: url('assets/images/background/bg_beneficios.jpg');*/    
     padding-top: 90px;
     padding-bottom: 14px;
-    color: #E6E6E6
+    color: #E6E6E6;
+	min-height:780px;
 }
 .bg {
     background-color: #43984C;
@@ -37,13 +38,11 @@
 </style>
 
 <section id="beneficios" class="section why beneficios bg">
-    
-        
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
 		<!-- <img src="assets/images/background/x-beneficios.png" style="float:right;">-->
-            <p class="title-h1 spacerow" >Benefícios </p>
+            <p class="title-h1 spacerow" >Benefícios</p>
 			
             <p style="font-size: 2.8em; font-weight: 300; margin-bottom: 0px;">para as Startups</p>
             <p style="font-size: 1.4em; font-weight: 100;">Selecionadas <b>5 startups</b> na primeira rodada, que contarão com 3 meses de:</p><br>
@@ -65,6 +64,7 @@
                 <p class="text"><b>Plataforma</b> </p>
                 <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">networking para gerar conhecimento e oportunidades de negócio</p>
             </div>
+			        <div style="width:auto;text-align:center;"><a href="#interesses"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin-top:160px"></i></a></div>
         </div><!--//content-->
         <div class="col-md-2"></div>
     </div>

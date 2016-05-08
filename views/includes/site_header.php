@@ -15,6 +15,9 @@
 		left: -30px;
 		display: none;
 	}
+	
+	
+	
     a.btn-cta-primary, a.btn-cta-primary:hover {
         background-color: transparent;
     }
@@ -26,7 +29,9 @@
     @media (min-width: 1200px) {
         .container {
             width: 1060px !important;
-    }
+		}
+	}
+	
 	.nav-item a{
 		font-family: Lato;
 		font-weight: 100;
@@ -52,7 +57,11 @@
         top: 7px;
         right: -12px;
     }
-    
+    .last-a:after{
+	content:"";
+	}
+	
+	
 </style>
 <div class="row">
     <span id="home"></span>    
@@ -79,7 +88,7 @@
                             <li class="active nav-item bullet-nav-item"><a href="#home">Home</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
-                            <li class="nav-item bullet-nav-item"><a href="#interesses">Área de Interesse</a></li>
+                            <li class="nav-item bullet-nav-item last-a"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
                             <li class="nav-item nav-item-cta last" onclick="return false;">
                                 <a class="btn btn-cta btn-cta-secondary" href="#" onclick="return false;" disabled="disabled">Inscreva sua Startup!</a>
@@ -93,8 +102,8 @@
         <!--Texto que fica no banner -->
         <section class="promo section section-on-bg">
             <div class="container text-left">                
-                <h2 class="title" style="font-size: 1.6em; text-align: left; text-shadow: none; margin-top:30px;">
-                    FLAB.SOLUTIONS É UMA PLATAFORMA <br>
+                <h2 class="title" style="text-align: left; text-shadow: none;">
+                    FLAB.SOLUTIONS É UMA PLATAFORMA<br>
                     PARA GERAÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.
                     <br>
@@ -106,10 +115,14 @@
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
                 <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Acompanhe as Novidades</a></p>
-				<div style="width:auto;text-align:center;"><a href="#testemonial"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;"></i></a></div>
+				
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
-            </div><!--//container-->
-        </section><!--//promo-->
-    </div>
+            
+			</div><!--//container-->
+        <div style="width:auto;text-align:center;" class="setabanner"><a href="#testemonial"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;"></i></a></div>
+		</section><!--//promo-->
+    
+	</div>
+	
     <div class="col-md-2"></div>
 </div>
