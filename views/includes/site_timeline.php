@@ -92,7 +92,7 @@
                     </ul>
                 </div><!--//content-->
             </div><!--//item-->
-        <div style="width:auto;text-align:center;" class="setabanner"><a href="#newsletters"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin-top:80px 0 50px 0;"></i></a></div>
+        <div style="width:auto;text-align:center;" class="setabanner"><a href="#newsletters"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin:50px 0 60px 0;"></i></a></div>
 		</div>
 
         <div class="col-md-2"></div>

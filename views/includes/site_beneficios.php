@@ -4,7 +4,7 @@
 }
 .beneficios {
     /*background-image: url('assets/images/background/bg_beneficios.jpg');*/    
-    padding-top: 90px;
+    padding-top: 80px;
     padding-bottom: 14px;
     color: #E6E6E6;
 	min-height:780px;
@@ -64,7 +64,7 @@
                 <p class="text"><b>Plataforma</b> </p>
                 <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">networking para gerar conhecimento e oportunidades de negócio</p>
             </div>
-			        <div style="width:auto;text-align:center;"><a href="#interesses"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin-top:160px"></i></a></div>
+			        <div style="width:auto;text-align:center;"><a href="#interesses"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin:60px 0 0px 0;"></i></a></div>
         </div><!--//content-->
         <div class="col-md-2"></div>
     </div>

@@ -17,7 +17,7 @@
                 <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
                         <div class="item active">
                             <div class="content">
-                                <blockquote>
+                                <blockquote style="margin-top:65px;">
                                     <img src="assets/images/figures/aspas.png" style="margin-top: -55px; float:left;">
 									<!-- <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i> -->
                                     <p style="font-weight: normal; text-align: center; font-style: italic; font-size: 0.9em; float:left; width:85%;">
@@ -45,7 +45,7 @@
                 <span>COO da agência Fischer</span>
 			</div>
 			<!--//container-->
-                <div style="width:auto;text-align:center;"><a href="#beneficios"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin-top:180px"></i></a></div>
+                <div style="width:auto;text-align:center;"><a href="#beneficios"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin-top:140px"></i></a></div>
 				</div>
     <div class="col-md-2"></div>
         </section><!--//testimonials-->

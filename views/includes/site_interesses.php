@@ -83,7 +83,7 @@
                 <br>
                 <br>
             </div>
-                <div style="width:auto;text-align:center;"><a href="#comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin:80px 0 50px 0"></i></a></div>			
+                <div style="width:auto;text-align:center;"><a href="#comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin:0px 0 50px 0"></i></a></div>			
         </div>
         <div class="col-md-2"></div>
     </div>   
