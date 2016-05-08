@@ -8,8 +8,7 @@
 	}
 
 	.header .x-logo-2 {
-        position: absolute;
-		
+        position: absolute;		
 		height: 72px;	
         top: -27px;	
 		left: -30px;
@@ -48,20 +47,17 @@
     /*
     * Handler bullet menu
     */
-    .bullet-nav-item:after, .bullet-nav-item:active:after {
-        content: '-';
-        color: #fff;
-        font-size: 2em;
-        display: inline;
-        position: absolute;
-        top: 7px;
-        right: -12px;
+    @media (min-width: 768px) {
+        .bullet-nav-item:after, .bullet-nav-item:active:after {
+            content: '-';
+            color: #fff;
+            font-size: 2em;
+            display: inline;
+            position: absolute;
+            top: 7px;
+            right: -12px;
+        }
     }
-    .last-a:after{
-	content:"";
-	}
-	
-	
 </style>
 <div class="row">
     <span id="home"></span>    
@@ -88,7 +84,7 @@
                             <li class="active nav-item bullet-nav-item"><a href="#home">Home</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
-                            <li class="nav-item bullet-nav-item last-a"><a href="#interesses">Áreas de Interesse</a></li>
+                            <li class="nav-item"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
                             <li class="nav-item nav-item-cta last" onclick="return false;">
                                 <a class="btn btn-cta btn-cta-secondary" href="#" onclick="return false;" disabled="disabled">Inscreva sua Startup!</a>
