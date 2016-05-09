@@ -13,7 +13,7 @@
     background-color: #43984C;
 }
 .beneficios .title-h1 {
-    font-size: 4.0em;
+    font-size: 3.6em;
     font-weight: 900;
     color: #E6E6E6;
     margin-bottom: 5px;
@@ -65,7 +65,7 @@
                 <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">networking para gerar conhecimento e oportunidades de negócio</p>
             </div>
 	        <div style="width:auto; text-align:center;">
-                <a href="#interesses" class="clk-seta-interesses"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;margin:60px 0 0px 0;"></i></a>
+                <a href="#interesses" class="clk-seta-interesses"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#76F983;font-weight:thin;margin:60px 0 0px 0;"></i></a>
             </div>
         </div><!--//content-->
         <div class="col-md-2"></div>

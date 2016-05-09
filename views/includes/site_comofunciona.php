@@ -5,7 +5,7 @@
 		padding-top: 50px;
     }
     #comofunciona .title-h1 {
-        font-size: 4.0em;
+        font-size: 3.6em;
         font-weight: 900;
         color: #66CC66;
         margin-bottom: 40px;
@@ -63,7 +63,7 @@
                 <div class="col-md-2"></div>
             </div>
 			<div style="width:auto;text-align:center;" class="setabanner">
-                <a href="#timeline" class="clk-seta-timeline"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#2A8C37;font-weight:thin;margin:-50px 0 50px 0;"></i></a>
+                <a href="#timeline" class="clk-seta-timeline"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#2A8C37;font-weight:thin;margin:0px 0 50px 0;"></i></a>
             </div>
         </div>
         <div class="col-md-2"></div>

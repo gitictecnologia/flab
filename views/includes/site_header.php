@@ -70,7 +70,7 @@
             <div class="container">
                 <div style="float: left; position: absolute; top: 30px">
                     <a href="#home"><img class="x-logo" src="assets/images/logo/logo-branco.png" style="margin:15px 0 0 -30px;" border="0" /></a>
-                    <a href="#home"><img class="x-logo-2" src="assets/images/logo/logo-color.png" border="0" /></a>
+                    <a href="#home"><img class="x-logo-2" src="assets/images/logo/logocolorido.png" border="0" /></a>
                 </div>
                 <!-- <h1 class="logo"></h1><!--//<logo-->
                 <nav class="main-nav navbar-right" role="navigation">
