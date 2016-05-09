@@ -12,8 +12,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
 {           
     if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'FIRSTBYTE-PC-1')
     {
-        //define('PATH',  '/git/flab/flab/');
-        //define('PATHA', '/VilaButantan4/site/admin/');
+        define('PATH',  '/git/flab/flab/');
+        define('PATHA', '/git/flab/site/admin/');
     }
     else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC')
     {
@@ -21,12 +21,9 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
         define('PATHA', '/flab/flab/admin/');
     }
     else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'ic1-PC')
-    {        
-        //define('PATH',  '/git/flab/site/');
-        //define('PATHA', '/git/flab/site/admin/');
-
-        define('PATH',  '/flab/site/');
-        define('PATHA', '/flab/site/admin/');        
+    {
+        define('PATH',  '/git/flab/flab/');
+        define('PATHA', '/git/flab/flab/admin/');        
     }
 }
 else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'www.flab.solutions')

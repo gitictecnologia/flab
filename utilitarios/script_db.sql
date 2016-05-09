@@ -148,3 +148,20 @@ CREATE TABLE Newsletter (
 
   PRIMARY KEY (Id)
 );
+
+
+CREATE TABLE Clipping (
+
+  Id INT NOT NULL AUTO_INCREMENT,
+  Titulo VARCHAR(1000) NULL,
+  Subtitulo VARCHAR(1000) NULL,
+  Texto Text NULL,
+  Fonte VARCHAR(1000) NULL,
+  Thumb VARCHAR(1000) NULL,
+  DtNoticia DATETIME NULL,
+  DtCriacao DATETIME NULL,
+  DtAlteracao DATETIME NULL,
+  St INT NOT NULL DEFAULT 0,  
+
+  PRIMARY KEY (Id)
+);

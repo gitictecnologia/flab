@@ -7,12 +7,3 @@ function __autoload($classname)
 
     include_once($_PATH . $classname . '.php');
 }
-
-
-/*
-$_objects = glob($_PATH . '*.php');
-foreach($_objects as $_obj)
-{
-	require_once $_obj;
-}
-*/

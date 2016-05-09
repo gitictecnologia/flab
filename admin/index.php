@@ -16,11 +16,10 @@ require('model/autoload.php');
 *
 * Desloga o usuario
 */
-if (isset($_GET['s']) && $_GET['s'] == 'sair') {
-
+if (isset($_GET['s']) && $_GET['s'] == 'sair')
+{
     unset($_SESSION['Auth']);
     Go('login.php');
-
 }
 
 
@@ -41,6 +40,11 @@ $secoes = array(
     'newsletter-add' => 'newsletter-add.php',
     'newsletter-edit' => 'newsletter-edit.php',
 
+    // Clipping
+    'clipping' => 'clipping.php',
+    'clipping-add' => 'clipping-add.php',
+    'clipping-edit' => 'clipping-edit.php',
+
     //usuarios
     'usuarios' => 'usuarios.php',
     'usuarios-add' => 'usuarios-add.php',
@@ -60,6 +64,11 @@ $title = array(
     'newsletter' => 'Newsletter',
     'newsletter-add' => 'Newsletter',
     'newsletter-edit' => 'Newsletter',
+
+    // Clipping
+    'clipping' => 'Clipping',
+    'clipping-add' => 'Clipping',
+    'clipping-edit' => 'Clipping',
     
     //usuarios
     'usuarios' => 'Usuários',
@@ -80,6 +89,11 @@ $breadcrumb = array(
     'newsletter' => 'Newsletter',
     'newsletter-add' => 'Newsletter',
     'newsletter-edit' => 'Newsletter',
+
+    // Newsletter
+    'clipping' => 'Clipping',
+    'clipping-add' => 'Clipping',
+    'clipping-edit' => 'Clipping',
     
 	//usuarios
     'usuarios' => 'Usuários',
@@ -89,7 +103,9 @@ $breadcrumb = array(
 );
 
 if (isset($_GET['a']) && !array_key_exists($_GET['a'], $secoes))
+{
     $_GET['s'] = '';
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -129,13 +145,10 @@ if (isset($_GET['a']) && !array_key_exists($_GET['a'], $secoes))
             <div id="content" class="clearfix">
                 <div class="contentwrapper"><!--Content wrapper-->
                     <div class="heading">
-
-                        <h3>Painel de administração</h3>                    
-
+                        <h3>Painel de administração</h3>
                         <div class="resBtnSearch">
                             <a href="#"><span class="icon16 icomoon-icon-search-3"></span></a>
                         </div>
-
                         <ul class="breadcrumb">
                             <li>Você está em:</li>
                             <li>
@@ -148,21 +161,16 @@ if (isset($_GET['a']) && !array_key_exists($_GET['a'], $secoes))
                             </li>
                             <li class="active"><?= (isset($_GET['s']) ? $breadcrumb[$_GET['s']]:$breadcrumb['']) ?></li>
                         </ul>
-
-                    </div><!-- End .heading -->
-
+                    </div>
 
                     <!-- Start content --> 
                     <?php isset($_GET['s']) ? include('view/' . $secoes[$_GET['s']]) : include('view/' . $secoes['']) ?>
                     <!-- End content --> 
 
                 </div><!-- End contentwrapper -->
-
             </div><!-- End #content -->
-
         </div><!-- End #wrapper -->
 
         <?php include('view/includes/js.php'); ?>
-
     </body>
 </html>
