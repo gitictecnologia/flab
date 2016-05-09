@@ -3308,7 +3308,7 @@ select {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
    .section .title{
-		font-size: 2.2em;
+		font-size: 1.9em;
 		margin-top:80px;
 	}
 	.setabanner{
