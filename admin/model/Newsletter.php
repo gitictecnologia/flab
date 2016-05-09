@@ -166,7 +166,44 @@ class Newsletter extends Contexto implements IContexto
             //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
             return NULL;
         }
-    }    
+    }
+
+    public static function getByEmail($email)
+    {
+        try
+        {
+            if(!empty($email))
+            {
+                $sql = "
+                    SELECT * FROM " . self::$table . " WHERE Email = " . parent::transformToSql($email);
+                
+                $result = parent::query($sql);
+                if(count($result) > 0)
+                {
+                    /**
+                    * Retorna um Array
+                    */
+                    $row = $result->fetch(PDO::FETCH_ASSOC);
+
+                    if(!isset($row['Id']))
+                    {
+                        return NULL;
+                    }
+
+                    $objeto = new Newsletter();
+                    $objeto->buildInfo($row);
+                    
+                    return $objeto;
+                }
+            }
+            return NULL;
+        }
+        catch(Exception $e)
+        {
+            //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
+            return NULL;
+        }
+    } 
 
 
     public static function getAll($st = -1)

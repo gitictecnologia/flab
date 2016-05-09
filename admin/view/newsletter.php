@@ -26,7 +26,7 @@ $newsletters = Newsletter::getAll(1);
                             <th style="30">Interessado</th>                                                        
                             <th style="30">Nome da Empresa</th>
                             <th style="30">Email</th>
-                            <th style="10">Ações</th>
+                            <!-- <th style="10">Ações</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -37,8 +37,10 @@ $newsletters = Newsletter::getAll(1);
                             <td><?= $newsletter->get('NomeUsuario') ?></td>
                             <td><?= $newsletter->get('NomeEmpresa') ?></td>
                             <td><?= $newsletter->get('Email') ?></td>                            
-                            <td>
-                                <a class="btn btn-default" href="?s=newsletters-edit&id=<?= $newsletter->get('Id') ?>"> <i class="icon-eye-open"></i></a>                                 
+                            <!--
+							<td>
+                                <a class="btn btn-default" href="?s=newsletters-edit&id=<?= $newsletter->get('Id') ?>"> <i class="icon-eye-open"></i></a> -->
+                                                       
                             </td>
                         </tr>
                         <?php } ?>

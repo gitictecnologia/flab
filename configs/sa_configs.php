@@ -2,37 +2,32 @@
 
 session_start();
 
-# Alterar apenas as variaveis contidas neste IF/ELSE e abaixo
-if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localhost') {            
-	
-	if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'FIRSTBYTE-PC-1') { 
-		define('PATH', 	'/cservices/site/');
-		define('PATHA', 'cservices/site/admin/');
+
+if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localhost')
+{	
+	if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'FIRSTBYTE-PC-1')
+	{ 
+		define('PATH', 	'/git/flab/flab/site/');
+		define('PATHA', '/git/flab/flab/admin/');
 	}
-	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC') {
-		define('PATH', 	'/cservices/site/');
-		define('PATHA', '/cservices/site/admin/');
+	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC')
+	{
+		define('PATH', 	'/flab/flab/');
+		define('PATHA', '/flab/flab/admin/');
 	}
-} else if($_SERVER['HTTP_HOST'] == 'website.cservices.midiadesigners.local') {
-	define('PATH', 	'/');
-	define('PATHA', '/admin/');
-} else if($_SERVER['HTTP_HOST'] == 'website.cservices.mediainteractive.com.br') {
-	define('PATH', 	'/');
-	define('PATHA', '/admin/');
-}else if($_SERVER['HTTP_HOST'] == 'cservices.com.br') {
-	$mysql_user_pass = array(
-        'read' 		=> array('root', ''),
-        'edit' 		=> array('root', ''),
-        'delete'	=> array('root', '')
-	);            
-    define('PATH', '/site/');
-	define('PATHA', '/site/admin/');
-} else {
-	$mysql_user_pass = array(
-        'read' 		=> array('root', ''),
-        'edit' 		=> array('root', ''),
-        'delete'	=> array('root', '')
-	);
+	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'ic1-PC')
+	{
+		define('PATH', 	'/git/flab/flab/site/');
+		define('PATHA', '/git/flab/flab/admin/');
+	}
+}
+else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'www.flab.solutions')
+{
+    define('PATH', '/');
+    define('PATHA', '/admin/');
+}
+else
+{
     define('PATH', '/');
 	define('PATHA', '/admin/');
 }
@@ -43,21 +38,11 @@ if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localh
 define('DESENVOLVIMENTO', true);
 
 $_SESSION[PATH]['jsFiles'] 	= array(
-	'assets/js/jquery-1.9.1.min.js',	
-	'assets/js/jquery-ui.min.js',
-	'assets/js/selectboxit.js',
-	'assets/js/maskedinput.min.js',
-	'assets/js/owl.min.js',
-    'assets/js/waypoints.min.js',
-	'assets/js/scripts.min.js',
-    'assets/js/scripts.form.js'
+	//'assets/js/jquery-1.9.1.min.js',	
 );
 
-$_SESSION[PATH]['cssFiles'] = array(
-	'assets/css/owl.carousel.css',
-	'assets/css/selectboxit.css',
-    'assets/css/font-awesome.css',
-	'assets/css/styles.css'
+$_SESSION[PATH]['cssFiles'] = array(	
+	//'assets/css/styles.css'
 );
 
 $_SESSION[PATH]['admin']['jsFiles']  = array();
@@ -78,7 +63,6 @@ ini_set("zlib.output_compression", "On");
 ini_set("ServerTokens", "Prod");
 ini_set("expose_php", "Off");
 
-//echo date_default_timezone_get();
 date_default_timezone_set('America/Sao_Paulo');
 
 header('Content-Type: text/html; charset=utf-8');

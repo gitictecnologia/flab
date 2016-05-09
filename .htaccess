@@ -21,7 +21,7 @@
 	#RewriteRule ^(.*)$ index.php?a=$1 [L]
 	
 	#RewriteBase /
-	RewriteRule (.*) index.php?a=$1 [L,QSA]	
+	#RewriteRule (.*) index.php?a=$1 [L,QSA]	
 
 </IfModule>
 

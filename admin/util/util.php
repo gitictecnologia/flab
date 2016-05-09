@@ -17,8 +17,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
     }
     else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC')
     {
-        //define('PATH',  '/vilabutanta/site/');
-        //define('PATHA', '/vilabutanta/site/admin/');
+        define('PATH',  '/flab/flab/');
+        define('PATHA', '/flab/flab/admin/');
     }
     else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'ic1-PC')
     {        
@@ -29,10 +29,10 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
         define('PATHA', '/flab/site/admin/');        
     }
 }
-else if($_SERVER['HTTP_HOST'] == 'ictecnologia.com.br')
+else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'www.flab.solutions')
 {
-    define('PATH', '/flab/');
-    define('PATHA', '/flab/admin/');
+    define('PATH', '/');
+    define('PATHA', '/admin/');
 }
 else
 {
