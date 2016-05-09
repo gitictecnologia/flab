@@ -103,8 +103,8 @@
             <div class="container text-left">                
                 <h2 class="title" style="text-align: left; text-shadow: none;">
 
-                    FLAB.SOLUTIONS <BR/>
-					É UMA UNIDADE DE NEGÓCIOS DA AGÊNCIA FISCHER<br>
+                    FLAB.SOLUTIONS É UMA UNIDADE DE NEGÓCIOS<br>
+                    DA AGÊNCIA FISCHER<br>
                     DEDICADA À GERAÇÃO DE NEGÓCIOS,<br> EM DUAS FRENTES:<br>
                     FOMENTO A STARTUPS E ÁREA DE INOVAÇÃO,<br>
                     FOCADAS EM TECNOLOGIA. 
