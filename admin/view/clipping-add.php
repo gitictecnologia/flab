@@ -37,7 +37,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <div class="span12">
-                                            <label for="subtitulo">* Subtitulo</label>                                           
+                                            <label for="subtitulo">* Subtitulo (chamada)</label>                                           
                                         </div>
                                     </div>
                                     <div class="row-fluid">
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="row-fluid">
                                         <div class="span6">
-                                            <input type="date" class="data" id="dtNoticia" name="dtNoticia" value="<?= ( isset($_SESSION['clipping']['dtNoticia']) ? $_SESSION['clipping']['dtNoticia'] : '' ) ?>">
+                                            <input class="data" id="dtNoticia" name="dtNoticia" value="<?= ( isset($_SESSION['clipping']['dtNoticia']) ? $_SESSION['clipping']['dtNoticia'] : '' ) ?>">
                                         </div>
                                     </div>
                                 </div>
