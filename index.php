@@ -119,7 +119,7 @@ require_once 'admin/model/autoload.php';
 
             // Animação seta Banner > Testemonial
             $('.clk-seta-testemonial').click(function () {                   
-                $('html, body').animate({ scrollTop: $("#testemonial").offset().top - 30}, 500);
+                $('html, body').animate({ scrollTop: $("#testemonial").offset().top - 0}, 500);
                 return false;
             });
 
