@@ -45,7 +45,9 @@
                 <span>COO da agência Fischer</span>
 			</div>
 			<!--//container-->
-                <div style="width:auto;text-align:center;"><a href="#beneficios"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin-top:140px"></i></a></div>
+            <div style="width:auto;text-align:center;">
+                <a href="#beneficios" class="clk-seta-beneficios"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin-top:140px"></i></a>
+            </div>
 				</div>
     <div class="col-md-2"></div>
-        </section><!--//testimonials-->
+</section><!--//testimonials-->

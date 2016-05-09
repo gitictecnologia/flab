@@ -15,8 +15,6 @@
 		display: none;
 	}
 	
-	
-	
     a.btn-cta-primary, a.btn-cta-primary:hover {
         background-color: transparent;
     }
@@ -37,6 +35,11 @@
 		font-size:1.1em;
 		color:#666666;
 	}
+
+    .promo {
+        height: auto;
+        margin-bottom: 20px;
+    }
 	
 	.bt-antenna{
 		font-family: Lato;
@@ -99,6 +102,18 @@
         <section class="promo section section-on-bg">
             <div class="container text-left">                
                 <h2 class="title" style="text-align: left; text-shadow: none;">
+
+                    FLAB.SOLUTIONS É UMA UNIDADE DE NEGÓCIOS<br>
+                    DA AGÊNCIA FISCHER<br>
+                    DEDICADA À GERAÇÃO DE NEGÓCIOS,<br> EM DUAS FRENTES:<br>
+                    FOMENTO A STARTUPS E ÁREA DE INOVAÇÃO,<br>
+                    FOCADAS EM TECNOLOGIA. 
+                    <br>
+                    <br>
+                    E LANÇAMOS O NOSSO PRIMEIRO PROGRAMA<br> PARA STARTUPS EM 1º DE JUNHO.
+
+
+                    <!-- 
                     FLAB.SOLUTIONS É UMA PLATAFORMA<br>
                     PARA GERAÇÃO DE NEGÓCIOS E OPORTUNIDADES<br>
                     DIRECIONADAS À STARTUPS.
@@ -106,6 +121,7 @@
                     <br>
                     O NOSSO PRIMEIRO PROGRAMA COMEÇA<br>
                     NO DIA 1° DE JULHO.
+                    -->
                 </h2>
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
                     Deixe os seus dados e acompanhe as novidades!<br>
@@ -115,7 +131,9 @@
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             
 			</div><!--//container-->
-        <div style="width:auto;text-align:center;" class="setabanner"><a href="#testemonial"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;"></i></a></div>
+            <div style="width:auto;text-align:center;" class="setabanner">
+                <a href="#testemonial" class="clk-seta-testemonial"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#76F983;font-weight:thin;"></i></a>
+            </div>
 		</section><!--//promo-->
     
 	</div>

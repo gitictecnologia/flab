@@ -50,15 +50,14 @@ require_once 'admin/model/autoload.php';
         */
         echo '<script> var PATH = "' . PATH . '"; var PATHA = "' . PATHA . '"; </script>';
         ?>
-<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-77440405-1', 'auto');
-		  ga('send', 'pageview');
-
+            ga('create', 'UA-77440405-1', 'auto');
+            ga('send', 'pageview');
 		</script>
     </head>
     <body class="home-page">
@@ -117,6 +116,44 @@ require_once 'admin/model/autoload.php';
                 $('.main-nav .nav-item').removeClass('active');
                 $(this).addClass('active');
             });
+
+            // Animação seta Banner > Testemonial
+            $('.clk-seta-testemonial').click(function () {                   
+                $('html, body').animate({ scrollTop: $("#testemonial").offset().top - 30}, 500);
+                return false;
+            });
+
+            
+            // Animação seta Testemonial > Beneficios
+            $('.clk-seta-beneficios').click(function () {                   
+                $('html, body').animate({ scrollTop: $("#beneficios").offset().top - 20}, 500);
+                return false;
+            });
+
+            // Animação seta Beneficios > Interessses
+            $('.clk-seta-interesses').click(function () {
+                $('html, body').animate({ scrollTop: $("#interesses").offset().top - 20}, 500);
+                return false;
+            });
+
+            // Animação seta Interessses > Como funciona
+            $('.clk-seta-comofunciona').click(function () {
+                $('html, body').animate({ scrollTop: $("#comofunciona").offset().top - 20}, 500);
+                return false;
+            });
+
+            // Animação seta Como funciona > Timeline
+            $('.clk-seta-timeline').click(function () {
+                $('html, body').animate({ scrollTop: $("#timeline").offset().top - 20}, 500);
+                return false;
+            });
+
+            // Animação seta Timeline > Newsletters
+            $('.clk-seta-newsletters').click(function () {
+                $('html, body').animate({ scrollTop: $("#newsletters").offset().top - 20}, 500);
+                return false;
+            });
+
 
             $(window).scroll(function () {
                 if($(this).scrollTop() == 0) {
