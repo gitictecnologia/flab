@@ -89,8 +89,8 @@
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
                             <li class="nav-item"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
-                            <li class="nav-item nav-item-cta last" onclick="return false;">
-                                <a class="btn btn-cta btn-cta-secondary" href="#" onclick="return false;" disabled="disabled">Inscreva sua Startup!</a>
+                            <li class="nav-item nav-item-cta last">
+                                <a class="btn btn-cta btn-cta-secondary" href="#newsletters">Inscreva sua Startup!</a>
                             </li>
                         </ul><!--//nav-->
                     </div><!--//navabr-collapse-->
