@@ -31,8 +31,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
 }
 else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'www.flab.solutions')
 {
-    define('PATH', '/site/');
-    define('PATHA', '/site/admin/');
+    define('PATH', '/');
+    define('PATHA', '/admin/');
 }
 else
 {

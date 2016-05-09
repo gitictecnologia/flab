@@ -7,7 +7,7 @@
         color: #76f983;
     }
     .newsletters .title-h1 {
-        font-size: 3.6em;
+        font-size: 3em;
         font-weight: 900;
     }
     .newsletters .row {
