@@ -148,5 +148,3 @@ CREATE TABLE Newsletter (
 
   PRIMARY KEY (Id)
 );
-
-
