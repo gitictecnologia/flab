@@ -2,7 +2,7 @@
 <style>
     .testimonials {
         padding-top: 80px;
-		min-height:760px;
+		min-height:780px;
 		padding-bottom: 14px;
     }
     .testimonials .item .content {
