@@ -87,7 +87,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <div class="span12">
-                                            <label for="dtNoticia">* dtNoticia</label>                                           
+                                            <label for="dtNoticia">* Data</label>                                           
                                         </div>
                                     </div>
                                     <div class="row-fluid">
