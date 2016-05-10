@@ -13,7 +13,9 @@ class Clipping extends Contexto implements IContexto
             'Subtitulo' => NULL,
             'Texto' => NULL,
             'Fonte' => NULL,
+            'Url' => NULL,
             'Thumb' => NULL,
+            'Destaque' => 0,
             'DtNoticia' => NULL,
             'DtCriacao' => NULL,
             'DtAlteracao' => NULL,
@@ -62,16 +64,18 @@ class Clipping extends Contexto implements IContexto
         {
             $sql = "
                 INSERT INTO " . self::$table . "
-                    (Titulo, Subtitulo, Texto, Fonte, Thumb, DtNoticia, DtCriacao, St)
+                    (Titulo, Subtitulo, Texto, Fonte, Url, Thumb, Destaque, DtNoticia, DtCriacao, St)
                 VALUES (
                     " . parent::transformToSql($this->Titulo) . ",
                     " . parent::transformToSql($this->Subtitulo) . ",
                     " . parent::transformToSql($this->Texto) . ",
                     " . parent::transformToSql($this->Fonte) . ",
+                    " . parent::transformToSql($this->Url) . ",
                     " . parent::transformToSql($this->Thumb) . ",
+                    " . parent::transformToSql($this->Destaque) . ",
                     " . parent::transformToSql($this->DtNoticia) . ",
-                    " . parent::transformToSql($this->DtCriacao) . ",                                    
-                    " . parent::transformToSql($this->St) . ")";                    
+                    " . parent::now() . ",
+                    " . parent::transformToSql($this->St) . ")";
 
             $result = parent::query($sql);
             if($result)
@@ -107,9 +111,11 @@ class Clipping extends Contexto implements IContexto
                     Subtitulo = " . parent::transformToSql($this->Subtitulo) . ",
                     Texto = " . parent::transformToSql($this->Texto) . ",
                     Fonte = " . parent::transformToSql($this->Fonte) . ",
+                    Url = " . parent::transformToSql($this->Url) . ",
                     Thumb = " . parent::transformToSql($this->Thumb) . ",
+                    Destaque = " . parent::transformToSql($this->Destaque) . ",
                     DtNoticia = " . parent::transformToSql($this->DtNoticia) . ",
-                    DtAlteracao = " . parent::transformToSql($this->DtAlteracao) . ",
+                    DtAlteracao = " . parent::now() . ",
                     St = " . parent::transformToSql($this->St) . "
                 WHERE
                     Id = " . parent::transformToSql($this->Id);

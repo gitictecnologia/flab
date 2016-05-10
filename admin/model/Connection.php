@@ -35,6 +35,10 @@ class Connection
                     {
                         throw new Exception("Banco de Dados não encontrado", 1);
                     }
+                    /**
+                    * Econding to UTF-8
+                    */
+                    self::$instance->exec('set names utf8');
                 } 
                 else 
                 {

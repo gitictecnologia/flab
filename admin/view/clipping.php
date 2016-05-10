@@ -23,10 +23,10 @@ $clippings = Clipping::getAll($status);
                 <hr>
                 <table cellpadding="0" cellspacing="0" border="0" class="responsive dynamicTable display table table-bordered" width="100%">
                     <thead>
-                        <tr>
-                            <th style="10">Thumb</th>
-                            <th style="30">Titulo</th>
-                            <th style="30">Subtitulo</th>                            
+                        <tr>                            
+                            <th style="40">Titulo</th>
+                            <th style="40">Subtitulo</th>
+                            <th style="10">Data Clipping</th>
                             <th style="10">Ações</th>
                         </tr>
                     </thead>
@@ -34,12 +34,12 @@ $clippings = Clipping::getAll($status);
                         <?php                        
                         foreach($clippings as $clipping) { 
                         ?>
-                        <tr class="odd gradeX">
-                            <td><?= $clipping->Thumb ?></td>
+                        <tr class="odd gradeX">                            
                             <td><?= $clipping->Titulo ?></td>
-                            <td><?= $clipping->Subtitulo ?></td>                            
+                            <td><?= $clipping->Subtitulo ?></td>
+                            <td><?= date('d/m/Y', strtotime($clipping->DtNoticia)) ?></td>
                             <td>
-                                <a class="btn btn-warning" href="?s=clipping-edit&id=<?= $clipping->Id ?>"> <i class="icon-eye-open"></i></a>
+                                <a class="btn btn-warning" href="?s=clipping-edit&id=<?= $clipping->Id ?>" title="Editar"> <i class="icon-edit"></i></a>
                             </td>
                         </tr>
                         <?php } ?>

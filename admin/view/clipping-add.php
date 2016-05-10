@@ -11,8 +11,9 @@
 
             <div class="content">                
 
-                <form class="form-horizontal" action="action/clipping.php" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" action="controller/clipping.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="do" value="add" />
+                    <input type="hidden" id="friendlyUrl" name="friendlyUrl" value="" />
                     
                     <div class="form-row row-fluid">
                         <div class="span12">
@@ -26,7 +27,7 @@
                                     </div>
                                     <div class="row-fluid">
                                         <div class="span6">
-                                            <input id="titulo" name="titulo" value="<?= ( isset($_SESSION['clipping']['titulo']) ? $_SESSION['clipping']['titulo'] : '' ) ?>">
+                                            <input class="title-friendlyUrl" id="titulo" name="titulo" value="<?= ( isset($_SESSION['clipping']['titulo']) ? $_SESSION['clipping']['titulo'] : '' ) ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -87,7 +88,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <div class="span12">
-                                            <label for="dtNoticia">* Data</label>                                           
+                                            <label for="dtNoticia">* Data da Notícia</label>                                           
                                         </div>
                                     </div>
                                     <div class="row-fluid">
@@ -119,11 +120,30 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <div class="span12">
+                                            <label for="destaque">* Destaque (Mostrar na home)</label>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span3">
+                                            <select id="destaque" name="destaque">
+                                                <option value="0" <?= ( isset($_SESSION['clipping']['destaque']) && $_SESSION['clipping']['destaque'] == 0 ? 'selected="selected"' : '' ) ?>> Não</option>
+                                                <option value="1" <?= ( isset($_SESSION['clipping']['destaque']) && $_SESSION['clipping']['destaque'] == 1 ? 'selected="selected"' : '' ) ?>> Sim</option>                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="row-fluid">
+                                        <div class="span12">
                                             <label for="status">* Ativo</label>
                                         </div>
                                     </div>
                                     <div class="row-fluid">
-                                        <div class="span6">
+                                        <div class="span3">
                                             <select id="status" name="status">
                                                 <option value="1" <?= ( isset($_SESSION['clipping']['status']) && $_SESSION['clipping']['status'] == 1 ? 'selected="selected"' : '' ) ?>> Sim</option>
                                                 <option value="0" <?= ( isset($_SESSION['clipping']['status']) && $_SESSION['clipping']['status'] == 0 ? 'selected="selected"' : '' ) ?>> Não</option>

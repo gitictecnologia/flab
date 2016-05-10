@@ -72,155 +72,163 @@
 <script type="text/javascript" src="<?= PATHA . 'assets/' ?>js/jquery.friendurl.js?<?=rand()?>"></script><!-- limit -->
 
 
-<? if (isset($_GET['s']) && ($_GET['s'] == 'posts-add' || $_GET['s'] == 'posts-edit')) { ?>
+<?php
+/**
+*
+* Configurações do CKEditor
+*
+*/
+$URL_ALLOW_CKEDITOR = array(
+	'clipping',
+	'clipping-add',
+	'clipping-edit'
+);
+if(isset($_GET['s']) && array_keys($URL_ALLOW_CKEDITOR, $_GET['s'])) { ?>
 
-<script type="text/javascript"> 
-	/* 
-    CKEDITOR.replace('texto',{
-        enterMode: CKEDITOR.ENTER_BR,
-        shiftEnterMode: CKEDITOR.ENTER_P, 
-        toolbar: [
-		{ name: 'document', items : [ 'Source']},
-		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ] },
-		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align'], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', ] },
-		{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
-		{ name: 'insert', items: [ 'Image' , 'SpecialChar', 'HorizontalRule'] },
-		'/',
-		{ name: 'styles', items: [ 'Format'] },
-		{ name: 'others', items: [ '-' ] },
-		{ name: 'tools', items : [ 'Maximize'] }
-	],
-		filebrowserBrowseUrl : 'ckeditor/ckfinder/ckfinder.html',
-		filebrowserImageBrowseUrl : 'ckeditor/ckfinder/ckfinder.html?type=Imagens',
-		filebrowserFilesBrowseUrl : 'ckeditor/ckfinder/ckfinder.html?type=Arquivos',
-		filebrowserUploadUrl : 'ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&amp;type=arquivos',
-		filebrowserImageUploadUrl : 'ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=imagens'		
-    });
-	*/
-	
-</script>
+	<script type="text/javascript"> 
 
-<? } ?>
+	    CKEDITOR.replace('texto',
+	    	{
+	        	enterMode: CKEDITOR.ENTER_BR,
+	        	shiftEnterMode: CKEDITOR.ENTER_P, 
+	        	toolbar: [
+					{ 
+						name: 'document',
+						items : [ 'Source'] 
+					},
+					{ 
+						name: 'clipboard',
+						groups: [ 'clipboard', 'undo' ],
+						items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ]
+					},
+					{
+						name: 'basicstyles',
+						groups: [ 'basicstyles', 'cleanup' ],
+						items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ]
+					},
+					{
+						name: 'paragraph',
+						groups: [ 'list', 'indent', 'blocks', 'align'],
+						items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', ]
+					},
+					{
+						name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ]
+					},
+					{
+						name: 'insert', items: [ 'Image' , 'SpecialChar', 'HorizontalRule'] }, '/',{ name: 'styles', items: [ 'Format']
+					},
+					{
+						name: 'others', items: [ '-' ]
+					},
+					{
+						name: 'tools', items : [ 'Maximize']
+					}
+				],
+				filebrowserBrowseUrl : 'ckeditor/ckfinder/ckfinder.html',
+				filebrowserImageBrowseUrl : 'ckeditor/ckfinder/ckfinder.html?type=Imagens',
+				filebrowserFilesBrowseUrl : 'ckeditor/ckfinder/ckfinder.html?type=Arquivos',
+				filebrowserUploadUrl : 'ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&amp;type=arquivos',
+				filebrowserImageUploadUrl : 'ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=imagens'		
+			}
+		);	
+	</script>
+
+<?php } ?>
 
 <script type="text/javascript">
-$(function(){
+	$(function() {
 
-	$('a.del').click(function(){ if (confirm('Deseja arquivar este Registro ?')) return true; else return false; });
-	$('a.active').click(function(){ if (confirm('Deseja ativar este Registro ?')) return true; else return false; });
-
-
-	$('#openImagem').click(function(){
-		$('#dialogImagem').dialog('open');
-		return false;
-	});
-	// JQuery Dialog			
-	$('#dialogImagem').dialog({
-		autoOpen: false,
-		dialogClass: 'dialog',
-		buttons: {
-			"Fechar": function() {
-				$(this).dialog("close"); 
+		$('#openImagem').click(function(){
+			$('#dialogImagem').dialog('open');
+			return false;
+		});
+		
+		$('#dialogImagem').dialog({
+			autoOpen: false,
+			dialogClass: 'dialog',
+			buttons: {
+				"Fechar": function() {
+					$(this).dialog("close"); 
+				}
 			}
-		}
-	});
+		});
 
-	$('#openImagemMobile').click(function(){
-		$('#dialogImagemMobile').dialog('open');
-		return false;
-	});
-	// JQuery Dialog			
-	$('#dialogImagemMobile').dialog({
-		autoOpen: false,
-		dialogClass: 'dialog',
-		buttons: {
-			"Fechar": function() {
-				$(this).dialog("close"); 
+		$('#openImagemMobile').click(function(){
+			$('#dialogImagemMobile').dialog('open');
+			return false;
+		});
+		
+		$('#dialogImagemMobile').dialog({
+			autoOpen: false,
+			dialogClass: 'dialog',
+			buttons: {
+				"Fechar": function() {
+					$(this).dialog("close"); 
+				}
 			}
-		}
-	});
+		});
 
-	$('#openDetalhes').click(function(){
-		$('#dialogDetalhes').dialog('open');
-		return false;
-	});
-
-	// JQuery Dialog			
-	$('#dialogDetalhes').dialog({
-		autoOpen: false,
-		dialogClass: 'dialog',
-		buttons: {
-			"Fechar": function() { 
-				$(this).dialog("close"); 
+		$('#openDetalhes').click(function(){
+			$('#dialogDetalhes').dialog('open');
+			return false;
+		});
+		
+		$('#dialogDetalhes').dialog({
+			autoOpen: false,
+			dialogClass: 'dialog',
+			buttons: {
+				"Fechar": function() { 
+					$(this).dialog("close"); 
+				}
 			}
-		}
-	});
-
-	// JQuery UI Modal Dialog			
-	$('#modal').dialog({
-		autoOpen: false,
-		modal: true,
-		dialogClass: 'dialog',
-		buttons: {
-			"Fechar": function() { 
-				$(this).dialog("close"); 
+		});
+					
+		$('#modal').dialog({
+			autoOpen: false,
+			modal: true,
+			dialogClass: 'dialog',
+			buttons: {
+				"Fechar": function() { 
+					$(this).dialog("close"); 
+				}
 			}
-		}
+		});
+
+		$("div.dialog button").addClass("btn");
+
+
+		$('.cep').mask("99999-999");
+		$('.data').mask("99/99/9999");
+
+
+		$('#tempo_preparo').live('keyup', function(e) {
+	  		$(this).val($(this).val().replace(/[^0-9]/g, ''));
+		});
+
+
+		$('.telefone, .fax, .celular').focusout(function(){
+		    var phone, element;
+		    element = $(this);
+		    element.unmask();
+		    phone = element.val().replace(/\D/g, '');
+		    if(phone.length > 10) {
+		        element.mask("(99) 99999-999?9");
+		    } else {
+		        element.mask("(99) 9999-9999?9");
+		    }
+		}).trigger('focusout');
+
+		$('#linha').change(function(){
+	        if( $(this).val() == '2') {
+	        	$('.subcatlinha').hide();
+			} else {
+				$('.subcatlinha').show();
+			}
+		});
+
+
+		// Friendly URL
+		$('.title-friendlyUrl').friendurl({id : 'friendlyUrl', divider: '-'});   
 	});
-
-	$("div.dialog button").addClass("btn");
-
-	//distribuidores
-	$('#estados').change(function(){
-        if( $(this).val() ) {
-            $('#cidades').hide();
-            $('.carregando').show();
-            $.getJSON('ajax.php?search=',{cod_estados: $(this).val(), ajax: 'true'}, function(j){
-                var options = '<option value=""></option>'; 
-                for (var i = 0; i < j.length; i++) {
-                    options += '<option value="' + j[i].cod_cidades + '">' + j[i].nome + '</option>';
-                }   
-                $('#cidades').html(options).show();
-                $('.carregando').hide();
-            });
-        } else {
-            $('#cidades').html('<option value="">-- Escolha um estado --</option>');
-        }
-    });
-
-	$('.cep').mask("99999-999");
-	$('.data').mask("99/99/9999");
-	//$('#tempo_preparo').mask("99999-999");
-
-	$('#tempo_preparo').live('keyup', function(e) {
-	  $(this).val($(this).val().replace(/[^0-9]/g, ''));
-	});
-
-	$('.telefone, .fax, .celular').focusout(function(){
-	    var phone, element;
-	    element = $(this);
-	    element.unmask();
-	    phone = element.val().replace(/\D/g, '');
-	    if(phone.length > 10) {
-	        element.mask("(99) 99999-999?9");
-	    } else {
-	        element.mask("(99) 9999-9999?9");
-	    }
-	}).trigger('focusout');
-
-	$('#linha').change(function(){
-        if( $(this).val() == '2') {
-        	$('.subcatlinha').hide();
-		} else {
-			$('.subcatlinha').show();
-		}
-	});
-	setformfieldsize(jQuery('#descricao'), 400, 'charsremain')
-});
-   
-
-// Friendly URL
-$('#titulo').friendurl({id : 'friendly_url', divider: '-'});    
-    
     
 </script>

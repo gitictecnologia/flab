@@ -8,6 +8,7 @@ setcookie("ck_authorized", "true", 0, "/");
 
 require('util/util.php');
 require('util/auth.php');
+require('util/pathImages.php');
 
 require('model/autoload.php');
 
@@ -112,7 +113,7 @@ if (isset($_GET['a']) && !array_key_exists($_GET['a'], $secoes))
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
         <title>FLab | <?php if(isset($_GET['s'])) { echo $title[$_GET['s']]; } else { echo 'Dashboard'; } ?></title>
 

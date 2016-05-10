@@ -1,7 +1,8 @@
 <?php
 
 require('../util/util.php');
-//require('../util/auth.php');
+require('../util/auth.php');
+require('../util/pathImages.php');
 require('../model/autoload.php');
 
 
@@ -13,15 +14,7 @@ switch ($_REQUEST['do'])
         * Extrai variaveis do post
         */
         extract($_POST);
-
-
-        $response = array('status' => true, 'message' => '');
-
-
-        /**
-        * Reposta JSON
-        */
-        header('Content-Type: application/json');        
+        $_SESSION['clipping'] = $_POST;
 
 
         /**
@@ -29,115 +22,193 @@ switch ($_REQUEST['do'])
         * Validação das informações
         */
 
-        if(empty($newslettersNome))
+        if(empty($titulo))
         {
-            $response['status'] = false;
-            $response['message'] = "<br>Campo Nome é inválido";
+            Erro('Campo "Titulo" inválido');
         }        
 
-        if(empty($newslettersEmail) || !validaEmail($newslettersEmail))
+        if(empty($subtitulo))
         {
-            $response['status'] = false;            
-            $response['message'] = "<br>Campo Email é inválido";      
+            Erro('Campo "Subtitulo" inválido');            
+        }
+        
+        if(empty($texto))
+        {
+            Erro('Campo "Texto" inválido');
         }
 
-        
-        if($response['status'] == false)
-        {            
-            echo json_encode($response);
-            return;
-            break;
-        }
-            
-        
-
-        /**
-        *
-        *
-        * Verifica se o email já axiste no Banco de Dados
-        *
-        */
-        if(Newsletter::getByEmail($newslettersEmail) == NULL)
+        if(empty($dtNoticia))
         {
-            /**
-            *
-            * Persistencia
-            */        
-            $newsletter = new Newsletter();
-            $newsletter->set('NomeUsuario', $newslettersNome);
-            $newsletter->set('NomeEmpresa', $newslettersNomeEmpresa);
-            $newsletter->set('Email', $newslettersEmail);
-            $newsletter->set('St', 1);
-
-            if($newsletter->insert())
-            {            
-                $response['message'] = "<br>Cadastro efetuado com sucesso";
-
-                echo json_encode($response);
-                return;
-            }
-            else
-            {            
-                $response['message'] = "<br>Não foi possível realizar o cadastro, tente mais tarde.";
-
-                echo json_encode($response);
-                return;
-            }
+            Erro('Campo "Data da Notícia" inválido');
         }
         else
         {
-            $response['status'] = false;            
-            $response['message'] = "<br>Esse email já está cadastrado em nosso Banco de Dados";
+            $dtNoticia = implode('-', array_reverse(explode('/', $dtNoticia)));
+        }
 
-            echo json_encode($response);
-            return;
+
+        /**
+        * Imagem
+        */
+        $_imagem = NULL;
+        if(isset($_FILES['thumb']) && !empty($_FILES['thumb']['name']))
+        {
+            /**
+            *
+            * Renomeia a imagem
+            */
+            $_imagem = time() . '.' . array_pop(explode('.', $_FILES['thumb']['name']));            
+
+            if(!copy($_FILES['thumb']['tmp_name'], $pathImage['clipping']['abs'] . $_imagem))
+            {
+                Erro('Campo "Imagem" falha ao copiar o arquivo');
+            }
+        }
+
+
+        /**
+        * Tem erros ?
+        */
+        if(!semErros())
+        {
+            Go();
             break;
         }
         
+        
+        /**
+        *
+        * Persistencia
+        */
 
+        $clipping = new Clipping();
+        $clipping->Titulo = $titulo;
+        $clipping->Subtitulo = $subtitulo;
+        $clipping->Texto = $texto;
+        $clipping->Fonte = $fonte;        
+        $clipping->Url = $friendlyUrl;
+        $clipping->Thumb = $_imagem;
+        $clipping->Destaque = $destaque;
+        $clipping->DtNoticia = $dtNoticia;
+        $clipping->St = $status;
+
+        if($clipping->insert())
+        {
+            unset($_SESSION['clipping']);
+
+            Info('Operação realizado com sucesso');
+            Go('../?s=clipping');
+            break;
+        }        
+
+        Erro('Operação não pode ser concluída');
+        Go();
         break;
 
-    case 'edit':        
-        break;
-	
-    case 'enable':
+    case 'edit':
 
-        $temaId = $_GET['temaId'];
-        $tema = Tema::getById($temaId);
-        if($tema != NULL) {            
-            $tema->setSt(1);
-            if(Contexto::update($tema)) {
-                
-                echo 'Tema desativado com sucesso';
-            } else {
+        /**
+        * Extrai variaveis do post
+        */
+        extract($_POST);
 
-                echo 'Houve um problema sistemico ao tentar afetuar a ação desejada';            
-            }
-        } else {
 
-            echo 'Tema não encontrado em nosso banco de dados';
+        $clipping = Clipping::getById($id);
+        if(is_null($clipping))
+        {
+            Erro('Operação não pode ser concluída');
+            Go();
+            break;
         }
 
-        break;
 
-    case 'disable':
+        /**
+        *
+        * Validação das informações
+        */
 
-        $temaId = $_GET['temaId'];
-        $tema = Tema::getById($temaId);
-        if($tema != NULL) {            
-            $tema->setSt(0);
-            if(Contexto::update($tema)) {
-                
-                echo 'Tema desativado com sucesso';
-            } else {
+        if(empty($titulo))
+        {
+            Erro('Campo "Titulo" inválido');
+        }        
 
-                echo 'Houve um problema sistemico ao tentar afetuar a ação desejada';            
-            }
-        } else {
-
-            echo 'Tema não encontrado em nosso banco de dados';
+        if(empty($subtitulo))
+        {
+            Erro('Campo "Subtitulo" inválido');            
+        }
+        
+        if(empty($texto))
+        {
+            Erro('Campo "Texto" inválido');
         }
 
+        if(empty($dtNoticia))
+        {
+            Erro('Campo "Data da Notícia" inválido');
+        }
+        else
+        {
+            $dtNoticia = implode('-', array_reverse(explode('/', $dtNoticia)));
+        }
+
+
+        /**
+        * Imagem
+        */
+        $_imagem = NULL;
+        if(isset($_FILES['thumb']) && !empty($_FILES['thumb']['name']))
+        {
+            /**
+            *
+            * Renomeia a imagem
+            */
+            $_imagem = time() . '.' . array_pop(explode('.', $_FILES['thumb']['name']));            
+
+            if(!copy($_FILES['thumb']['tmp_name'], $pathImage['clipping']['abs'] . $_imagem))
+            {
+                Erro('Campo "Imagem" falha ao copiar o arquivo');
+            }            
+        }
+        else
+        {
+            $_imagem = $clipping->Thumb;
+        }
+
+
+        /**
+        * Tem erros ?
+        */
+        if(!semErros())
+        {
+            Go();
+            break;
+        }
+        
+        
+        /**
+        *
+        * Update
+        */
+        
+        $clipping->Titulo = $titulo;
+        $clipping->Subtitulo = $subtitulo;
+        $clipping->Texto = $texto;
+        $clipping->Fonte = $fonte;        
+        $clipping->Url = $friendlyUrl;
+        $clipping->Thumb = $_imagem;
+        $clipping->Destaque = $destaque;
+        $clipping->DtNoticia = $dtNoticia;
+        $clipping->St = $status;
+
+        if($clipping->update())
+        {
+            Info('Operação realizado com sucesso');
+            Go('../?s=clipping-edit&id=' . $id);
+            break;
+        }        
+
+        Erro('Operação não pode ser concluída');
+        Go();
         break;
 
     default:
