@@ -5,9 +5,7 @@
             
             <?php showErros(); ?>
 
-            <div class="title">
-                <h4><?= ($title[$_GET['s']])  ?></span></h4>
-            </div>
+            <div class="title"><h4><?= ($title[$_GET['s']])  ?></h4></div>
 
             <div class="content">                
 

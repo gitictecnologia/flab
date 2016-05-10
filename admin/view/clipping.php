@@ -11,9 +11,7 @@ $clippings = Clipping::getAll($status);
 
             <?php showErros(); ?>
 
-            <div class="title">
-                <h4>Empresas</h4>
-            </div>            
+            <div class="title"><h4><?= ($title[$_GET['s']])  ?></h4></div>            
             <div class="content noPad clearfix">
 
                 <div class="col-sm-3">
