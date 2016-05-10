@@ -54,7 +54,7 @@
 
                 <img src="assets/images/figures/beneficios_quadrados_branco.png">
                 <p class="text"><b>Metodologia</b></p>
-                <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">todos os serviços de um grupo full service  de comunicação e marketing, uma das maiores e mais premiadas agências do BR (planejamento estratégico, branding, criação e desenvolvimento de comunicação, estratégia de crescimento)</p>
+                <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">todos os serviços de um grupo full service  de comunicação e marketing, uma das maiores e mais premiadas agências do Brasil (planejamento estratégico, branding, criação e desenvolvimento de comunicação, estratégia de crescimento)</p>
 
                 <img src="assets/images/figures/beneficios_quadrados_branco.png">
                 <p class="text"><b>Estrutura</b> </p>
