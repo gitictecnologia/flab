@@ -3,7 +3,7 @@
         padding-top: 80px;
         padding-bottom: 14px;
         color: #E6E6E6;
-    	min-height:600px;
+    	min-height: 600px;
         background-color: #fff;
         font-family: 'Roboto';                
     }
@@ -14,7 +14,7 @@
     }
     .carousel-clipping .item {    
         background-color: #f5f5f5;
-        height: 350px;
+        height: 450px;
         padding: 5px 5px;
         /*border: 0.5px solid #b7b7b7;*/
     }

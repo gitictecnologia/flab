@@ -113,6 +113,8 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="destaque" value="0">
+                            <!--
                             <br>
                             <div class="row-fluid">
                                 <div class="span12">
@@ -131,6 +133,7 @@
                                     </div>
                                 </div>
                             </div>
+                            -->
 
                             <br>
                             <div class="row-fluid">
