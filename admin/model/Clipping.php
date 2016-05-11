@@ -197,7 +197,7 @@ class Clipping extends Contexto implements IContexto
             //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
             return NULL;
         }        
-    }    
+    }
 
 
     public static function getAll($st = -1)
@@ -209,12 +209,12 @@ class Clipping extends Contexto implements IContexto
             if($st == -1)
             {
                 $sql = "
-                    SELECT * FROM " . self::$table;
+                    SELECT * FROM " . self::$table . " ORDER BY Posicao ASC";
             }
             else
             {
                 $sql = "
-                    SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st);                    
+                    SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st) . " ORDER BY Posicao ASC";
             }       
             
             $result = parent::query($sql);
