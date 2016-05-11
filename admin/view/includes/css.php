@@ -45,3 +45,9 @@ http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-w
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<style>
+	.sidenav {
+		width: 100%;
+	}
+</style>

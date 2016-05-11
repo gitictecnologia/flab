@@ -4,6 +4,7 @@ require_once 'configs/sa_funcoeslib.php';
 require_once 'configs/sa_url-amigavel.php';
 require_once 'configs/sa_cache.php';
 require_once 'configs/sa_css-js.php';
+require_once 'admin/util/pathImages.php';
 require_once 'admin/model/autoload.php';
 ?>
 
@@ -19,24 +20,33 @@ require_once 'admin/model/autoload.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
+        
         <link rel="icon" type="image/png" href="assets/images/favicon.png">  
+
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-        
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>        
+
         <!-- Global CSS -->
-        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-        <!-- Plugins CSS -->    
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">        
+
+        <!-- Plugins CSS -->
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
         
+        <!-- OWL Carousel -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        
+
         <!-- Theme CSS -->
         <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <![endif]-->       
 
 
         <?php
@@ -110,7 +120,105 @@ require_once 'admin/model/autoload.php';
             margin-right: 15px;
         }
         </style>
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+        <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>        
+        <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+        <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/newsletters.js"></script>
+
+        <!-- Vimeo video API -->
+        <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script type="text/javascript" src="assets/js/vimeo.js"></script>
+
+
         <script>
+
+            // Clipping            
+            $('.carousel-clipping').owlCarousel({                
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive: { 
+                    0:{items:1},
+                    600:{items:1},
+                    1000:{items:2}
+                },
+                navText: [
+                  "<span class='glyphicon glyphicon-circle-arrow-left'></span>",
+                  "<span class='glyphicon glyphicon-circle-arrow-right'></span>"
+                ],
+            });
+
+            // Building modal clipping
+            $('.modal-view-clipping').click(function (event) {                
+                event.preventDefault();                
+                var id = $(this).attr('id').replace('clipping-', '');
+                $.ajax({
+                    method: "GET",
+                    url: PATHA + 'controller/clipping.php',
+                    data: { "do":"get", "id":id },
+                    success: function (data) {
+                        if(data.status == true) {                        
+                            var html = '' +
+                            '<div class="modal fade modal-clipping" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">' +
+                                '<div class="modal-dialog modal-lg">' +
+                                    '<div class="modal-content">' +
+                                        '<div class="modal-header">' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' +
+                                                    '<a class="close-modal" data-dismiss="modal" aria-label="Close" style="float: right; text-decoration: none; cursor: pointer">X</a>' +
+                                                    '<h2>' + data.clipping.titulo + '</h2>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="modal-body">' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' + 
+                                                    '<h4>' + data.clipping.subtitulo + '</h4>' +
+                                                '</div>' +
+                                            '</div>' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' +
+                                                    '<p>' + data.clipping.texto + '</p>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="modal-footer">' +
+                                            '<div class="row">' +
+                                                '<div class="col-xs-6 text-left">' +
+                                                    '<p>Fonte: ' + data.clipping.fonte + '</p>' +
+                                                '</div>' +
+                                                '<div class="col-xs-6 text-right">' +
+                                                    '<p>Data: ' + data.clipping.dtNoticia + '</p>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
+
+                            $('.box-clipping').html(html);
+                            $('.modal-clipping').modal('show');
+                        } else {
+                            alert(data.message);
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert('Falha na operação');
+                    }
+                });                
+            });
+
+
             // Menu active
             $('.main-nav .nav-item').click(function() {
                 $('.main-nav .nav-item').removeClass('active');

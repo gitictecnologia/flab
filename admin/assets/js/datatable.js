@@ -8,6 +8,7 @@ $(document).ready(function() {
 			"bJQueryUI": false,
 			"bAutoWidth": false,
 			"bLengthChange": true,
+			"iDisplayLength": 100,
 			"fnInitComplete": function(oSettings, json) {
 				var search = $('.dataTables_filter > label > input');
 				search.attr('id', 'search');

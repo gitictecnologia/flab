@@ -48,7 +48,7 @@ class Contexto
         *
         */
 
-        $str = addcslashes($str, '\'');
+        $str = addslashes($str);
          
         if(is_numeric($str))
         {

@@ -22,9 +22,11 @@
 	<!-- Ares como funciona -->
 	<?php include 'includes/site_comofunciona.php'; ?>
 
-    
 	<!-- Timeline -->
 	<?php include 'includes/site_timeline.php'; ?>
+
+	<!-- Clipping -->
+	<?php include 'includes/site_clipping.php'; ?>
 
 	<!-- Subscribe -->
 	<?php //include 'includes/site_subscribe.php'; ?>
