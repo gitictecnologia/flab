@@ -5,7 +5,7 @@
         color: #E6E6E6;
     	min-height:780px;
         background-color: #fff;
-        font-family: 'Roboto';
+        font-family: 'Roboto';                
     }
     .clipping .title-h1 {
         font-size: 3.6em;
@@ -16,6 +16,7 @@
         background-color: #f5f5f5;
         height: 350px;
         padding: 5px 5px;
+        border: 1px solid #b7b7b7;
     }
     .carousel-clipping .owl-prev {
         float: left;
@@ -35,7 +36,7 @@
     .carousel-clipping .item h1 {
         color: #666666;
         font-size: 2em;   
-        font-weight: 900;     
+        font-weight: 900;    
     }
 
     .carousel-clipping .item .clipping-body p {
@@ -55,8 +56,21 @@
         font-weight: 900;
         position: absolute;
         bottom: -10px;
-        width: 100%;
-        margin-left: -5px;     
+        width: 99.8%;
+        margin-left: -5px;
+        height: 60px;
+    	padding-top: 10px;
+    	transition: 0.3s
+    }
+
+    .carousel-clipping .item .clipping-footer:hover {    	
+    	background-color: #666;
+    	transition: 0.3s;
+    }
+
+    .carousel-clipping .item .clipping-footer .glyphicon {
+    	float: right;
+    	top: 7px;
     }
 
 </style>
@@ -84,11 +98,13 @@
                                 </div>
                             </div>                            
                         </div>
+                        <a href="#">
                         <div class="row clipping-footer">                            
                             <div class="col-sm-12">                                
                                 <p>LEIA O ARTIGO <span class="glyphicon glyphicon-arrow-right"></span></p>                                
                             </div>
                         </div>
+                        </a>
                     </div>
                     <div class="item">
                         <div class="row">
