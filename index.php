@@ -256,6 +256,14 @@ require_once 'admin/model/autoload.php';
                 return false;
             });
 
+            // Animação seta Timeline > Clipping
+            $('.clk-seta-clipping').click(function () {
+                $('html, body').animate({ scrollTop: $("#clipping").offset().top - 20}, 500);
+                return false;
+            });
+
+            
+
             // Animação seta Timeline > Newsletters
             $('.clk-seta-newsletters').click(function () {
                 $('html, body').animate({ scrollTop: $("#newsletters").offset().top - 20}, 500);

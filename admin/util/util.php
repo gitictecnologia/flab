@@ -31,6 +31,11 @@ else if($_SERVER['HTTP_HOST'] == 'flab.solutions' || $_SERVER['HTTP_HOST'] == 'w
     define('PATH', '/');
     define('PATHA', '/admin/');
 }
+else if($_SERVER['HTTP_HOST'] == 'website.flabsolutions.mediainteractive.com.br')
+{
+    define('PATH', '/');
+    define('PATHA', '/admin/');
+}
 else
 {
     define('PATH',  '/');
