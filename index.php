@@ -4,6 +4,7 @@ require_once 'configs/sa_funcoeslib.php';
 require_once 'configs/sa_url-amigavel.php';
 require_once 'configs/sa_cache.php';
 require_once 'configs/sa_css-js.php';
+require_once 'admin/util/pathImages.php';
 require_once 'admin/model/autoload.php';
 ?>
 
@@ -156,7 +157,66 @@ require_once 'admin/model/autoload.php';
                 ],
             });
 
+            // Building modal clipping
+            $('.modal-view-clipping').click(function (event) {                
+                event.preventDefault();                
+                var id = $(this).attr('id').replace('clipping-', '');
+                $.ajax({
+                    method: "GET",
+                    url: PATHA + 'controller/clipping.php',
+                    data: { "do":"get", "id":id },
+                    success: function (data) {
+                        if(data.status == true) {                        
+                            var html = '' +
+                            '<div class="modal fade modal-clipping" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">' +
+                                '<div class="modal-dialog modal-lg">' +
+                                    '<div class="modal-content">' +
+                                        '<div class="modal-header">' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' +
+                                                    '<a class="close-modal" data-dismiss="modal" aria-label="Close" style="float: right; text-decoration: none; cursor: pointer">X</a>' +
+                                                    '<h2>' + data.clipping.titulo + '</h2>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="modal-body">' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' + 
+                                                    '<h4>' + data.clipping.subtitulo + '</h4>' +
+                                                '</div>' +
+                                            '</div>' +
+                                            '<div class="row">' +
+                                                '<div class="col-sm-12">' +
+                                                    '<p>' + data.clipping.texto + '</p>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<div class="modal-footer">' +
+                                            '<div class="row">' +
+                                                '<div class="col-xs-6 text-left">' +
+                                                    '<p>Fonte: ' + data.clipping.fonte + '</p>' +
+                                                '</div>' +
+                                                '<div class="col-xs-6 text-right">' +
+                                                    '<p>Data: ' + data.clipping.dtNoticia + '</p>' +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
 
+                            $('.box-clipping').html(html);
+                            $('.modal-clipping').modal('show');
+                        } else {
+                            alert(data.message);
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                        alert('Falha na operação');
+                    }
+                });                
+            });
 
 
             // Menu active

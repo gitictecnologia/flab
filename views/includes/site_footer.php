@@ -53,6 +53,10 @@
 </footer><!--//footer-->
 
 
+<!-- Modal clipping-->
+<div class="box-clipping"></div>
+
+
 
 
 <!-- Video Modal -->

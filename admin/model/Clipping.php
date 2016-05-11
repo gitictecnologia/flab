@@ -16,6 +16,7 @@ class Clipping extends Contexto implements IContexto
             'Url' => NULL,
             'Thumb' => NULL,
             'Destaque' => 0,
+            'Posicao' => 0,
             'DtNoticia' => NULL,
             'DtCriacao' => NULL,
             'DtAlteracao' => NULL,
@@ -53,7 +54,7 @@ class Clipping extends Contexto implements IContexto
     {
         foreach($params as $key => $value)
         {
-            $this->$key = $value;
+            $this->{$key} = $value;
         }
     }   
 
@@ -64,7 +65,7 @@ class Clipping extends Contexto implements IContexto
         {
             $sql = "
                 INSERT INTO " . self::$table . "
-                    (Titulo, Subtitulo, Texto, Fonte, Url, Thumb, Destaque, DtNoticia, DtCriacao, St)
+                    (Titulo, Subtitulo, Texto, Fonte, Url, Thumb, Destaque, Posicao, DtNoticia, DtCriacao, St)
                 VALUES (
                     " . parent::transformToSql($this->Titulo) . ",
                     " . parent::transformToSql($this->Subtitulo) . ",
@@ -73,6 +74,7 @@ class Clipping extends Contexto implements IContexto
                     " . parent::transformToSql($this->Url) . ",
                     " . parent::transformToSql($this->Thumb) . ",
                     " . parent::transformToSql($this->Destaque) . ",
+                    " . parent::transformToSql($this->Posicao) . ",
                     " . parent::transformToSql($this->DtNoticia) . ",
                     " . parent::now() . ",
                     " . parent::transformToSql($this->St) . ")";
@@ -114,6 +116,7 @@ class Clipping extends Contexto implements IContexto
                     Url = " . parent::transformToSql($this->Url) . ",
                     Thumb = " . parent::transformToSql($this->Thumb) . ",
                     Destaque = " . parent::transformToSql($this->Destaque) . ",
+                    Posicao = " . parent::transformToSql($this->Posicao) . ",
                     DtNoticia = " . parent::transformToSql($this->DtNoticia) . ",
                     DtAlteracao = " . parent::now() . ",
                     St = " . parent::transformToSql($this->St) . "

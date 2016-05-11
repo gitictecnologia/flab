@@ -17,7 +17,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost:8080' || $_SERVER['HTTP_HOST'] == 'localh
 	}
 	else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'ic1-PC')
 	{
-		define('PATH', 	'/git/flab/flab/site/');
+		define('PATH', 	'/git/flab/flab/');
 		define('PATHA', '/git/flab/flab/admin/');
 	}
 }

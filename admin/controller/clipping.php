@@ -96,6 +96,23 @@ switch ($_REQUEST['do'])
         {
             unset($_SESSION['clipping']);
 
+            /**
+            *
+            * Atualiza as posições dos registros, já que foi inserido com sucesso
+            * 
+            */
+            $clippings = Clipping::getAll(1);
+            foreach($clippings as $c)
+            {
+                $c->Posicao++;
+                $c->update(); 
+            }
+
+
+            $clipping->Posicao = 1;
+            $clipping->update();
+
+
             Info('Operação realizado com sucesso');
             Go('../?s=clipping');
             break;
@@ -209,6 +226,53 @@ switch ($_REQUEST['do'])
 
         Erro('Operação não pode ser concluída');
         Go();
+        break;
+
+    case 'get':
+
+        /**
+        * ID do Clipping
+        */
+        $id = isset($_GET['id']) ? $_GET['id'] : 0;
+
+        $response = array(
+            'status' => true,
+            'message' => '',
+            'clipping' => NULL
+        );
+
+        if($id > 0)
+        {
+            $clipping = Clipping::getById($id);
+
+            if(!is_null($clipping))
+            {
+                $_clipping = array(
+                    'img' => $clipping->Thumb,
+                    'titulo' => $clipping->Titulo,
+                    'subtitulo' => $clipping->Subtitulo,
+                    'texto' => $clipping->Texto,
+                    'dtNoticia' => date('d/m/Y', strtotime($clipping->DtNoticia)),
+                    'fonte' => (is_null($clipping->Fonte) ? 'N/D' : $clipping->Fonte),
+                );
+                $response['clipping'] = $_clipping;
+            }
+            else
+            {
+                $response['status'] = false;
+                $response['message'] = 'Falha na operação';
+            }            
+        }
+        else
+        {
+            $response['status'] = false;
+            $response['message'] = 'Falha na operação';
+        }
+
+
+
+        header('Content-Type: application/json');        
+        echo json_encode($response);
         break;
 
     default:
