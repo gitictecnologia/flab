@@ -13,13 +13,19 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <figure class="profile" style="text-align: center;"><img src="assets/images/logo/logo_fischer_transp.png" width="300" alt="" style="max-width:100%;" /></figure><br/><br/>
+            <figure class="profile" style="text-align: center;">
+                <a href="http://fischeramerica.com.br" target="_blank">
+                    <img src="assets/images/logo/logo_fischer_transp.png" width="300" alt="" style="max-width:100%;" />
+                </a>
+            </figure>
+            <br/>
+            <br/>
             <div class="container">
                 <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
                         <div class="item active">
                             <div class="content">
                                 <blockquote style="margin-top:80px;">
-                                    <img src="assets/images/figures/aspas.png" style="margin-top: -55px; float:left;">
+                                    <img src="assets/images/figures/aspas.png" style="margin-top: -55px; float:left;">                                    
 									<!-- <i class="fa fa-quote-left" style="font-size: 46px; top: -40px;"></i> -->
                                     <p style="font-weight: normal; text-align: center; font-style: italic; font-size: 0.9em; float:left; width:85%;">
                                         Acreditamos que a inovação e a evolução do negócio de comunicação e marketing
