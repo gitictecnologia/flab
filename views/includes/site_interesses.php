@@ -65,7 +65,7 @@
                 <div class="col-md-10 x-box" style="min-height: 280px;">
                     <h1>Projetos</h1>
                     <p>que tenham a ver com o contexto de negócios<br> das seguintes áreas (produtos ou serviços)<br> e focados em B2C</p>
-					<!-- <i class="fa fa-angle-down" style="font-size: 50px; margin-top: 60px;"></i>-->
+                    <!-- <i class="fa fa-angle-down" style="font-size: 50px; margin-top: 60px;"></i>-->
                 </div>                    
             </div>               
                           
@@ -74,16 +74,16 @@
                 <p><span>&bull;</span> Melhoria na relação com o dinheiro (vida financeira)</p>
                 <p><span>&bull;</span> Produtos ou serviços que visam a melhoria da relação com o corpo e a saúde</p>
                 <p><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços</p>
-                <p style="margin-bottom: 0px;"><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços ligados ao entretenimento (viagem, cinema, restaurante, férias, hotel etc.)</p><br>
+                <p style="margin-bottom: 0px;"><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços ligados ao entretenimento (viagem, cinema, restaurante, férias, hotel etc.)</p>                
                 <p><span>&bull;</span> Produtos ou serviços de inteligência para o varejo</p>
-                <p><span>&bull;</span> Serviços ligados so entretenimento esportivo (futebol)</p>
+                <p><span>&bull;</span> Serviços ligados ao entretenimento esportivo (futebol)</p>
                 <p><span>&bull;</span> Inteligências em segmentação e compra de mídia</p>
                 <br>
                 <br>
                 <br>
             </div>
             <div style="width:auto;text-align:center;">
-                <a href="#comofunciona" class="clk-seta-comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin:0px 0 50px 0"></i></a>
+                <a href="#comofunciona" class="clk-seta-comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#666666;font-weight:thin;margin:0px 0 50px 0"></i></a>
             </div>
         </div>
         <div class="col-md-2"></div>

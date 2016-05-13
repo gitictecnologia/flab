@@ -13,16 +13,16 @@
         margin-top: -10px;
         font-size: 1.3em;
         font-weight: 700;
-		padding-top: 20px;
+        padding-top: 20px;
     }
     .footer .footer-email {
         margin-top: 30px;
         color: #76f983;
     }
-	.footer .footer-email a{
+    .footer .footer-email a{
         color: #76f983;
     }
-	
+    
 
 </style>
 <!-- ******FOOTER****** --> 
@@ -34,23 +34,27 @@
                 <div class="row">
                     <div class="visible-md visible-lg col-md-10 text-left">
                         <img src="assets/images/logo/logo-branco.png" style="height: 130px">
-						<p class="footer-description">é uma unidade de negócios <a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png"  border="0" style="margin-bottom:30px;"></a></p>
+                        <p class="footer-description">é uma unidade de negócios <a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png"  border="0" style="margin-bottom:30px;"></a></p>
                     </div>
                     <div class="visible-xs visible-sm col-sm-12 col-xs-12 text-center">
                         <img src="assets/images/logo/logo-branco.png" style="height: 130px">
-						<p class="footer-description">é uma unidade de negócios <br/><a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png" border="0"></a></p>
-						<p class="footer-email">info@flab.solutions</p>
+                        <p class="footer-description">é uma unidade de negócios <br/><a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png" border="0"></a></p>
+                        <p class="footer-email">info@flab.solutions</p>
                     </div>
-					<div class="visible-md visible-lg col-md-2 text-right"  style="margin-top:150px;">
+                    <div class="visible-md visible-lg col-md-2 text-right"  style="margin-top:150px;">
                         <p class="footer-email"><a href="mailto:info@flab.solutions">info@flab.solutions</a></p>
                     </div>
-					
+                    
                 </div><!--//row-->                
             </div>
             <div class="col-md-2 col-xs-1"></div>
         </div>
     </div><!--//footer-content-->    
 </footer><!--//footer-->
+
+
+<!-- Modal clipping-->
+<div class="box-clipping"></div>
 
 
 
@@ -71,21 +75,3 @@
         </div><!--//modal-content-->
     </div><!--//modal-dialog-->
 </div><!--//modal-->
-
-
-
-<!-- Javascript -->
-<script type="text/javascript" src="assets/plugins/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
-<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
-<script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
-<script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
-<script type="text/javascript" src="assets/js/newsletters.js"></script>
-
-<!-- Vimeo video API -->
-<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-<script type="text/javascript" src="assets/js/vimeo.js"></script>

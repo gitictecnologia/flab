@@ -1,7 +1,7 @@
 <style>
     #comofunciona {
         background-color: #FFFFFF;
-		min-height:750px;
+		min-height:780px;
 		padding-top: 50px;
     }
     #comofunciona .title-h1 {

@@ -57,7 +57,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <h1 class="title-h1">Acompanhe as novidades</h1>
-            <span>As inscrições começam em <strong>1°  de junho</strong>. Deixe seus dados e avisaremos sobre as próximas fases.</span>
+            <span>As inscrições começam em <strong>1° &nbsp;de junho</strong>. Deixe seus dados e avisaremos sobre as próximas fases.</span>
         
             <h2 class="title text-center"></h2>
             <div class="row">
@@ -86,7 +86,7 @@
 
                         <div class="row newsletters-resposnse" style="display: none; padding-bottom: 0;">
                             <div class="col-md-6">                        
-                                <p>Teste</p>
+                                <p></p>
                             </div>
                         </div>
 
