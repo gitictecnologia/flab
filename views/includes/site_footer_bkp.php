@@ -13,16 +13,11 @@
         margin-top: -10px;
         font-size: 1.3em;
         font-weight: 700;
-		padding-top: 20px;
     }
     .footer .footer-email {
         margin-top: 30px;
-        color: #76f983;
+        
     }
-	.footer .footer-email a{
-        color: #76f983;
-    }
-	
 
 </style>
 <!-- ******FOOTER****** --> 
@@ -30,21 +25,18 @@
     <div class="footer-content">
         <div class="row">
             <div class="col-md-2 col-xs-1"></div>
-            <div class="col-md-8 col-xs-10">
+            <div class="col-md-8 col-xs-8">
                 <div class="row">
-                    <div class="visible-md visible-lg col-md-10 text-left">
+                    <div class="col-sm-8 col-xs-10">
+                        <p class="footer-email">info@flab.solutions</p>
+                        <p class="footer-description">flab.solutions é uma unidade de negócios <img src="assets/images/logo/logo-fischer.png"></p>                    
+                    </div>
+                    <div class="visible-md visible-lg col-md-4 text-right">
                         <img src="assets/images/logo/logo-branco.png" style="height: 130px">
-						<p class="footer-description">é uma unidade de negócios <a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png"  border="0" style="margin-bottom:30px;"></a></p>
                     </div>
                     <div class="visible-xs visible-sm col-sm-12 col-xs-12 text-center">
                         <img src="assets/images/logo/logo-branco.png" style="height: 130px">
-						<p class="footer-description">é uma unidade de negócios <br/><a href="http://www.fischeramerica.com.br/" target="_blank"><img src="assets/images/logo/logo-fischer.png" border="0"></a></p>
-						<p class="footer-email">info@flab.solutions</p>
                     </div>
-					<div class="visible-md visible-lg col-md-2 text-right"  style="margin-top:150px;">
-                        <p class="footer-email"><a href="mailto:info@flab.solutions">info@flab.solutions</a></p>
-                    </div>
-					
                 </div><!--//row-->                
             </div>
             <div class="col-md-2 col-xs-1"></div>

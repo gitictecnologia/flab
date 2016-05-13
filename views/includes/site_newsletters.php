@@ -57,7 +57,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <h1 class="title-h1">Acompanhe as novidades</h1>
-            <span>As inscrições começam em <strong>1° de junho</strong>. Deixe seus dados e te avisamos sobre as próximas fases.</span>
+            <span>As inscrições começam em <strong>1°  de junho</strong>. Deixe seus dados e avisaremos sobre as próximas fases.</span>
         
             <h2 class="title text-center"></h2>
             <div class="row">
@@ -80,7 +80,7 @@
 
                         <div class="row">
                             <div class="col-md-6">                        
-                                <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="Email" value="" required>
+                                <input type="text" class="form-control" id="newslettersEmail" name="newslettersEmail" placeholder="E-mail" value="" required>
                             </div>
                         </div>
 

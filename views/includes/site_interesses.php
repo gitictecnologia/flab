@@ -48,13 +48,13 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h1 class="title-h1">Áreas de Interesse</h1>
+            <h1 class="title-h1">Áreas de interesse</h1>
             
             <div class="row" style="margin-left: -5px">
                 <div class="col-md-5 x-box">
                     <h1>Requisito</h1>
                     <h2>Principal</h2>
-                    <p>presença nas plataformas mobile</p>
+                    <p>presença na plataforma mobile</p>
                 </div>
                 <div class="col-md-5 x-box" style="padding-top: 70px;">
                     <h1>Startups</h1>                        
@@ -74,17 +74,16 @@
                 <p><span>&bull;</span> Melhoria na relação com o dinheiro (vida financeira)</p>
                 <p><span>&bull;</span> Produtos ou serviços que visam a melhoria da relação com o corpo e a saúde</p>
                 <p><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços</p>
-                <p style="margin-bottom: 0px;"><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços ligados a entretenimento
-                <p style="margin-top: 0px;"><span>&nbsp;</span> (viagem, cinema, restaurante, férias, hotel etc.)</p>
+                <p style="margin-bottom: 0px;"><span>&bull;</span> Processo de escolha e/ou compra de produtos e serviços ligados ao entretenimento (viagem, cinema, restaurante, férias, hotel etc.)</p><br>
                 <p><span>&bull;</span> Produtos ou serviços de inteligência para o varejo</p>
-                <p><span>&bull;</span> Serviços ligados à entretenimento esportivo (Futebol)</p>
+                <p><span>&bull;</span> Serviços ligados so entretenimento esportivo (futebol)</p>
                 <p><span>&bull;</span> Inteligências em segmentação e compra de mídia</p>
                 <br>
                 <br>
                 <br>
             </div>
             <div style="width:auto;text-align:center;">
-                <a href="#comofunciona" class="clk-seta-comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#666666;font-weight:thin;margin:0px 0 50px 0"></i></a>
+                <a href="#comofunciona" class="clk-seta-comofunciona"><i class="fa fa-chevron-circle-down" style="font-size: 50px; padding: 0 0 0 20px; color:#666666;font-weight:thin;margin:0px 0 50px 0"></i></a>
             </div>
         </div>
         <div class="col-md-2"></div>

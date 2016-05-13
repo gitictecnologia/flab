@@ -86,7 +86,6 @@
                         <ul class="nav navbar-nav">
                             <li class="active nav-item bullet-nav-item"><a href="#home">Home</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
-                            <li class="nav-item bullet-nav-item"><a href="#clipping">Clipping</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
                             <li class="nav-item"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
@@ -105,13 +104,13 @@
                 <h2 class="title" style="text-align: left; text-shadow: none;">
 
                     FLAB.SOLUTIONS É UMA UNIDADE DE NEGÓCIOS<br>
-                    DA AGÊNCIA FISCHER<br>
-                    DEDICADA À GERAÇÃO DE NEGÓCIOS,<br> EM DUAS FRENTES:<br>
+                    DA AGÊNCIA FISCHER,<br>
+                    DEDICADA À GERAÇÃO DE NEGÓCIOS<br> EM DUAS FRENTES:<br>
                     FOMENTO A STARTUPS E ÁREA DE INOVAÇÃO,<br>
                     FOCADAS EM TECNOLOGIA. 
                     <br>
                     <br>
-                    E LANÇAMOS O NOSSO PRIMEIRO PROGRAMA<br> PARA STARTUPS EM 1º DE JUNHO.
+                    E LANÇAREMOS O NOSSO PRIMEIRO PROGRAMA<br> PARA STARTUPS EM 1º DE JUNHO.
 
 
                     <!-- 
@@ -127,7 +126,7 @@
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
                     Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
-                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Acompanhe as Novidades</a></p>
+                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Acompanhe as novidades</a></p>
 				
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             

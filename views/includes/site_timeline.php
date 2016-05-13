@@ -63,14 +63,14 @@
         <div class="col-md-8">
             <h1 class="title-h1">Timeline</h1>
             <p>A FLab.Solutions analisará os projetos inscritos e definirá as startups que avançam para a etapa de Pitch.</p>
-            <p>Se sua startup for selecionada, entraremos em contato a partir do dia <strong>16 de julho</strong></p>
+            <p>Se sua startup for selecionada, entraremos em contato a partir do dia <strong>16 de julho.</strong></p>
         
             <h2 class="title text-center"></h2>
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <ul>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span> 01 <strong>JUN</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span> 1º <strong>JUN</strong> 2016</span>
                             <span class="tm-description">Início das inscrições</span>
                         </li>
                         <li class="tm-item">
@@ -93,7 +93,7 @@
                 </div><!--//content-->
             </div><!--//item-->
         <div style="width:auto;text-align:center;" >
-            <a href="#clipping" class="clk-seta-clipping"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#76F983;font-weight:thin;margin:0px 0 30px 0;"></i></a>
+            <a href="#newsletters" class="clk-seta-newsletters"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#76F983;font-weight:thin;margin:0px 0 30px 0;"></i></a>
         </div>
 		</div>
 

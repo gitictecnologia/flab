@@ -50,7 +50,7 @@
             <div class="desc" >
                 <img src="assets/images/figures/beneficios_quadrados_branco.png">
                 <p class="text"><b>Oportunidades</b> </p>
-                <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">para fazer negócios com empresas do grupo Fischer e seus clientes</p>
+                <p style="font-size: 1.2em; font-weight: 100; margin-left: 103px;">para fazer negócios com empresas do Grupo Fischer e seus clientes</p>
 
                 <img src="assets/images/figures/beneficios_quadrados_branco.png">
                 <p class="text"><b>Metodologia</b></p>

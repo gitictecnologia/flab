@@ -1,7 +1,7 @@
 <style>
     #comofunciona {
         background-color: #FFFFFF;
-		min-height:780px;
+		min-height:750px;
 		padding-top: 50px;
     }
     #comofunciona .title-h1 {
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h1 class="title-h1">Como Funciona</h1>
+            <h1 class="title-h1">Como funciona</h1>
 			
             <div class="row">
                 <div class="col-md-4" style="text-align:center;padding:20px;"><img src="assets/images/icon/icon_light.png" class="iconcircle">
