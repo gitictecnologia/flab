@@ -36,7 +36,7 @@ require_once 'admin/model/autoload.php';
         
         <!-- OWL Carousel -->
         <link rel="stylesheet" href="assets/css/owl.carousel.css">
-        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <!-- <link rel="stylesheet" href="assets/css/owl.theme.css"> -->
         
 
         <!-- Theme CSS -->
