@@ -1,6 +1,6 @@
 <?php
 
-class Pergunta implements IContexto
+class Pergunta extends Contexto implements IContexto
 {   
     public static $table = __CLASS__;
     private $params;
@@ -12,28 +12,39 @@ class Pergunta implements IContexto
             'Pergunta' => NULL,
             'St' => 0, 
         );
-    }
+    }    
 
-    
-
-    public function set($param, $value)
+    public function __set($key, $value)
     {
-        $this->params[$param] = $value;
+        if(array_key_exists($key, $this->params))
+        {
+            $this->params[$key] = $value;
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
     
-    public function get($param)
+    public function __get($key)
     {
-        return $this->params[$param];
+        if(array_key_exists($key, $this->params))
+        {
+            return $this->params[$key];
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
-
 
     private function buildInfo($params)
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
-        }        
-    }   
+            $this->{$key} = $value;
+        }
+    } 
 
 
     public function insert()
@@ -44,8 +55,8 @@ class Pergunta implements IContexto
                 INSERT INTO " . self::$table . "
                     (EmpresaId, Pergunta, St)
                 VALUES (                    
-                    " . parent::transformToSql($this->get('Pergunta')) . ",                    
-                    " . parent::transformToSql($this->get('St')) . ")";                    
+                    " . parent::transformToSql($this->Pergunta) . ",                    
+                    " . parent::transformToSql($this->St) . ")";                    
 
             $result = parent::query($sql);
             if($result)
@@ -55,9 +66,9 @@ class Pergunta implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
-                Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
+                //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
             }
             return false;
@@ -77,10 +88,10 @@ class Pergunta implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET                    
-                    Pergunta = " . parent::transformToSql($this->get('Pergunta')) . ",                    
-                    St = " . parent::transformToSql($this->get('St')) . "
+                    Pergunta = " . parent::transformToSql($this->Pergunta) . ",                    
+                    St = " . parent::transformToSql($this->St) . "
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -101,7 +112,7 @@ class Pergunta implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id;
 
             $result = parent::query($sql);          
             if($result)

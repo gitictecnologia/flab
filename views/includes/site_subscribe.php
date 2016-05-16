@@ -11,7 +11,7 @@
         font-weight: 900;
     }
     .subscribe .row {
-        padding: 20px 0;
+        padding: 15px 0;
         margin-left: -15px;
         margin-right: 15px;
     }
@@ -88,70 +88,106 @@
         <div class="col-sm-12 col-md-2"></div>
         <div class="col-sm-12 col-md-8">
             <h1 class="title-h1">Inscreva sua startup</h1>        
+
             
             <div class="row">
                 <div class="col-sm-12 col-md-12">
 
-                    <form class="form-horizontal" id="form-subscribe" role="form">
+                    <form class="form-horizontal" id="form-subscribe" role="form" enctype="multipart/form-data">
                         <input type="hidden" name="do" value="add"></input>
 
                         <div class="row">
                             <div class="col-sm-12 col-md-6">                        
-                                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ" value="" required >
+                                <input type="text" class="form-control cnpj" id="cnpj" name="cnpj" placeholder="CNPJ" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="18" data-val-length-max="18">
+                                <span class="field-validation-valid" data-valmsg-for="cnpj" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12 col-md-6">                        
-                                <input type="text" class="form-control" id="nomeEmpresa" name="nomeEmpresa" placeholder="Nome da Empresa" value="">
+                                <input type="text" class="form-control" id="nomeEmpresa" name="nomeEmpresa" placeholder="Nome da Empresa" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="2" data-val-length-max="100">
+                                <span class="field-validation-valid" data-valmsg-for="nomeEmpresa" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" value="" required>
+                                <input type="text" class="form-control" id="website" name="website" placeholder="Website" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="255">
+                                <span class="field-validation-valid" data-valmsg-for="website" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-12 col-md-12">
-                                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" value="" required>
+                                <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Endereço" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
+                                <span class="field-validation-valid" data-valmsg-for="logradouro" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
-                        <div class="row">                                                         
+                        <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="" required>
+                                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
+                                        <span class="field-validation-valid" data-valmsg-for="cidade" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <select class="form-control" id="estado" name="estado" placeholder="Estado" value="" required>
+                                        <select class="form-control" id="estado" name="estado" placeholder="Estado" value="" data-val="true" data-val-required="Campo obrigatório" >
                                             <option value="">Estado</option>
-                                            <option value="">São Paulo</option>
-                                            <option value="">Rio de Janeiro</option>
-                                            <option value="">Pará</option>
-                                            <option value="">Bahia</option>
+                                            <?php 
+                                            $estados = Estado::getAll(1);
+                                            foreach($estados as $estado)
+                                            {
+                                                echo '<option value="' . $estado->Id . '">' . $estado->Nome . '</option>';
+                                            }
+                                            ?>
                                         </select>
+                                        <span class="field-validation-valid" data-valmsg-for="estado" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone" value="" required>                                        
+                                        <input type="text" class="form-control phone_cel" id="telefone" name="telefone" placeholder="Telefone" value="" data-val="true" data-val-required="Campo obrigatório" >
+                                        <span class="field-validation-valid" data-valmsg-for="telefone" data-valmsg-replace="true"></span>
+                                    </div>                                    
+                                </div>
+                            </div>                                
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <input type="text" class="form-control date" id="dtFundacao" name="dtFundacao" placeholder="Data de fundação" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="10">
+                                        <span class="field-validation-valid" data-valmsg-for="dtFundacao" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="col-sm-12 col-md-4">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <input type="text" class="form-control money" id="faturamento" name="faturamento" placeholder="Faturamento em 2015" value="" data-val="true" data-val-required="Campo obrigatório" >
+                                        <span class="field-validation-valid" data-valmsg-for="faturamento" data-valmsg-replace="true"></span>
                                     </div>                                    
                                 </div>
                             </div>                                
                         </div>
 
+
+
+
+                        <br>
+                        <br>
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
-                                <input type="text" class="form-control" id="nomeSocioResponsavel" name="nomeSocioResponsavel" placeholder="Nome do Sócio - responsável pela inscrição" value="" required>
+                                <input type="text" class="form-control" id="nomeSocioResponsavel" name="nomeSocioResponsavel" placeholder="Nome do Sócio - responsável pela inscrição" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
+                                <span class="field-validation-valid" data-valmsg-for="nomeSocioResponsavel" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
@@ -159,21 +195,24 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="" required>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="100">
+                                        <span class="field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>   
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Cargo ou Função" value="" required>
+                                        <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Cargo ou Função" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
+                                        <span class="field-validation-valid" data-valmsg-for="cargo" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-3">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="celular" name="celular" placeholder="Telefone Celular" value="" required>
+                                        <input type="text" class="form-control phone_cel" id="celular" name="celular" placeholder="Telefone Celular" value="" data-val="true" data-val-required="Campo obrigatório">
+                                        <span class="field-validation-valid" data-valmsg-for="celular" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +223,7 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="fakeCurriculoSocio" name="fakeCurriculoSocio" placeholder="Anexar Currículo dos Sócios" value="">
-                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" required>
+                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" >
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +237,7 @@
                             <div class="col-sm-12 col-md-4">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="linkedinSocio" name="linkedinSocio" placeholder="Link Linkedin" value="" required>
+                                        <input type="text" class="form-control" id="linkedinSocio" name="linkedinSocio" placeholder="Link Linkedin" value="" >
                                     </div>
                                 </div>
                             </div>                            
@@ -208,22 +247,28 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <input type="text" class="form-control" id="fakeAutorizacaoSocio" name="fakeAutorizacaoSocio" placeholder="Anexar autorização dos demais sócios (se houver)" value="">
-                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" required>
+                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" >
                             </div>
                         </div>
 
 
+                        <?php
+                        $perguntas = Pergunta::getAll(1);
+                        foreach($perguntas as $pergunta) {
+                        ?>
                         <br>
                         <div class="row">
                             <div class="col-sm-12">
-                                <textarea class="form-control" id="descricaoProjetoEmpresa" name="descricaoProjetoEmpresa" placeholder="Breve descrição do projeto e da empresa" rows="4" required ></textarea>                                
+                                <textarea class="form-control" id="descricaoProjetoEmpresa" name="descricaoProjetoEmpresa" placeholder="<?= $pergunta->Pergunta ?>" rows="4" data-val="true" data-val-required="Campo obrigatório" ></textarea>
+                                <span class="field-validation-valid" data-valmsg-for="descricaoProjetoEmpresa" data-valmsg-replace="true"></span>                          
                             </div>
                         </div>
+                        <?php } ?>
 
                         <div class="row">
                             <div class="col-sm-12 col-md-4">
                                 <input type="text" class="form-control" id="fakePptApresentacao" name="fakePptApresentacao" placeholder="Anexar PPT de apresentação" value="">
-                                <input type="file" class="form-control" id="pptApresentacao" name="pptApresentacao" value="" required>
+                                <input type="file" class="form-control" id="pptApresentacao" name="pptApresentacao" value="" >
                             </div>
                         </div>
 

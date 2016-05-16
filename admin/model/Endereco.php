@@ -1,11 +1,11 @@
 <?php
 
-class Endereco implements IContexto
+class Endereco extends Contexto implements IContexto
 {
     public static $table = __CLASS__;    
     private $params;
 
-    public function Empresa()
+    public function __construct()
     {
         $this->params = array(
             'Id' => 0,            
@@ -13,25 +13,30 @@ class Endereco implements IContexto
             'EstadoId' => 0,
             'CEP' => NULL,
             'Logradouro' => NULL,
-            'Numero' => 0,
+            'Numero' => NULL,
             'Complemento' => NULL,
             'Bairro' => NULL,
             'Cidade' => NULL,            
             'DtCriacao' => NULL,
-            'DtAlteracao' => NULL                
+            'DtAlteracao' => NULL,
+            'St' => 0             
         );
-    }   
+    }
 
-    
-
-    public function set($param, $value)
-    {
-        $this->params[$param] = $value;
+    public function __set($key, $value) {
+        if(array_key_exists($key, $this->params)) {                
+            $this->params[$key] = $value;
+        } else {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
     
-    public function get($param)
-    {
-        return $this->params[$param];
+    public function __get($key) {
+        if(array_key_exists($key, $this->params)) {         
+            return $this->params[$key];
+        } else {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
 
 
@@ -39,9 +44,9 @@ class Endereco implements IContexto
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
-        }        
-    }   
+            $this->{$key} = $value;
+        }
+    }     
 
 
     public function insert()
@@ -50,15 +55,14 @@ class Endereco implements IContexto
         {
             $sql = "
                 INSERT INTO " . self::$table . "
-                    (EmpresaId, EstadoId, CEP, Logradouro, Numero, Complemento, Cidade, DtCriacao)
+                    (EmpresaId, EstadoId, CEP, Logradouro, Numero, Cidade, DtCriacao)
                 VALUES (
-                    " . parent::transformToSql($this->get('EmpresaId')) . ",
-                    " . parent::transformToSql($this->get('EstadoId')) . ",
-                    " . parent::transformToSql($this->get('CEP')) . ",
-                    " . parent::transformToSql($this->get('Logradouro')) . ",
-                    " . parent::transformToSql($this->get('Numero')) . ",
-                    " . parent::transformToSql($this->get('Complemento')) . ",
-                    " . parent::transformToSql($this->get('Cidade')) . ",
+                    " . parent::transformToSql($this->EmpresaId) . ",
+                    " . parent::transformToSql($this->EstadoId) . ",
+                    " . parent::transformToSql($this->CEP) . ",
+                    " . parent::transformToSql($this->Logradouro) . ",
+                    " . parent::transformToSql($this->Numero) . ",                    
+                    " . parent::transformToSql($this->Cidade) . ",
                     " . parent::now() . ")";
 
             $result = parent::query($sql);
@@ -69,9 +73,9 @@ class Endereco implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
-                Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
+                //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
             }
             return false;
@@ -91,17 +95,17 @@ class Endereco implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET 
-                    EmpresaId = " . parent::transformToSql($this->get('EmpresaId')) . ",
-                    EstadoId = " . parent::transformToSql($this->get('EstadoId')) . ",
-                    CEP = " . parent::transformToSql($this->get('CEP')) . ",
-                    Logradouro = " . parent::transformToSql($this->get('Logradouro')) . ",
-                    Numero = " . parent::transformToSql($this->get('Numero')) . ",
-                    Complemento = " . parent::transformToSql($this->get('Complemento')) . ",
-                    Cidade = " . parent::transformToSql($this->get('Cidade')) . ",                    
-                    DtCriacao = " . parent::transformToSql($this->get('DtCriacao')) . ",
+                    EmpresaId = " . parent::transformToSql($this->EmpresaId) . ",
+                    EstadoId = " . parent::transformToSql($this->EstadoId) . ",
+                    CEP = " . parent::transformToSql($this->CEP) . ",
+                    Logradouro = " . parent::transformToSql($this->Logradouro) . ",
+                    Numero = " . parent::transformToSql($this->Numero) . ",
+                    Complemento = " . parent::transformToSql($this->Complemento) . ",
+                    Cidade = " . parent::transformToSql($this->Cidade) . ",                    
+                    DtCriacao = " . parent::transformToSql($this->DtCriacao) . ",
                     DtAlteracao =  " . parent::now() . "
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -122,7 +126,7 @@ class Endereco implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id;
 
             $result = parent::query($sql);          
             if($result)

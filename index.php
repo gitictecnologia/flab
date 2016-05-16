@@ -33,6 +33,8 @@ require_once 'admin/model/autoload.php';
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+
+        <link rel="stylesheet" href="assets/plugins/validate/css/validate.css">
         
         <!-- OWL Carousel -->
         <link rel="stylesheet" href="assets/css/owl.carousel.css">
@@ -130,6 +132,12 @@ require_once 'admin/model/autoload.php';
         <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
         <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
         <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate.js"></script>        
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate-vsdoc.js"></script>
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate.unobtrusive.js"></script>
+
+        <script type="text/javascript" src="assets/plugins/jquery.mask.js"></script>
+        
         <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript" src="assets/js/newsletters.js"></script>
@@ -142,7 +150,7 @@ require_once 'admin/model/autoload.php';
         <script>
 
             // Clipping            
-            $('.carousel-clipping').owlCarousel({                
+            $('.carousel-clipping').owlCarousel({
                 loop:true,
                 margin:10,
                 nav:true,
@@ -158,7 +166,7 @@ require_once 'admin/model/autoload.php';
             });
 
             // Building modal clipping
-            $('.modal-view-clipping').click(function (event) {                
+            $('.modal-view-clipping').click(function (event) {
                 event.preventDefault();                
                 var id = $(this).attr('id').replace('clipping-', '');
                 $.ajax({
@@ -278,6 +286,34 @@ require_once 'admin/model/autoload.php';
                 } else {
                     $('.x-logo-2').css('display', 'inline');
                     $('.x-logo').css('display', 'none');
+                }
+            });
+
+
+            $('#form-subscribe').submit(function (event) {
+                event.preventDefault();                
+
+                if($('#form-subscribe').valid()) {
+
+                    var form = $('#form-subscribe')[0];
+                    var formData = new FormData(form);
+
+                    $.ajax({
+                        method: 'post',
+                        url: PATHA + 'controller/subscribe.php',
+                        data: formData,
+                        dataType: 'json',
+                        contentType: false,
+                        processData: false,
+                        beforeSend: function () {                            
+                        },
+                        success: function (data) {
+                            alert(data.message);                         
+                        },
+                        error: function (erro) {
+                            alert('Erro: ' + erro.message);
+                        }
+                    });
                 }
             });
         </script>
