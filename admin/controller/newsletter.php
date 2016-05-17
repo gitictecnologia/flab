@@ -64,10 +64,10 @@ switch ($_REQUEST['do'])
             * Persistencia
             */        
             $newsletter = new Newsletter();
-            $newsletter->set('NomeUsuario', $newslettersNome);
-            $newsletter->set('NomeEmpresa', $newslettersNomeEmpresa);
-            $newsletter->set('Email', $newslettersEmail);
-            $newsletter->set('St', 1);
+            $newsletter->NomeUsuario = $newslettersNome;
+            $newsletter->NomeEmpresa = $newslettersNomeEmpresa;
+            $newsletter->Email = $newslettersEmail;
+            $newsletter->St = 1;
 
             if($newsletter->insert())
             {            
@@ -92,53 +92,9 @@ switch ($_REQUEST['do'])
             echo json_encode($response);
             return;
             break;
-        }
-        
+        }        
 
-        break;
-
-    case 'edit':        
-        break;
-	
-    case 'enable':
-
-        $temaId = $_GET['temaId'];
-        $tema = Tema::getById($temaId);
-        if($tema != NULL) {            
-            $tema->setSt(1);
-            if(Contexto::update($tema)) {
-                
-                echo 'Tema desativado com sucesso';
-            } else {
-
-                echo 'Houve um problema sistemico ao tentar afetuar a ação desejada';            
-            }
-        } else {
-
-            echo 'Tema não encontrado em nosso banco de dados';
-        }
-
-        break;
-
-    case 'disable':
-
-        $temaId = $_GET['temaId'];
-        $tema = Tema::getById($temaId);
-        if($tema != NULL) {            
-            $tema->setSt(0);
-            if(Contexto::update($tema)) {
-                
-                echo 'Tema desativado com sucesso';
-            } else {
-
-                echo 'Houve um problema sistemico ao tentar afetuar a ação desejada';            
-            }
-        } else {
-
-            echo 'Tema não encontrado em nosso banco de dados';
-        }
-
-        break;
+        break;       
 
     default:
 

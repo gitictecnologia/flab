@@ -4,6 +4,7 @@
         background-color: #91fa9c;
         padding-top: 46px;
         padding-bottom: 14px;
+        padding-left: 30px;
         color: #6c6c6c;
     }
     .subscribe .title-h1 {
@@ -287,6 +288,10 @@
                     </form>
                 </div><!--//content-->
             </div><!--//item-->
+
+            <div style="width:auto;text-align:center;" >
+                <a href="#clipping" class="clk-seta-clipping"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#666;font-weight:thin;margin:0px 0 30px 0;"></i></a>
+            </div>
         </div>
         <div class="col-sm-12 col-md-2"></div>
     </div>
