@@ -3,10 +3,9 @@
 class Empresa extends Contexto implements IContexto
 {
     public static $table = __CLASS__;    
-    private $params;
+    private $params;    
 
-    public function Empresa()
-    {
+    public function __construct() {
         $this->params = array(
             'Id' => 0,            
             'Nome' => NULL,
@@ -20,33 +19,49 @@ class Empresa extends Contexto implements IContexto
             'DtFundacao' => NULL,
             'DtCriacao' => NULL,
             'DtAlteracao' => NULL,
-            'St' => 0,           
+            'St' => 0,
+            /**
+            * Relationships
+            */
+            'Endereco' => NULL,
+            'Socios' => NULL,
+            'Projetos' => NULL,
+            'Respostas' => NULL, 
         );
     }	
 
     
 
-    public function __set($key, $value)
-    {
-        if(array_key_exists($key, $this->params))
-        {
+    public function __set($key, $value) {
+        if(array_key_exists($key, $this->params)) {
             $this->params[$key] = $value;
-        }
-        else
-        {
+        } else {
             throw new Exception("Parameter '" . $key . "' not found", 1);
         }
     }
     
-    public function __get($key)
-    {
-        if(array_key_exists($key, $this->params))
-        {
+    public function __get($key) {
+        if(array_key_exists($key, $this->params)) {
+            if($key == 'Endereco') {
+                if($this->params['Endereco'] == NULL) {
+                    $this->params['Endereco'] = Endereco::getByEmpresaId($this->Id);
+                }
+            } else if($key == 'Socios') {
+                if($this->params['Socios'] == NULL) {
+                    $this->params['Socios'] = Socio::getByEmpresaId($this->Id);
+                }                
+            } else if($key == 'Projetos') {
+                if($this->params['Projetos'] == NULL) {
+                    $this->params['Projetos'] = Projeto::getByEmpresaId($this->Id);
+                }
+            } else if($key == 'Respostas') {                
+                if($this->params['Respostas'] == NULL) {
+                    $this->params['Respostas'] = Resposta::getByEmpresaId($this->Id);
+                }
+            }            
             return $this->params[$key];
-        }
-        else
-        {
-            throw new Exception("Parameter '" . $key . "' not found", 1);
+        } else {
+            throw new Exception("Parameter '" . $key . "' not found");
         }
     }
 

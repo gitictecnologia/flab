@@ -1,11 +1,10 @@
 <?php
 /**
 *
-* Obtem as listagem de empresas
+* Obtem a listagem de empresas cadastradas no programa
 *
 */
-$empresas = Empresa::getAll();
-
+$empresas = Empresa::getAll(1);
 ?>
 
 <div class="row-fluid">
@@ -23,23 +22,21 @@ $empresas = Empresa::getAll();
                 <table cellpadding="0" cellspacing="0" border="0" class="responsive dynamicTable display table table-bordered" width="100%">
                     <thead>
                         <tr>
-                            <th style="30">Nome</th>                                                        
+                            <th style="30">Nome da Empresa</th>                                                        
                             <th style="30">Telefone</th>
                             <th style="30">Email</th>
-                            <th style="10">Ações</th>
+                            <th style="10"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php                        
-                        foreach($empresas as $empresa) { 
+                        foreach($empresas as $empresa) {
                         ?>
                         <tr class="odd gradeX">
-                            <td><?= $empresa->get('Nome') ?></td>
-                            <td><?= $empresa->get('Telefone') ?></td>
-                            <td><?= $empresa->get('Telefone') ?></td>                            
-                            <td>
-                                <a class="btn btn-default" href="?s=empresas-edit&id=<?= $empresa->get('Id') ?>"> <i class="icon-eye-open"></i></a>                                 
-                            </td>
+                            <td><?= $empresa->Nome ?></td>
+                            <td><?= $empresa->Telefone ?></td>
+                            <td><?= isset($empresa->Socios[0]) ? $empresa->Socios[0]->Email : 'N/D' ?></td>                            
+                            <td><a class="btn btn-default" href="?s=empresas-edit&id=<?= $empresa->Id ?>"> <i class="icon-eye-open"></i></a></td>
                         </tr>
                         <?php } ?>
                     </tbody>

@@ -19,7 +19,11 @@ class Endereco extends Contexto implements IContexto
             'Cidade' => NULL,            
             'DtCriacao' => NULL,
             'DtAlteracao' => NULL,
-            'St' => 0             
+            'St' => 0,
+            /**
+            * Relationship
+            */
+            'Estado' => NULL
         );
     }
 
@@ -32,7 +36,10 @@ class Endereco extends Contexto implements IContexto
     }
     
     public function __get($key) {
-        if(array_key_exists($key, $this->params)) {         
+        if(array_key_exists($key, $this->params)) {
+            if($key == 'Estado') {
+                $this->Estado = Estado::getById($this->EstadoId);
+            }
             return $this->params[$key];
         } else {
             throw new Exception("Parameter '" . $key . "' not found", 1);
@@ -199,6 +206,41 @@ class Endereco extends Contexto implements IContexto
                 $q = "
                     SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st);                    
             }       
+            
+            $result = parent::query($q);
+            if(count($result) > 0)
+            {                
+                while($row = $result->fetch(PDO::FETCH_ASSOC))
+                {
+                    if(!isset($row['Id']))
+                    {
+                        break;
+                    }
+
+                    $objeto = new Endereco();
+                    $objeto->buildInfo($row);
+
+                    $objetos[] = $objeto;
+                }
+            }
+            return $objetos;
+        }
+        catch(Exception $e)
+        {
+            //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
+            return array();
+        }    
+    }
+
+    public static function getByEmpresaId($id)
+    {        
+        try
+        {            
+            $objetos = array();
+            
+            $q = "
+                SELECT * FROM " . self::$table . " WHERE EmpresaId = " . $id;           
+                
             
             $result = parent::query($q);
             if(count($result) > 0)

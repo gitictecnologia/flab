@@ -243,5 +243,39 @@ class Socio extends Contexto implements IContexto
             return array();
         }    
     }
+
+    public static function getByEmpresaId($id)
+    {        
+        try
+        {            
+            $objetos = array();
+
+            $q = "
+                SELECT * FROM " . self::$table . " WHERE EmpresaId = " . $id;                   
+            
+            $result = parent::query($q);
+            if(count($result) > 0)
+            {                
+                while($row = $result->fetch(PDO::FETCH_ASSOC))
+                {
+                    if(!isset($row['Id']))
+                    {
+                        break;
+                    }
+
+                    $objeto = new Socio();
+                    $objeto->buildInfo($row);
+
+                    $objetos[] = $objeto;
+                }
+            }
+            return $objetos;
+        }
+        catch(Exception $e)
+        {
+            //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
+            return array();
+        }    
+    }
 }
 

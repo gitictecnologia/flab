@@ -24,6 +24,7 @@
         color: transparent;
         background: none;
         border: none;
+        cursor: pointer;
     }
 
     .subscribe input[type="text"], .subscribe textarea, .subscribe select {
@@ -164,7 +165,7 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control date" id="dtFundacao" name="dtFundacao" placeholder="Data de fundação" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="10">
+                                        <input type="text" class="form-control __date" id="dtFundacao" name="dtFundacao" placeholder="Data de fundação" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="10">
                                         <span class="field-validation-valid" data-valmsg-for="dtFundacao" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
@@ -178,8 +179,6 @@
                                 </div>
                             </div>                                
                         </div>
-
-
 
 
                         <br>
@@ -223,7 +222,7 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="fakeCurriculoSocio" name="fakeCurriculoSocio" placeholder="Anexar Currículo dos Sócios" value="">
-                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" >
+                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de um currículo é necessário enviar um arquivo .ZIP">
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +236,7 @@
                             <div class="col-sm-12 col-md-4">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="linkedinSocio" name="linkedinSocio" placeholder="Link Linkedin" value="" >
+                                        <input type="text" class="form-control" id="linkedinSocio" name="linkedinSocio" placeholder="Link Linkedin" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de um link, é necessário separá-los por vírgula">
                                     </div>
                                 </div>
                             </div>                            
@@ -247,7 +246,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <input type="text" class="form-control" id="fakeAutorizacaoSocio" name="fakeAutorizacaoSocio" placeholder="Anexar autorização dos demais sócios (se houver)" value="">
-                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" >
+                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de uma autorização é necessário enviar um arquivo .ZIP">
                             </div>
                         </div>
 
@@ -268,14 +267,15 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-4">
                                 <input type="text" class="form-control" id="fakePptApresentacao" name="fakePptApresentacao" placeholder="Anexar PPT de apresentação" value="">
-                                <input type="file" class="form-control" id="pptApresentacao" name="pptApresentacao" value="" >
+                                <input type="file" class="form-control" id="pptApresentacao" name="pptApresentacao" value="" data-toggle="tooltip" data-placement="bottom" title="Anexe uma apresentação da sua empresa">
                             </div>
                         </div>
 
 
-                        <div class="row subscribe-resposnse" style="display: none; padding-bottom: 0;">
-                            <div class="col-sm-12 col-md-6">                        
-                                <p></p>
+                        <div class="row subscribe-response" style="display: none; padding-bottom: 0;">
+                            <div class="col-sm-12 col-md-6">
+                                <br>                        
+                                <p>Enviando ... </p>
                             </div>
                         </div>
 

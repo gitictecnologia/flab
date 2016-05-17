@@ -27,15 +27,15 @@ $pathImage = array(
 	*/
 	'docs' => array(
 		'curriculo' => array(
-			'rel' => PATH . 'uploads/',
+			'rel' => PATH . 'uploads/docs/curriculo/',
 			'abs' => $PATH_ROOT . 'uploads/docs/curriculo/'
 		),
 		'autorizacao' => array(
-			'rel' => PATH . 'uploads/',
+			'rel' => PATH . 'uploads/docs/autorizacao/',
 			'abs' => $PATH_ROOT . 'uploads/docs/autorizacao/'
 		),
 		'apresentacao' => array(
-			'rel' => PATH . 'uploads/',
+			'rel' => PATH . 'uploads/docs/apresentacao/',
 			'abs' => $PATH_ROOT . 'uploads/docs/apresentacao/'
 		)
 	)

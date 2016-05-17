@@ -288,13 +288,11 @@ require_once 'admin/model/autoload.php';
                     $('.x-logo').css('display', 'none');
                 }
             });
-
+            
 
             $('#form-subscribe').submit(function (event) {
-                event.preventDefault();                
-
+                event.preventDefault();
                 if($('#form-subscribe').valid()) {
-
                     var form = $('#form-subscribe')[0];
                     var formData = new FormData(form);
 
@@ -305,10 +303,28 @@ require_once 'admin/model/autoload.php';
                         dataType: 'json',
                         contentType: false,
                         processData: false,
-                        beforeSend: function () {                            
+                        beforeSend: function () {
+                            $('#form-subscribe button[type="submit"]').attr('disabled', true);
+                            $('#form-subscribe .subscribe-response p').html('Enviando ...');
+                            $('#form-subscribe .subscribe-response').show(300);
                         },
                         success: function (data) {
-                            alert(data.message);                         
+                            if(data.st == true) {                                
+                                $('#form-subscribe .subscribe-response p').html(data.message);
+                                $('#form-subscribe .subscribe-response').show(300);
+
+                                setTimeout(function () {
+                                    location.href = '/';
+                                }, 8000);
+                            } else {                                
+                                $('#form-subscribe .subscribe-response p').html(data.message);
+                                $('#form-subscribe .subscribe-response').show(300);
+
+                                setTimeout(function () {
+                                    $('#form-subscribe button[type="submit"]').attr('disabled', false);
+                                    $('#form-subscribe .subscribe-response').hide(100);
+                                }, 5000);
+                            }                         
                         },
                         error: function (erro) {
                             alert('Erro: ' + erro.message);
@@ -316,6 +332,9 @@ require_once 'admin/model/autoload.php';
                     });
                 }
             });
+
+            // Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
         </script>
 
     </body>

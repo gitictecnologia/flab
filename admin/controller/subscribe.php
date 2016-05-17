@@ -41,26 +41,20 @@ switch ($_REQUEST['do']) {
 			$empresa->Site = $website;
 			$empresa->Descricao = $descricaoProjetoEmpresa;
 			$empresa->Telefone = $telefone;
-			$empresa->DtFundacao = date('Y-m-d', strtotime($dtFundacao));
+			$empresa->DtFundacao = date('Y-m-d', strtotime(str_replace('/', '-', $dtFundacao)));
 			$empresa->Faturamento = $faturamento;
 			$empresa->St = 1;
 			/**
 			* Arquivo de apresentação
 			*/
 			if(isset($_FILES['pptApresentacao']) && !empty($_FILES['pptApresentacao']['name'])) {
-
-				if(!copy($_FILES['pptApresentacao']['tmp_name'], $pathImage['docs']['apresentacao']['abs'] . $_FILES['pptApresentacao']['name'])) {
+				$newNameApresentacao = time() . '.' . array_pop(explode('.', $_FILES['pptApresentacao']['name']));
+				if(!copy($_FILES['pptApresentacao']['tmp_name'], $pathImage['docs']['apresentacao']['abs'] . $newNameApresentacao)) {
 					throw new Exception("Falha ao copiar arquivo " . $_FILES['pptApresentacao']['name']);
 				}
-
-				$empresa->Apresentacao = $_FILES['pptApresentacao']['name'];
-
-			} else if(isset($linkedinSocio) && !empty($linkedinSocio)) {
-
-				$empresa->Apresentacao = $linkedinSocio;
+				$empresa->Apresentacao = $newNameApresentacao;
 			} else {
-
-				throw new Exception("Necessário enviar um arquivo .ZIP contento o(s) curriculo(s) do(s) socio(s) ou o link do LINKEDIN separado por virgúla");
+				throw new Exception("Necessário enviar um arquivo contendo a apresentação da empresa");
 			}
 			
 
@@ -101,23 +95,28 @@ switch ($_REQUEST['do']) {
 			* Aquivo de autorizacao dos socios
 			*/			
 			if(isset($_FILES['autorizacaoSocio']) && !empty($_FILES['autorizacaoSocio']['name'])) {
-
-				if(!copy($_FILES['autorizacaoSocio']['tmp_name'], $pathImage['docs']['autorizacao']['abs'] . $_FILES['autorizacaoSocio']['name'])) {
+				$newNameAutorizacao = time() . '.' . array_pop(explode('.', $_FILES['autorizacaoSocio']['name']));
+				if(!copy($_FILES['autorizacaoSocio']['tmp_name'], $pathImage['docs']['autorizacao']['abs'] . $newNameAutorizacao)) {
 					throw new Exception("Falha ao copiar arquivo " . $_FILES['autorizacaoSocio']['name']);					
 				}
-
-				$socio->Autorizacao = $_FILES['autorizacaoSocio']['name'];
+				$socio->Autorizacao = $newNameAutorizacao;
+			} else {
+				throw new Exception("Necessário enviar um arquivo .ZIP contento a(s) autorização(oes)) do(s) socio(s)");
 			}
+
 			/**
 			* Arquivo curriculo		
 			*/			
 			if(isset($_FILES['curriculoSocio']) && !empty($_FILES['curriculoSocio']['name'])) {
-
-				if(!copy($_FILES['curriculoSocio']['tmp_name'], $pathImage['docs']['curriculo']['abs'] . $_FILES['curriculoSocio']['name'])) {
+				$newNameCurriculo = time() . '.' . array_pop(explode('.', $_FILES['curriculoSocio']['name']));
+				if(!copy($_FILES['curriculoSocio']['tmp_name'], $pathImage['docs']['curriculo']['abs'] . $newNameCurriculo)) {
 					throw new Exception("Falha ao copiar arquivo " . $_FILES['curriculoSocio']['name']);					
 				}
-
-				$socio->Curriculo = $_FILES['curriculoSocio']['name'];
+				$socio->Curriculo = $newNameCurriculo;
+			} else if(isset($curriculoSocio) && !empty($curriculoSocio)) {
+				$socio->Curriculo = $curriculoSocio;
+			} else {
+				throw new Exception("Necessário enviar um arquivo .ZIP contento o(s) curriculo(s) do(s) socio(s) ou o link do LINKEDIN separado por virgúla");
 			}
 
 			if(!$socio->insert()) {

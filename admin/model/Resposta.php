@@ -10,12 +10,17 @@ class Resposta extends Contexto implements IContexto
             'Id' => 0,            
             'EmpresaId' => 0,
             'PerguntaId' => 0,            
-            'Resposta' => NULL
+            'Resposta' => NULL,
+            /**
+            * Relationships
+            */
+            'Empresa' => NULL,
+            'Pergunta' => NULL
         );
     }    
 
     public function __set($key, $value) {        
-        if(array_key_exists($key, $this->params)) {
+        if(array_key_exists($key, $this->params)) {            
             $this->params[$key] = $value;
         } else {
             throw new Exception("Parameter '" . $key . "' not found", 1);
@@ -24,6 +29,13 @@ class Resposta extends Contexto implements IContexto
     
     public function __get($key) {
         if(array_key_exists($key, $this->params)) {
+            if($key == 'Empresa') {
+                if($this->Empresa == NULL) {
+                    $this->Empresa = Empresa::getById($this->EmpresaId);
+                } else if($this->Pergunta == NULL) {
+                    $this->Pergunta = Pergunta::getById($this->PerguntaId);
+                }
+            }
             return $this->params[$key];
         } else {
             throw new Exception("Parameter '" . $key . "' not found", 1);
@@ -179,8 +191,41 @@ class Resposta extends Contexto implements IContexto
             else
             {
                 $q = "
-                    SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st);                    
+                    SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st);
             }       
+            
+            $result = parent::query($q);
+            if(count($result) > 0)
+            {                
+                while($row = $result->fetch(PDO::FETCH_ASSOC))
+                {
+                    if(!isset($row['Id']))
+                    {
+                        return NULL;
+                    }
+
+                    $objeto = new Resposta();
+                    $objeto->buildInfo($row);
+
+                    $objetos[] = $objeto;
+                }
+            }
+            return $objetos;
+        }
+        catch(Exception $e)
+        {
+            //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
+            return array();
+        }    
+    }
+
+
+
+    public static function getByEmpresaId($empresaId) {
+        try {            
+            $objetos = array();
+            
+            $q = "SELECT * FROM " . self::$table . " WHERE EmpresaId = " . $empresaId;
             
             $result = parent::query($q);
             if(count($result) > 0)
