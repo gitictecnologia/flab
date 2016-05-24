@@ -20,23 +20,36 @@ class Newsletter extends Contexto implements IContexto
 
     
 
-    public function set($param, $value)
+    public function __set($key, $value)
     {
-        $this->params[$param] = $value;
+        if(array_key_exists($key, $this->params))
+        {
+            $this->params[$key] = $value;
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
     
-    public function get($param)
+    public function __get($key)
     {
-        return $this->params[$param];
+        if(array_key_exists($key, $this->params))
+        {
+            return $this->params[$key];
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
-
 
     private function buildInfo($params)
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
-        }        
+            $this->{$key} = $value;
+        }
     }   
 
 
@@ -48,11 +61,11 @@ class Newsletter extends Contexto implements IContexto
                 INSERT INTO " . self::$table . "
                     (NomeUsuario, NomeEmpresa, Email, DtCriacao, St)
                 VALUES (                    
-                    " . parent::transformToSql($this->get('NomeUsuario')) . ",
-                    " . parent::transformToSql($this->get('NomeEmpresa')) . ",
-                    " . parent::transformToSql($this->get('Email')) . ",
+                    " . parent::transformToSql($this->NomeUsuario) . ",
+                    " . parent::transformToSql($this->NomeEmpresa) . ",
+                    " . parent::transformToSql($this->Email) . ",
                     " . parent::now() . ",                    
-                    " . parent::transformToSql($this->get('St')) . ")";
+                    " . parent::transformToSql($this->St) . ")";
 
             $result = parent::query($sql);
             if($result)
@@ -62,7 +75,7 @@ class Newsletter extends Contexto implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
                 //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
@@ -84,13 +97,13 @@ class Newsletter extends Contexto implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET                     
-                    NomeUsuario = " . parent::transformToSql($this->get('NomeUsuario')) . ",
-                    NomeEmpresa = " . parent::transformToSql($this->get('NomeEmpresa')) . ",
-                    Email = " . parent::transformToSql($this->get('Email')) . ",
-                    DtAlteracao = " . parent::transformToSql($this->get('DtAlteracao')) . ",
-                    St = " . parent::transformToSql($this->get('St')) . "
+                    NomeUsuario = " . parent::transformToSql($this->NomeUsuario) . ",
+                    NomeEmpresa = " . parent::transformToSql($this->NomeEmpresa) . ",
+                    Email = " . parent::transformToSql($this->Email) . ",
+                    DtAlteracao = " . parent::transformToSql($this->DtAlteracao) . ",
+                    St = " . parent::transformToSql($this->St) . "
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -111,7 +124,7 @@ class Newsletter extends Contexto implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id;
 
             $result = parent::query($sql);          
             if($result)

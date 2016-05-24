@@ -1,11 +1,11 @@
 <?php
 
-class Projeto implements IContexto
+class Projeto extends Contexto implements IContexto
 {   
     public static $table = __CLASS__;
     private $params;
 
-    public function Pergunta()
+    public function Projeto()
     {
         $this->params = array(
             'Id' => 0,            
@@ -13,27 +13,38 @@ class Projeto implements IContexto
             'Nome' => NULL,
             'Descricao' => NULL
         );
-    }
+    }    
 
-    
-
-    public function set($param, $value)
+    public function __set($key, $value)
     {
-        $this->params[$param] = $value;
+        if(array_key_exists($key, $this->params))
+        {
+            $this->params[$key] = $value;
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
     
-    public function get($param)
+    public function __get($key)
     {
-        return $this->params[$param];
+        if(array_key_exists($key, $this->params))
+        {
+            return $this->params[$key];
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
-
 
     private function buildInfo($params)
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
-        }        
+            $this->{$key} = $value;
+        }
     }   
 
 
@@ -45,9 +56,9 @@ class Projeto implements IContexto
                 INSERT INTO " . self::$table . "
                     (EmpresaId, Nome, Descricao)
                 VALUES (                    
-                    " . parent::transformToSql($this->get('EmpresaId')) . ",
-                    " . parent::transformToSql($this->get('Nome')) . ",
-                    " . parent::transformToSql($this->get('Descricao')) . ")";                    
+                    " . parent::transformToSql($this->EmpresaId) . ",
+                    " . parent::transformToSql($this->Nome) . ",
+                    " . parent::transformToSql($this->Descricao) . ")";                    
 
             $result = parent::query($sql);
             if($result)
@@ -57,9 +68,9 @@ class Projeto implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
-                Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
+                //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
             }
             return false;
@@ -79,11 +90,11 @@ class Projeto implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET                    
-                    EmpresaId = " . parent::transformToSql($this->get('EmpresaId')) . ",
-                    Nome = " . parent::transformToSql($this->get('Nome')) . ",                
-                    Descricao = " . parent::transformToSql($this->get('Descricao')) . "
+                    EmpresaId = " . parent::transformToSql($this->EmpresaId) . ",
+                    Nome = " . parent::transformToSql($this->Nome) . ",                
+                    Descricao = " . parent::transformToSql($this->Descricao) . "
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -104,7 +115,7 @@ class Projeto implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id;
 
             $result = parent::query($sql);          
             if($result)
@@ -178,6 +189,40 @@ class Projeto implements IContexto
                 $q = "
                     SELECT * FROM " . self::$table . " WHERE St = " . parent::transformToSql($st);                    
             }       
+            
+            $result = parent::query($q);
+            if(count($result) > 0)
+            {                
+                while($row = $result->fetch(PDO::FETCH_ASSOC))
+                {
+                    if(!isset($row['Id']))
+                    {
+                        return NULL;
+                    }
+
+                    $objeto = new Projeto();
+                    $objeto->buildInfo($row);
+
+                    $objetos[] = $objeto;
+                }
+            }
+            return $objetos;
+        }
+        catch(Exception $e)
+        {
+            //Logger::Erro(__METHOD__ . ' { '.$e->getMessage() . ' }');            
+            return array();
+        }    
+    }
+
+    public static function getByEmpresaId($id)
+    {
+        try
+        {            
+            $objetos = array();
+           
+            $q = "
+                SELECT * FROM " . self::$table;
             
             $result = parent::query($q);
             if(count($result) > 0)

@@ -25,6 +25,9 @@
 	<!-- Timeline -->
 	<?php include 'includes/site_timeline.php'; ?>
 
+	<!-- Subscribe -->
+	<?php include 'includes/site_subscribe.php'; ?>
+
 	<!-- Clipping -->
 	<?php include 'includes/site_clipping.php'; ?>
 

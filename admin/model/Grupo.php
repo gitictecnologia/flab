@@ -1,6 +1,6 @@
 <?php
 
-class Grupo implements IContexto
+class Grupo extends Contexto implements IContexto
 {	
     public static $table = __CLASS__;
     private $params;
@@ -13,28 +13,41 @@ class Grupo implements IContexto
             'Decricao' => NULL,            
             'St' => 0,           
         );
-    }	
-
-    
-
-    public function set($param, $value)
-    {
-        $this->params[$param] = $value;
     }
     
-    public function get($param)
-    {
-        return $this->params[$param];
-    }
 
+    public function __set($key, $value)
+    {
+        if(array_key_exists($key, $this->params))
+        {
+            $this->params[$key] = $value;
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
+    }
+    
+    public function __get($key)
+    {
+        if(array_key_exists($key, $this->params))
+        {
+            return $this->params[$key];
+        }
+        else
+        {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
+    }
 
     private function buildInfo($params)
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
-        }        
+            $this->{$key} = $value;
+        }
     }   
+  
 
 
     public function insert()
@@ -45,9 +58,9 @@ class Grupo implements IContexto
                 INSERT INTO " . self::$table . "
                     (Nome, Descricao, St)
                 VALUES (                    
-                    " . parent::transformToSql($this->get('Nome')) . ",
-                    " . parent::transformToSql($this->get('Descricao')) . ",                    
-                    " . parent::transformToSql($this->get('St')) . ")";                    
+                    " . parent::transformToSql($this->Nome) . ",
+                    " . parent::transformToSql($this->Descricao) . ",                    
+                    " . parent::transformToSql($this->St) . ")";                    
 
             $result = parent::query($sql);
             if($result)
@@ -57,9 +70,9 @@ class Grupo implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
-                Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
+                //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
             }
             return false;
@@ -79,11 +92,11 @@ class Grupo implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET                     
-                    Nome = " . parent::transformToSql($this->get('Nome')) . ",
-                    Descricao = " . parent::transformToSql($this->get('Descricao')) . ",                    
-                    St = " . parent::transformToSql($this->get('St')) . "
+                    Nome = " . parent::transformToSql($this->Nome) . ",
+                    Descricao = " . parent::transformToSql($this->Descricao) . ",                    
+                    St = " . parent::transformToSql($this->St) . "
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -104,7 +117,7 @@ class Grupo implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id);
 
             $result = parent::query($sql);          
             if($result)

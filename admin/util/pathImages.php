@@ -17,7 +17,26 @@ $pathImage = array(
 	*
 	*/
 	'clipping' => array(
-		'rel' => PATH . 'uploads/img/clipping/',		
+		'rel' => PATH . 'uploads/img/clipping/',
 		'abs' => $PATH_ROOT . 'uploads/img/clipping/'
-	)	
+	),
+	/**
+	*
+	* Documentos dos 
+	*
+	*/
+	'docs' => array(
+		'curriculo' => array(
+			'rel' => PATH . 'uploads/docs/curriculo/',
+			'abs' => $PATH_ROOT . 'uploads/docs/curriculo/'
+		),
+		'autorizacao' => array(
+			'rel' => PATH . 'uploads/docs/autorizacao/',
+			'abs' => $PATH_ROOT . 'uploads/docs/autorizacao/'
+		),
+		'apresentacao' => array(
+			'rel' => PATH . 'uploads/docs/apresentacao/',
+			'abs' => $PATH_ROOT . 'uploads/docs/apresentacao/'
+		)
+	)
 );

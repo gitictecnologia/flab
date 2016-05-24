@@ -34,14 +34,10 @@ $newsletters = Newsletter::getAll(1);
                         foreach($newsletters as $newsletter) { 
                         ?>
                         <tr class="odd gradeX">
-                            <td><?= $newsletter->get('NomeUsuario') ?></td>
-                            <td><?= $newsletter->get('NomeEmpresa') ?></td>
-                            <td><?= $newsletter->get('Email') ?></td>                            
-                            <!--
-							<td>
-                                <a class="btn btn-default" href="?s=newsletters-edit&id=<?= $newsletter->get('Id') ?>"> <i class="icon-eye-open"></i></a> -->
-                                                       
-                            </td>
+                            <td><?= $newsletter->NomeUsuario ?></td>
+                            <td><?= $newsletter->NomeEmpresa ?></td>
+                            <td><?= $newsletter->Email ?></td>                            
+                            <!-- <td><a class="btn btn-default" href="?s=newsletters-edit&id=<?= $newsletter->Id ?>"> <i class="icon-eye-open"></i></a></td> -->
                         </tr>
                         <?php } ?>
                     </tbody>

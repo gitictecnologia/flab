@@ -33,10 +33,12 @@ require_once 'admin/model/autoload.php';
         <!-- Plugins CSS -->
         <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+
+        <link rel="stylesheet" href="assets/plugins/validate/css/validate.css">
         
         <!-- OWL Carousel -->
         <link rel="stylesheet" href="assets/css/owl.carousel.css">
-        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <!-- <link rel="stylesheet" href="assets/css/owl.theme.css"> -->
         
 
         <!-- Theme CSS -->
@@ -130,6 +132,12 @@ require_once 'admin/model/autoload.php';
         <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
         <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
         <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate.js"></script>        
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate-vsdoc.js"></script>
+        <script type="text/javascript" src="assets/plugins/validate/js/jquery.validate.unobtrusive.js"></script>
+
+        <script type="text/javascript" src="assets/plugins/jquery.mask.js"></script>
+        
         <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript" src="assets/js/newsletters.js"></script>
@@ -142,7 +150,7 @@ require_once 'admin/model/autoload.php';
         <script>
 
             // Clipping            
-            $('.carousel-clipping').owlCarousel({                
+            $('.carousel-clipping').owlCarousel({
                 loop:true,
                 margin:10,
                 nav:true,
@@ -158,7 +166,7 @@ require_once 'admin/model/autoload.php';
             });
 
             // Building modal clipping
-            $('.modal-view-clipping').click(function (event) {                
+            $('.modal-view-clipping').click(function (event) {
                 event.preventDefault();                
                 var id = $(this).attr('id').replace('clipping-', '');
                 $.ajax({
@@ -256,15 +264,19 @@ require_once 'admin/model/autoload.php';
                 return false;
             });
 
-            // Animação seta Timeline > Clipping
-            $('.clk-seta-clipping').click(function () {
-                $('html, body').animate({ scrollTop: $("#clipping").offset().top - 20}, 500);
+            // Animação seta Timeline > Subscribe
+            $('.clk-seta-subscribe').click(function () {
+                $('html, body').animate({ scrollTop: $("#subscribe").offset().top - 20}, 500);
                 return false;
             });
 
-            
+            // Animação seta Subscribe > Clipping
+            $('.clk-seta-clipping').click(function () {
+                $('html, body').animate({ scrollTop: $("#clipping").offset().top - 20}, 500);
+                return false;
+            });            
 
-            // Animação seta Timeline > Newsletters
+            // Animação seta Clipping > Newsletters
             $('.clk-seta-newsletters').click(function () {
                 $('html, body').animate({ scrollTop: $("#newsletters").offset().top - 20}, 500);
                 return false;
@@ -280,6 +292,53 @@ require_once 'admin/model/autoload.php';
                     $('.x-logo').css('display', 'none');
                 }
             });
+            
+
+            $('#form-subscribe').submit(function (event) {
+                event.preventDefault();
+                if($('#form-subscribe').valid()) {
+                    var form = $('#form-subscribe')[0];
+                    var formData = new FormData(form);
+
+                    $.ajax({
+                        method: 'post',
+                        url: PATHA + 'controller/subscribe.php',
+                        data: formData,
+                        dataType: 'json',
+                        contentType: false,
+                        processData: false,
+                        beforeSend: function () {
+                            $('#form-subscribe button[type="submit"]').attr('disabled', true);
+                            $('#form-subscribe .subscribe-response p').html('Enviando ...');
+                            $('#form-subscribe .subscribe-response').show(300);
+                        },
+                        success: function (data) {
+                            if(data.st == true) {                                
+                                $('#form-subscribe .subscribe-response p').html(data.message);
+                                $('#form-subscribe .subscribe-response').show(300);
+
+                                setTimeout(function () {
+                                    location.href = '/';
+                                }, 8000);
+                            } else {                                
+                                $('#form-subscribe .subscribe-response p').html(data.message);
+                                $('#form-subscribe .subscribe-response').show(300);
+
+                                setTimeout(function () {
+                                    $('#form-subscribe button[type="submit"]').attr('disabled', false);
+                                    $('#form-subscribe .subscribe-response').hide(100);
+                                }, 5000);
+                            }                         
+                        },
+                        error: function (erro) {
+                            alert('Erro: ' + erro.message);
+                        }
+                    });
+                }
+            });
+
+            // Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
         </script>
 
     </body>

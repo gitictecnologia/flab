@@ -3,10 +3,9 @@
 class Empresa extends Contexto implements IContexto
 {
     public static $table = __CLASS__;    
-    private $params;
+    private $params;    
 
-    public function Empresa()
-    {
+    public function __construct() {
         $this->params = array(
             'Id' => 0,            
             'Nome' => NULL,
@@ -20,20 +19,50 @@ class Empresa extends Contexto implements IContexto
             'DtFundacao' => NULL,
             'DtCriacao' => NULL,
             'DtAlteracao' => NULL,
-            'St' => 0,           
+            'St' => 0,
+            /**
+            * Relationships
+            */
+            'Endereco' => NULL,
+            'Socios' => NULL,
+            'Projetos' => NULL,
+            'Respostas' => NULL, 
         );
     }	
 
     
 
-    public function set($param, $value)
-    {
-        $this->params[$param] = $value;
+    public function __set($key, $value) {
+        if(array_key_exists($key, $this->params)) {
+            $this->params[$key] = $value;
+        } else {
+            throw new Exception("Parameter '" . $key . "' not found", 1);
+        }
     }
     
-    public function get($param)
-    {
-        return $this->params[$param];
+    public function __get($key) {
+        if(array_key_exists($key, $this->params)) {
+            if($key == 'Endereco') {
+                if($this->params['Endereco'] == NULL) {
+                    $this->params['Endereco'] = Endereco::getByEmpresaId($this->Id);
+                }
+            } else if($key == 'Socios') {
+                if($this->params['Socios'] == NULL) {
+                    $this->params['Socios'] = Socio::getByEmpresaId($this->Id);
+                }                
+            } else if($key == 'Projetos') {
+                if($this->params['Projetos'] == NULL) {
+                    $this->params['Projetos'] = Projeto::getByEmpresaId($this->Id);
+                }
+            } else if($key == 'Respostas') {                
+                if($this->params['Respostas'] == NULL) {
+                    $this->params['Respostas'] = Resposta::getByEmpresaId($this->Id);
+                }
+            }            
+            return $this->params[$key];
+        } else {
+            throw new Exception("Parameter '" . $key . "' not found");
+        }
     }
 
 
@@ -41,9 +70,10 @@ class Empresa extends Contexto implements IContexto
     {
         foreach($params as $key => $value)
         {
-            $this->set($key, $value);
+            $this->{$key} = $value;
         }        
     }   
+   
 
 
     public function insert()
@@ -54,17 +84,17 @@ class Empresa extends Contexto implements IContexto
                 INSERT INTO " . self::$table . "
                     (Nome, Descricao, CNPJ, Email, Telefone, Site, Faturamento, Apresentacao, DtFundacao, DtCriacao, St)
                 VALUES (
-                    " . parent::transformToSql($this->get('Nome')) . ",
-                    " . parent::transformToSql($this->get('Descricao')) . ",
-                    " . parent::transformToSql($this->get('CNPJ')) . ",
-                    " . parent::transformToSql($this->get('Email')) . ",
-                    " . parent::transformToSql($this->get('Telefone')) . ",
-                    " . parent::transformToSql($this->get('Site')) . ",
-                    " . parent::transformToSql($this->get('Faturamento')) . ",
-                    " . parent::transformToSql($this->get('Apresentacao')) . ",
-                    " . parent::transformToSql($this->get('DtFundacao')) . ",
+                    " . parent::transformToSql($this->Nome) . ",
+                    " . parent::transformToSql($this->Descricao) . ",
+                    " . parent::transformToSql($this->CNPJ) . ",
+                    " . parent::transformToSql($this->Email) . ",
+                    " . parent::transformToSql($this->Telefone) . ",
+                    " . parent::transformToSql($this->Site) . ",
+                    " . parent::transformToSql($this->Faturamento) . ",
+                    " . parent::transformToSql($this->Apresentacao) . ",
+                    " . parent::transformToSql($this->DtFundacao) . ",
                     " . parent::now() . ",
-                    " . parent::transformToSql($this->get('St')) . ")";
+                    " . parent::transformToSql($this->St) . ")";
 
             $result = parent::query($sql);
             if($result)
@@ -74,9 +104,9 @@ class Empresa extends Contexto implements IContexto
                 * Set Id
                 *
                 */
-                $this->set('Id', parent::getLastId());
+                $this->Id = parent::getLastId();
 
-                Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
+                //Logger::Info(__METHOD__ . ' { ' . $sql . ' }');
                 return true;
             }
             return false;
@@ -96,20 +126,20 @@ class Empresa extends Contexto implements IContexto
                 UPDATE
                     " . self::$table . "
                 SET 
-                    Nome = " . parent::transformToSql($this->get('Nome')) . ",
-                    Descricao = " . parent::transformToSql($this->get('Descricao')) . ",
-                    CNPJ = " . parent::transformToSql($this->get('CNPJ')) . ",
-                    Email = " . parent::transformToSql($this->get('Email')) . ",
-                    Telefone = " . parent::transformToSql($this->get('Telefone')) . ",
-                    Site = " . parent::transformToSql($this->get('Site')) . ",
-                    Faturamento = " . parent::transformToSql($this->get('Faturamento')) . ",
-                    Apresentacao= " . parent::transformToSql($this->get('Apresentacao')) . ",
-                    DtFundacao = " . parent::transformToSql($this->get('DtFundacao')) . ",
-                    DtCriacao = " . parent::transformToSql($this->get('DtCriacao')) . ",
+                    Nome = " . parent::transformToSql($this->Nome) . ",
+                    Descricao = " . parent::transformToSql($this->Descricao) . ",
+                    CNPJ = " . parent::transformToSql($this->CNPJ) . ",
+                    Email = " . parent::transformToSql($this->Email) . ",
+                    Telefone = " . parent::transformToSql($this->Telefone) . ",
+                    Site = " . parent::transformToSql($this->Site) . ",
+                    Faturamento = " . parent::transformToSql($this->Faturamento) . ",
+                    Apresentacao= " . parent::transformToSql($this->Apresentacao) . ",
+                    DtFundacao = " . parent::transformToSql($this->DtFundacao) . ",
+                    DtCriacao = " . parent::transformToSql($this->DtCriacao) . ",
                     DtAlteracao =  " . parent::now() . ",
-                    St = " . parent::transformToSql($this->get('St')) . "                 
+                    St = " . parent::transformToSql($this->St) . "                 
                 WHERE
-                    Id = " . parent::transformToSql($this->get('Id'));
+                    Id = " . parent::transformToSql($this->Id);
 
             if(parent::query($sql))
             {
@@ -130,7 +160,7 @@ class Empresa extends Contexto implements IContexto
         try
         {
             $sql = "
-                DELETE FROM " . self::$table . " WHERE Id = " . $this->get('Id');
+                DELETE FROM " . self::$table . " WHERE Id = " . $this->Id;
 
             $result = parent::query($sql);          
             if($result)
