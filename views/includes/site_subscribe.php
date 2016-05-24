@@ -17,6 +17,12 @@
         margin-right: 15px;
     }
 
+    .subscribe .row .row {
+        padding: 15px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
     .subscribe input[type="file"] {
         display: block;
         opacity: 0;
@@ -127,7 +133,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
@@ -135,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-3">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <select class="form-control" id="estado" name="estado" placeholder="Estado" value="" data-val="true" data-val-required="Campo obrigatório" >
@@ -152,7 +158,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-3">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control phone_cel" id="telefone" name="telefone" placeholder="Telefone" value="" data-val="true" data-val-required="Campo obrigatório" >
@@ -171,7 +177,7 @@
                                     </div>
                                 </div>
                             </div>                            
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control money" id="faturamento" name="faturamento" placeholder="Faturamento em 2015" value="" data-val="true" data-val-required="Campo obrigatório" >
@@ -185,14 +191,14 @@
                         <br>
                         <br>
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <input type="text" class="form-control" id="nomeSocioResponsavel" name="nomeSocioResponsavel" placeholder="Nome do Sócio - responsável pela inscrição" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <input type="text" class="form-control" id="nomeSocioResponsavel" name="nomeSocioResponsavel" placeholder="Nome do Sócio" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100" data-toggle="tooltip" data-placement="bottom" title="Nome do sócio responsável">
                                 <span class="field-validation-valid" data-valmsg-for="nomeSocioResponsavel" data-valmsg-replace="true"></span>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="10" data-val-length-max="100">
@@ -200,7 +206,7 @@
                                     </div>
                                 </div>   
                             </div>
-                            <div class="col-sm-12 col-md-3">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Cargo ou Função" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="3" data-val-length-max="100">
@@ -208,7 +214,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-3">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control phone_cel" id="celular" name="celular" placeholder="Telefone Celular" value="" data-val="true" data-val-required="Campo obrigatório">
@@ -219,11 +225,11 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-5">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
-                                        <input type="text" class="form-control" id="fakeCurriculoSocio" name="fakeCurriculoSocio" placeholder="Anexar Currículo dos Sócios" value="">
-                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de um currículo é necessário enviar um arquivo .ZIP">
+                                        <input type="text" class="form-control" id="fakeCurriculoSocio" name="fakeCurriculoSocio" placeholder="Anexar Curriculum" value="">
+                                        <input type="file" class="form-control" id="curriculoSocio" name="curriculoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de um curriculum é necessário enviar um arquivo .ZIP">
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +240,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-4">
+                            <div class="col-sm-12 col-md-5">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12">
                                         <input type="text" class="form-control" id="linkedinSocio" name="linkedinSocio" placeholder="Link Linkedin" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de um link, é necessário separá-los por vírgula">
@@ -244,10 +250,11 @@
                         </div>
 
                         <br>
+                        <!-- Anexar Autorização -->
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <input type="text" class="form-control" id="fakeAutorizacaoSocio" name="fakeAutorizacaoSocio" placeholder="Anexar autorização dos demais sócios (se houver)" value="">
-                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de uma autorização é necessário enviar um arquivo .ZIP">
+                            <div class="col-sm-12 col-md-11">
+                                <input type="text" class="form-control" id="fakeAutorizacaoSocio" name="fakeAutorizacaoSocio" placeholder="Anexar autorização" value="">
+                                <input type="file" class="form-control" id="autorizacaoSocio" name="autorizacaoSocio" value="" data-toggle="tooltip" data-placement="bottom" title="Se houver mais de uma autorização, é necessário enviar um arquivo contendo as assinaturas de cada sócio">
                             </div>
                         </div>
 
