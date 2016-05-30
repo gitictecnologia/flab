@@ -12,8 +12,8 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == 'localhost:8
 {           
     if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'FIRSTBYTE-PC-1')
     {
-        define('PATH',  '/git/flab/flab/');
-        define('PATHA', '/git/flab/site/admin/');
+        define('PATH',  '/flab/');
+        define('PATHA', '/flab/admin/');
     }
     else if(gethostbyaddr($_SERVER['REMOTE_ADDR']) == 'Ruy-PC')
     {

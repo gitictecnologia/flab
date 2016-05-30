@@ -91,7 +91,7 @@
                             <li class="nav-item"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
                             <li class="nav-item nav-item-cta last">
-                                <a class="btn btn-cta btn-cta-secondary" href="#newsletters">Inscreva sua Startup!</a>
+                                <a class="btn btn-cta btn-cta-secondary" href="#subscribe">Inscreva sua Startup!</a>
                             </li>
                         </ul><!--//nav-->
                     </div><!--//navabr-collapse-->
@@ -111,12 +111,11 @@
                     FOCADAS EM TECNOLOGIA. 
                     <br>
                     <br>
-                    E LANÇAREMOS O NOSSO PRIMEIRO PROGRAMA<br> PARA STARTUPS EM 1º DE JUNHO.
+                    INSCRIÇÕES ABERTAS PARA STARTUPS DE 1 A 15 DE JUNHO.
                 </h2>
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
-                    Deixe os seus dados e acompanhe as novidades!<br>
                 </p>
-                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#newsletters" >Acompanhe as novidades</a></p>
+                <p><a class="btn btn-cta btn-cta-primary bt-antenna" href="#subscribe" >Inscreva sua Startup!</a></p>
                 
                 <!--<button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>-->
             
