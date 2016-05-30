@@ -74,7 +74,7 @@
                             <span class="tm-description">Início das inscrições</span>
                         </li>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>JUN</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span>30 <strong>JUN</strong> 2016</span>
                             <span class="tm-description">Fim das inscrições</span>
                         </li>
                         <li class="tm-item">
