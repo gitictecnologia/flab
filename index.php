@@ -112,7 +112,13 @@ require_once 'admin/model/autoload.php';
         * Lightbox
         */
         include 'views/includes/site_lightbox.php';
+        /*
+        *Lightbox do Regulamento
+        */
+        include 'views/includes/site_lightbox_regulamento.php';
         ?>
+
+
 
 
         <style>

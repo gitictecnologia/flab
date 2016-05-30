@@ -285,6 +285,11 @@
                                 <button type="submit" class="btn btn-cta btn-cta-secondary">Enviar Inscrição</button>
                             </div>
                         </div>
+                        <div>
+                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg-regulamento">
+                                <p class="source" style="font-weight: bold;">Veja o regulamento &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
+                            </a>                
+                        </div>
                     </form>
                 </div><!--//content-->
             </div><!--//item-->

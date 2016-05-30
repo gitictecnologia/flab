@@ -86,7 +86,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active nav-item bullet-nav-item"><a href="#home">Home</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#testemonial">Visão Flab</a></li>
-                            <li class="nav-item bullet-nav-item"><a href="#clipping">Clipping</a></li>
+                            <li class="nav-item bullet-nav-item"><a href="#clipping">News</a></li>
                             <li class="nav-item bullet-nav-item"><a href="#beneficios">Beneficios para as Startups</a></li>
                             <li class="nav-item"><a href="#interesses">Áreas de Interesse</a></li>
                             <!-- <li class="nav-item"><a href="#newsletters">Acompanhe as Novidades</a></li> -->
