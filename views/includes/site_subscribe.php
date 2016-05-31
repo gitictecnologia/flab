@@ -104,6 +104,12 @@
                     <form class="form-horizontal" id="form-subscribe" role="form" enctype="multipart/form-data">
                         <input type="hidden" name="do" value="add"></input>
 
+                        <div>
+                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg-regulamento">
+                                <p class="source" style="font-weight: bold;">Veja o regulamento &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
+                            </a>                
+                        </div>
+
                         <div class="row">
                             <div class="col-sm-12 col-md-6">                        
                                 <input type="text" class="form-control cnpj" id="cnpj" name="cnpj" placeholder="CNPJ" value="" data-val="true" data-val-required="Campo obrigatório" data-val-length="Campo inválido" data-val-length-min="18" data-val-length-max="18">
@@ -292,11 +298,7 @@
                                 <button type="submit" class="btn btn-cta btn-cta-secondary">Enviar Inscrição</button>
                             </div>
                         </div>
-                        <div>
-                            <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg-regulamento">
-                                <p class="source" style="font-weight: bold;">Veja o regulamento &nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:1.3em;"></i></p>                                    
-                            </a>                
-                        </div>
+                        
                     </form>
                 </div><!--//content-->
             </div><!--//item-->
