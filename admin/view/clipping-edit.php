@@ -178,7 +178,7 @@ $clipping = Clipping::getById($id);
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-info">Salvar</button>
-                        <button type="button" class="btn" onclick="location.href='?s=posts'">Cancelar</button>
+                        <button type="button" class="btn" onclick="location.href='?s=clipping'">Cancelar</button>
                     </div>
                 </form>
 

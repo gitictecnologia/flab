@@ -101,7 +101,7 @@ switch ($_REQUEST['do']) {
 				}
 				$socio->Autorizacao = $newNameAutorizacao;
 			} else {
-				throw new Exception("Necessário enviar um arquivo .ZIP contento a(s) autorização(oes)) do(s) socio(s)");
+				//throw new Exception("Necessário enviar um arquivo .ZIP contento a(s) autorização(oes)) do(s) socio(s)");
 			}
 
 			/**
