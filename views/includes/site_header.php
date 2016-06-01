@@ -111,7 +111,7 @@
                     FOCADAS EM TECNOLOGIA. 
                     <br>
                     <br>
-                    INSCRIÇÕES ABERTAS PARA STARTUPS DE 1 A 15 DE JUNHO.
+                    PARTICIPE DO NOSSO PRIMEIRO PROGRAMA PARA STARTUPS. INSCRIÇÕES ATÉ O DIA 30 DE JUNHO.
                 </h2>
                 <p style="font-family: 'Roboto'; font-weight: 300; font-size: 1.2em; text-shadow: none;">
                 </p>
