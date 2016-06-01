@@ -93,7 +93,7 @@
                 </div><!--//content-->
             </div><!--//item-->
             <div style="width:auto;text-align:center;" >
-                <a href="#clipping" class="clk-seta-clipping"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#76F983;font-weight:thin;margin:0px 0 30px 0;"></i></a>
+                <a href="#subscribe" class="clk-seta-subscribe"><i class="fa fa-chevron-circle-down" style="font-size: 50px;  color:#76F983;font-weight:thin;margin:0px 0 30px 0;"></i></a>
             </div>
         </div>
 
