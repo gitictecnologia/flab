@@ -17,7 +17,8 @@ class Socio extends Contexto implements IContexto
             'Celular' => NULL,
             'Email' => NULL,
             'Cargo' => NULL,
-            'Curriculo' => NULL,            
+            'Curriculo' => NULL,
+            'CurriculoLink' => NULL,
             'Autorizacao' => NULL,
             'Tipo' => 0,
             'St' => 0
@@ -66,7 +67,7 @@ class Socio extends Contexto implements IContexto
         {
             $sql = "
                 INSERT INTO " . self::$table . "
-                    (EmpresaId, Nome, Sobrenome, Telefone, Celular, Email, Cargo, Curriculo, Autorizacao, Tipo, St)
+                    (EmpresaId, Nome, Sobrenome, Telefone, Celular, Email, Cargo, Curriculo, CurriculoLink, Autorizacao, Tipo, St)
                 VALUES (
                     " . parent::transformToSql($this->EmpresaId) . ",
                     " . parent::transformToSql($this->Nome) . ",
@@ -76,6 +77,7 @@ class Socio extends Contexto implements IContexto
                     " . parent::transformToSql($this->Email) . ",
                     " . parent::transformToSql($this->Cargo) . ",
                     " . parent::transformToSql($this->Curriculo) . ",
+                    " . parent::transformToSql($this->CurriculoLink) . ",
                     " . parent::transformToSql($this->Autorizacao) . ",
                     " . parent::transformToSql($this->Tipo) . ",                 
                     " . parent::transformToSql($this->St) . ")";            
@@ -119,6 +121,7 @@ class Socio extends Contexto implements IContexto
                     Email = " . parent::transformToSql($this->Email) . ",                    
                     Cargo = " . parent::transformToSql($this->Cargo) . ",
                     Curriculo = " . parent::transformToSql($this->Curriculo) . ",
+                    CurriculoLink = " . parent::transformToSql($this->CurriculoLink) . ",
                     Autorizacao = " . parent::transformToSql($this->Autorizacao) . ",
                     Tipo = " . parent::transformToSql($this->Tipo) . ",
                     St = " . parent::transformToSql($this->St) . "                 

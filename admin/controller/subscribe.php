@@ -105,17 +105,23 @@ switch ($_REQUEST['do']) {
 			}
 
 			/**
-			* Arquivo curriculo		
-			*/			
-			if(isset($_FILES['curriculoSocio']) && !empty($_FILES['curriculoSocio']['name'])) {
+			* Arquivo curriculo / Linkedin
+			*/
+			if(isset($_FILES['curriculoSocio']) && !empty($_FILES['curriculoSocio']['name']))
+			{
 				$newNameCurriculo = time() . '.' . array_pop(explode('.', $_FILES['curriculoSocio']['name']));
-				if(!copy($_FILES['curriculoSocio']['tmp_name'], $pathImage['docs']['curriculo']['abs'] . $newNameCurriculo)) {
-					throw new Exception("Falha ao copiar arquivo " . $_FILES['curriculoSocio']['name']);					
+				if(!copy($_FILES['curriculoSocio']['tmp_name'], $pathImage['docs']['curriculo']['abs'] . $newNameCurriculo))
+				{
+					throw new Exception("Falha ao copiar arquivo " . $_FILES['curriculoSocio']['name']);
 				}
 				$socio->Curriculo = $newNameCurriculo;
-			} else if(isset($curriculoSocio) && !empty($curriculoSocio)) {
-				$socio->Curriculo = $curriculoSocio;
-			} else {
+			}
+			else if(isset($linkedinSocio) && !empty($linkedinSocio))
+			{
+				$socio->CurriculoLink = $linkedinSocio;
+			}
+			else
+			{
 				throw new Exception("Necessário enviar um arquivo .ZIP contento o(s) curriculo(s) do(s) socio(s) ou o link do LINKEDIN separado por virgúla");
 			}
 

@@ -196,7 +196,20 @@ $empresa = Empresa::getById($id);
                                                 <div class="span12"><input class="span12" type="text" value="<?= $empresa->Socios[0]->Celular ?>"></div>
                                             </div>
                                         </div>                                       
-                                    </div>                                    
+                                    </div>
+
+                                    <br>
+                                    <div class="row-fluid">
+                                        <div class="span12">
+                                            <div class="row-fluid">
+                                                <div class="span12">Currículos</div>
+                                            </div>
+                                            <div class="row-fluid">
+                                                <div class="span12"><input class="span12" type="text" value="<?= $empresa->Socios[0]->CurriculoLink ?>"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </section>
 
                                 <br>
@@ -244,8 +257,6 @@ $empresa = Empresa::getById($id);
                                                 <div class="span12">
                                                     <?php if(is_null($empresa->Socios[0]->Curriculo)) { ?>
                                                         &nbsp; <strong>Não há arquivo</strong>
-                                                    <?php } else if(strstr($empresa->Socios[0]->Curriculo, 'linkedin') != FALSE) { ?>
-                                                        &nbsp; <input class=""type="text" value="<?= $empresa->Socios[0]->Curriculo ?>">
                                                     <?php } else { ?>
                                                         &nbsp; <a href="<?= $pathImage['docs']['curriculo']['rel'] . $empresa->Socios[0]->Curriculo ?>" class="btn btn-default" target="_blank"><span class="icomoon-icon-file-download"></span> Baixar</a>
                                                     <?php } ?>
