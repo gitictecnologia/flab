@@ -205,27 +205,27 @@
 								4.1.2. A segunda Fase, avaliação da Comissão Avaliadora e definição dos finalistas, <a>compreende</a>    <a id="_anchor_1" href="file:///C:/Users/ic1/Desktop/Regulamento_CallforPitch.docx#_msocom_1" name="_msoanchor_1">[CMFS1]</a> :
 							</p>
 							<p>
-								a.) Os projetos pré-selecionadospelos organizadores serão encaminhados para a Comissão Avaliadora;
+								a.) Os projetos pré-selecionados pelos organizadores serão encaminhados para a Comissão Avaliadora;
 							</p>
 							<p>
-								b.) Os finalistas tomarão conhecimento de sua seleção através de divulgação no site <u>flab.solutions</u> até o dia 01/08/2016, por e-mail ou contato
+								b.) Os finalistas tomarão conhecimento de sua seleção através de divulgação no site <u>flab.solutions</u> até o dia 01/09/2016, por e-mail ou contato
 								telefônico.
 							</p>
 							<p>
 								4.1.3. A terceira fase, Pitch Day, onde a Comissão Avaliadora assistirá às apresentações dos finalistas, compreende:
 							</p>
 							<p>
-								a.) Os Organizadores e a Comissão Avaliadora assistirão às apresentações dos finalistas no dia 16/08, em horário a ser definido e comunicado aos finalistas
+								a.) Os Organizadores e a Comissão Avaliadora assistirão às apresentações dos finalistas no dia 16/09, em horário a ser definido e comunicado aos finalistas
 								por email ou contato telefônico.
 							</p>
 							<p>
-								b.) A comissão avaliadora terá até o dia 30 de agosto para escolher as 5 empresas ganhadoras.
+								b.) A comissão avaliadora terá até o dia 30 de setembro para escolher as 5 empresas ganhadoras.
 							</p>
 							<p>
 								4.1.4. A quarta Fase, Apresentação dos finalistas e seleção dos qualificados para a fase final, compreende:
 							</p>
 							<p>
-								a.) Divulgação das empresas qualificadas para a fase finalno site <u>flab.solutions</u> até o dia 31/08/2016, por e-mail.
+								a.) Divulgação das empresas qualificadas para a fase finalno site <u>flab.solutions</u> até o dia 31/09/2016, por e-mail.
 							</p>
 							<p>
 								b.) O programa de aceleração terá início em setembro, com duração de 3 meses (90 dias), será combinado com as empresas participantes em reuniões
@@ -241,16 +241,16 @@
 								O CALL respeitará o seguinte calendário:
 							</p>
 							<p>
-								(a) até dia 30/06/2016: Inscrições dos projetos no Site;
+								(a) até dia 31/07/2016: Inscrições dos projetos no Site;
 							</p>
 							<p>
-								(b) 01/07/2016 a 01/08/2016: Seleção de até30 (trinta) finalistas pela Comissão Avaliadora;
+								(b) 01/08/2016 a 01/09/2016: Seleção de até30 (trinta) finalistas pela Comissão Avaliadora;
 							</p>
 							<p>
-								(c) 16/8/2016: Pitch Day – apresentação dos finalistas à Comissão Avaliadora
+								(c) 16/9/2016: Pitch Day – apresentação dos finalistas à Comissão Avaliadora
 							</p>
 							<p>
-								(d) até 31/8/2016: Anúncio dos 5 (cinco) qualificados para a fase finalno Site flab.solutions.
+								(d) até 31/9/2016: Anúncio dos 5 (cinco) qualificados para a fase finalno Site flab.solutions.
 							</p>
 							<strong>
 								<br clear="all"/>

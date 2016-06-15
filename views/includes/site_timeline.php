@@ -74,19 +74,19 @@
                             <span class="tm-description">Início das inscrições</span>
                         </li>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span>30 <strong>JUN</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span>31 <strong>JUL</strong> 2016</span>
                             <span class="tm-description">Fim das inscrições</span>
                         </li>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>AGO</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span>15 <strong>SET</strong> 2016</span>
                             <span class="tm-description">Pitch day</span>
                         </li>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>AGOSTO</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>SETEMBRO</strong> 2016</span>
                             <span class="tm-description">Anúncio das selecionadas</span>
                         </li>
                         <li class="tm-item">
-                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>SETEMBRO</strong> 2016</span>
+                            <span class="tm-data"><span class="tm-bullet">&bull;</span><strong>OUTUBRO</strong> 2016</span>
                             <span class="tm-description">Início do programa</span>
                         </li>
                     </ul>
