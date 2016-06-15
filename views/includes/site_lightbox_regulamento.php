@@ -202,7 +202,7 @@
 								d.) Selecionados os principais projetos, estes serão qualificados para a segunda fase, para então serem avaliados pela Comissão Avaliadora.
 							</p>
 							<p>
-								4.1.2. A segunda Fase, avaliação da Comissão Avaliadora e definição dos finalistas, <a>compreende</a>    <a id="_anchor_1" href="file:///C:/Users/ic1/Desktop/Regulamento_CallforPitch.docx#_msocom_1" name="_msoanchor_1">[CMFS1]</a> :
+								4.1.2. A segunda Fase, avaliação da Comissão Avaliadora e definição dos finalistas, compreende:
 							</p>
 							<p>
 								a.) Os projetos pré-selecionados pelos organizadores serão encaminhados para a Comissão Avaliadora;
